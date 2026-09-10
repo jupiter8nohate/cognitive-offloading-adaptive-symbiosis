@@ -51,6 +51,12 @@ func TestBuildSelfAuthoredRuntimeUsesCanonicalGLITCHOLOGY(t *testing.T) {
 	if runtime.Receipt.StyleSourceSHA != GLITCHOLOGYSourceSHA {
 		t.Fatalf("style source sha = %q, want %q", runtime.Receipt.StyleSourceSHA, GLITCHOLOGYSourceSHA)
 	}
+	if runtime.Receipt.SelectedGoalID == "" || runtime.Receipt.SelectedGoalName == "" {
+		t.Fatal("self-authored runtime did not carry a selected autonomous mission goal")
+	}
+	if !strings.Contains(runtime.GoSource, "SelectedGoalID") || !strings.Contains(runtime.Markdown, "SELECTED_AUTONOMOUS_GOAL") {
+		t.Fatal("selected autonomous mission goal is missing from generated outputs")
+	}
 }
 
 func TestSelfAuthorFingerprintIgnoresItsOwnGeneratedNamespace(t *testing.T) {
