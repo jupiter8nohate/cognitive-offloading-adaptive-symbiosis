@@ -94,6 +94,7 @@ jobs:
           GOOGLE_WEB_SEARCH_API_KEY: ${{ steps.google-search-secrets.outputs.google_web_search_api_key || secrets.GOOGLE_WEB_SEARCH_API_KEY }}
           GOOGLE_WEB_SEARCH_CLIENT_ID: ${{ steps.google-search-secrets.outputs.google_web_search_client_id || secrets.GOOGLE_WEB_SEARCH_CLIENT_ID }}
           GOOGLE_WEB_SEARCH_USER_IP: ${{ steps.google-search-secrets.outputs.google_web_search_user_ip || secrets.GOOGLE_WEB_SEARCH_USER_IP }}
+          COAS_GOOGLE_CREDENTIAL_SOURCE: ${{ steps.google-search-secrets.outcome == 'success' && 'wif-secret-manager' || 'environment-fallback' }}
         run: |
           go run ./cmd/coas-index-audit \
             -commit "${GITHUB_SHA}" \
