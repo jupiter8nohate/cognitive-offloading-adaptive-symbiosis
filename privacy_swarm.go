@@ -33,14 +33,14 @@ type PrivacyAgent struct {
 }
 
 type PrivacyAgentResult struct {
-	AgentID       string `json:"agent_id"`
-	Mechanic      string `json:"mechanic"`
-	Role          string `json:"role"`
-	Invariant     string `json:"invariant"`
-	Status        string `json:"status"`
+	AgentID        string `json:"agent_id"`
+	Mechanic       string `json:"mechanic"`
+	Role           string `json:"role"`
+	Invariant      string `json:"invariant"`
+	Status         string `json:"status"`
 	LocalPseudonym string `json:"local_pseudonym"`
-	GlitchTrace   string `json:"glitch_trace"`
-	Observation   string `json:"observation"`
+	GlitchTrace    string `json:"glitch_trace"`
+	Observation    string `json:"observation"`
 }
 
 type PrivacySwarmReport struct {
