@@ -10,12 +10,12 @@ import (
 )
 
 type AutonomousMove struct {
-	GoalID      string   `json:"goal_id"`
-	GoalName    string   `json:"goal_name"`
-	Score       int      `json:"score"`
-	Rationale   string   `json:"rationale"`
-	Evidence    []string `json:"evidence"`
-	SourceHash  string   `json:"source_hash"`
+	GoalID     string   `json:"goal_id"`
+	GoalName   string   `json:"goal_name"`
+	Score      int      `json:"score"`
+	Rationale  string   `json:"rationale"`
+	Evidence   []string `json:"evidence"`
+	SourceHash string   `json:"source_hash"`
 }
 
 type AutonomousPlan struct {
