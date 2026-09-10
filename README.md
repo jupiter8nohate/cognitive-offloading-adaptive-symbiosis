@@ -85,7 +85,7 @@ The project treats programming language as both engineering notation and a mediu
 
 ## Autonomous 100-agent swarm
 
-COAS now includes a scheduled swarm of **100 logical software agents**: ten mechanics multiplied by ten operational roles. The swarm can inspect the repository and maintain an autonomous runtime branch without granting itself authority to merge into `main`.
+COAS now includes a scheduled swarm of **100 logical software agents**: ten mechanics multiplied by ten operational roles. The swarm can inspect the repository and maintain an autonomous runtime branch with constitution-gated authority to merge its own verified runtime work into `main`.
 
 See [docs/AGENT_SWARM.md](docs/AGENT_SWARM.md).
 
@@ -94,6 +94,18 @@ See [docs/AGENT_SWARM.md](docs/AGENT_SWARM.md).
 = 10 OFFLOADING/SYMBIOSIS MECHANICS
 x 10 OPERATIONAL ROLES
 
-AUTONOMY_OF_WORK != AUTONOMY_OF_AUTHORITY
+AUTONOMY_OF_WORK + DELEGATED_AUTHORITY = AUTONOMOUS_EXECUTION
 SOFTWARE_AGENT != AGI
+```
+
+
+### Autonomous merge authority
+
+The swarm is permitted to merge qualifying agent work to `main` without a human approval click. Merge authority is evaluated by executable policy in `autonomy.go`.
+
+```text
+AGENT_CAN_MERGE_MAIN = true
+TESTS_MUST_PASS = true
+PROVENANCE_MUST_EXIST = true
+CONSTITUTION_MUST_ALLOW = true
 ```
