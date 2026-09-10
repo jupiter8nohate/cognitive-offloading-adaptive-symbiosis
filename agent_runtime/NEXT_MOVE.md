@@ -2,24 +2,24 @@
 
 SOURCE_COMMIT: `4f79ab023c1a562b207118edb7d6c45b4c0d117a`
 
-SELECTED_GOAL: **Preserve authorship and provenance** (`preserve-authorship`)
+SELECTED_GOAL: **Improve the software** (`improve-software`)
 
-SCORE: **94**
+SCORE: **90**
 
 ~~~text
-⁇ [G8] preserve-authorship :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] improve-software :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.
+Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Preserve authorship and provenance | 94 | `f681ff680562ba35` |
-| Demonstrate the linguistic boundary | 93 | `d6fc195e4f747f75` |
-| Protect private drafts | 87 | `976a73bf4c65f1ae` |
-| Improve the software | 78 | `4ba03e768cc52abc` |
-| Expand voluntary reach | 74 | `e2f64ab8ae6e54be` |
-| Preserve human authority | 74 | `c345437f14fff47d` |
-| Reduce cognitive load | 68 | `22e5cbbedbda0016` |
+| Improve the software | 90 | `b4eb6244c0f27f3d` |
+| Protect private drafts | 87 | `1b1211a4c7494a05` |
+| Preserve authorship and provenance | 85 | `7165bb510104a95c` |
+| Demonstrate the linguistic boundary | 82 | `8dfdf1314ec6efdc` |
+| Expand voluntary reach | 81 | `e958e7605ee4b273` |
+| Reduce cognitive load | 69 | `049a4da707e2da3b` |
+| Preserve human authority | 65 | `1f3d1cd8f2e496d3` |
