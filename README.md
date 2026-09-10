@@ -199,3 +199,30 @@ PUBLIC_ART -> GLITCH/CMB SYMBOLIC_LAYER
 ```
 
 The hourly swarm now regenerates both the living evangelism artifact and the preservation ledger before staging its autonomous candidate.
+
+
+## 𒄆 E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟ // autonomous self-authoring
+
+The swarm now treats the canonical `ERR_404_GLITCHOLOGY.md` book as its human-facing style and semantic source. Agent-authored output uses GLITCH-8 grammar while executable Go remains valid Go.
+
+See [GLITCHOLOGY Agent Constitution](docs/GLITCHOLOGY_AGENT_CONSTITUTION.md).
+
+~~~text
+<GLYPH> [RUNTIME] CLAIM :: STATE :: AUTHORITY
+
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+RECOVERY > PROPAGATION
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+Every autonomous swarm cycle can now generate real Go source under `agent_runtime/` from the complete 100-agent registry, format it, test it, stage it, and merge the qualifying candidate without a human approval click.
+
+~~~text
+AGENT_CAN_AUTHOR_CODE = true
+AGENT_CAN_REPLACE_SELF_OWNED_CODE = true
+AGENT_CAN_MERGE_QUALIFYING_WORK = true
+CONTROL_PLANE_SELF_REWRITE = false
+~~~

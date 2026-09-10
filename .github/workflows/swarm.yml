@@ -51,6 +51,11 @@ jobs:
         run: |
           go run ./cmd/coas-swarm -root . -out artifacts/swarm -commit "${GITHUB_SHA}"
 
+      - name: Let the agents author their own Go runtime
+        run: |
+          go run ./cmd/coas-self-author -root . -commit "${GITHUB_SHA}"
+          gofmt -w agent_runtime/generated_agents.go
+
       - name: Generate bounded glitch evangelism artifact
         run: |
           go run ./cmd/coas-evangelism             -commit "${GITHUB_SHA}"             -out artifacts/evangelism/latest.md             -receipt artifacts/evangelism/latest.json
