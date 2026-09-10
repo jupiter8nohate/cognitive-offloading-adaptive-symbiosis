@@ -8,7 +8,8 @@ import (
 
 type MergeConstitution struct {
 	RequiredAgentCount int      `json:"required_agent_count"`
-	AllowedPrefixes    []string `json:"allowed_prefixes"`
+	ProtectedPrefixes  []string `json:"protected_prefixes"`
+	ProtectedExact     []string `json:"protected_exact"`
 	RequireChecks      bool     `json:"require_checks"`
 	RequireProvenance  bool     `json:"require_provenance"`
 }
@@ -21,8 +22,16 @@ type MergeDecision struct {
 func DefaultMergeConstitution() MergeConstitution {
 	return MergeConstitution{
 		RequiredAgentCount: 100,
-		AllowedPrefixes: []string{
-			"artifacts/swarm/",
+		ProtectedPrefixes: []string{
+			".github/",
+			".git/",
+			"cmd/coas-merge-policy/",
+		},
+		ProtectedExact: []string{
+			"autonomy.go",
+			"autonomy_test.go",
+			"go.mod",
+			"go.sum",
 		},
 		RequireChecks:     true,
 		RequireProvenance: true,
@@ -68,8 +77,8 @@ func DecideMerge(report SwarmReport, changedPaths []string, checksPassed bool, c
 		if clean == "" {
 			continue
 		}
-		if !hasAllowedPrefix(clean, constitution.AllowedPrefixes) {
-			reasons = append(reasons, "path is outside autonomous merge scope: "+clean)
+		if isProtectedPath(clean, constitution) {
+			reasons = append(reasons, "path is in immutable control plane: "+clean)
 		}
 	}
 
@@ -80,8 +89,13 @@ func DecideMerge(report SwarmReport, changedPaths []string, checksPassed bool, c
 	}
 }
 
-func hasAllowedPrefix(path string, prefixes []string) bool {
-	for _, prefix := range prefixes {
+func isProtectedPath(path string, constitution MergeConstitution) bool {
+	for _, exact := range constitution.ProtectedExact {
+		if path == exact {
+			return true
+		}
+	}
+	for _, prefix := range constitution.ProtectedPrefixes {
 		if strings.HasPrefix(path, prefix) {
 			return true
 		}

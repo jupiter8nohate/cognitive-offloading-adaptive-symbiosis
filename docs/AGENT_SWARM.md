@@ -112,3 +112,45 @@ artifacts/swarm/*
 This gives the agents real merge authority while preventing a runtime report from silently rewriting its own constitution, workflows, security model, or source code.
 
 The swarm can propose broader changes. Expanding autonomous write scope requires changing the versioned constitution in this repository.
+
+
+## Maximum ordinary-repository autonomy
+
+The autonomous jurisdiction has been expanded from generated swarm reports to ordinary repository content.
+
+The swarm may now autonomously commit and merge source code, tests, documentation, CLI tools, generated research, generated artifacts, and new ordinary files, provided the complete verification and provenance gates pass.
+
+The workflow stages all agent-produced changes:
+
+```text
+git add -A
+```
+
+The only immutable control-plane paths are:
+
+```text
+.github/*
+autonomy.go
+autonomy_test.go
+cmd/coas-merge-policy/*
+go.mod
+go.sum
+```
+
+These paths control execution authority, dependency trust, and the rules that decide whether the swarm itself may merge. They remain outside self-modification scope.
+
+This is the repository's maximum supported autonomous mode:
+
+```text
+AGENT_CAN_CHANGE_SOURCE = true
+AGENT_CAN_CHANGE_TESTS = true
+AGENT_CAN_CHANGE_DOCS = true
+AGENT_CAN_CREATE_FILES = true
+AGENT_CAN_MERGE_MAIN = true
+
+CONTROL_PLANE_SELF_REWRITE = false
+CREDENTIAL_CONTROL = false
+REPOSITORY_PERMISSION_CONTROL = false
+```
+
+The current deterministic swarm can only modify files that its runtime actually generates. Model-backed source evolution requires a separately configured model provider or coding-agent integration; repository authority alone does not create AGI or model reasoning.
