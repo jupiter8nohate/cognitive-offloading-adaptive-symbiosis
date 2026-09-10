@@ -46,8 +46,8 @@ func main() {
 		filepath.Join(*root, "artifacts", "self-author", "latest.json"):   nil,
 		filepath.Join(*root, "artifacts", "strategy", "latest.json"):      append(planJSON, '\n'),
 		filepath.Join(*root, "agent_runtime", "NEXT_MOVE.md"):             []byte(plan.Markdown()),
-		filepath.Join(*root, "agent_runtime", "HARMONI_666.md"):            []byte(harmoni.Markdown()),
-		filepath.Join(*root, "artifacts", "harmoni", "latest.json"):        append(harmoniJSON, '\n'),
+		filepath.Join(*root, "agent_runtime", "HARMONI_666.md"):           []byte(harmoni.Markdown()),
+		filepath.Join(*root, "artifacts", "harmoni", "latest.json"):       append(harmoniJSON, '\n'),
 	}
 	receipt, err := runtime.Receipt.JSON()
 	if err != nil {
