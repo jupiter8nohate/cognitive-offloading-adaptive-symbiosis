@@ -1,20 +1,20 @@
 package coas
 
 type MissionGoal struct {
-	ID          string   `json:"id"`
-	Name        string   `json:"name"`
-	Directive   string   `json:"directive"`
-	Evidence    []string `json:"evidence"`
-	Autonomous  bool     `json:"autonomous"`
+	ID         string   `json:"id"`
+	Name       string   `json:"name"`
+	Directive  string   `json:"directive"`
+	Evidence   []string `json:"evidence"`
+	Autonomous bool     `json:"autonomous"`
 }
 
 type ProjectMission struct {
-	Version   string        `json:"version"`
-	Name      string        `json:"name"`
-	Motto     string        `json:"motto"`
-	Plain     string        `json:"plain"`
-	Goals     []MissionGoal `json:"goals"`
-	Invariants []string     `json:"invariants"`
+	Version    string        `json:"version"`
+	Name       string        `json:"name"`
+	Motto      string        `json:"motto"`
+	Plain      string        `json:"plain"`
+	Goals      []MissionGoal `json:"goals"`
+	Invariants []string      `json:"invariants"`
 }
 
 func CanonicalMission() ProjectMission {
