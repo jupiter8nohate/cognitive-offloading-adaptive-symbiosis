@@ -15,12 +15,13 @@ import (
 const CanonicalRepositoryURL = "https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis"
 
 type IndexProviderConfig struct {
-	GitHubToken    string
-	GoogleAPIKey   string
-	GoogleClientID string
-	GoogleUserIP   string
-	HTTPClient     *http.Client
-	RequestTimeout time.Duration
+	GitHubToken            string
+	GoogleAPIKey           string
+	GoogleClientID         string
+	GoogleUserIP           string
+	GoogleCredentialSource string
+	HTTPClient             *http.Client
+	RequestTimeout         time.Duration
 }
 
 type IndexProbe struct {
@@ -40,14 +41,15 @@ type DiscoveryAgentResult struct {
 }
 
 type IndexAuditReport struct {
-	Version             string                 `json:"version"`
-	SourceCommit        string                 `json:"source_commit"`
-	RepositoryURL       string                 `json:"repository_url"`
-	LogicalAgentCount   int                    `json:"logical_agent_count"`
-	UniqueQueryCount    int                    `json:"unique_query_count"`
-	UniqueNetworkProbes int                    `json:"unique_network_probes"`
-	GoogleConfigured    bool                   `json:"google_configured"`
-	Results             []DiscoveryAgentResult `json:"results"`
+	Version                string                 `json:"version"`
+	SourceCommit           string                 `json:"source_commit"`
+	RepositoryURL          string                 `json:"repository_url"`
+	LogicalAgentCount      int                    `json:"logical_agent_count"`
+	UniqueQueryCount       int                    `json:"unique_query_count"`
+	UniqueNetworkProbes    int                    `json:"unique_network_probes"`
+	GoogleConfigured       bool                   `json:"google_configured"`
+	GoogleCredentialSource string                 `json:"google_credential_source"`
+	Results                []DiscoveryAgentResult `json:"results"`
 }
 
 func DiscoveryQueries() []string {
@@ -82,6 +84,7 @@ func RunIndexAudit(ctx context.Context, sourceCommit string, cfg IndexProviderCo
 	}
 
 	googleConfigured := cfg.GoogleAPIKey != "" && cfg.GoogleClientID != "" && cfg.GoogleUserIP != ""
+	googleCredentialSource := normalizeGoogleCredentialSource(cfg.GoogleCredentialSource, googleConfigured)
 	cache := make(map[string][]IndexProbe, len(queries))
 	uniqueNetworkProbes := 0
 	for _, query := range queries {
@@ -128,15 +131,26 @@ func RunIndexAudit(ctx context.Context, sourceCommit string, cfg IndexProviderCo
 	}
 
 	return IndexAuditReport{
-		Version:             "coas-index-audit.v1",
-		SourceCommit:        sourceCommit,
-		RepositoryURL:       CanonicalRepositoryURL,
-		LogicalAgentCount:   len(agents),
-		UniqueQueryCount:    len(queries),
-		UniqueNetworkProbes: uniqueNetworkProbes,
-		GoogleConfigured:    googleConfigured,
-		Results:             results,
+		Version:                "coas-index-audit.v2",
+		SourceCommit:           sourceCommit,
+		RepositoryURL:          CanonicalRepositoryURL,
+		LogicalAgentCount:      len(agents),
+		UniqueQueryCount:       len(queries),
+		UniqueNetworkProbes:    uniqueNetworkProbes,
+		GoogleConfigured:       googleConfigured,
+		GoogleCredentialSource: googleCredentialSource,
+		Results:                results,
 	}, nil
+}
+
+func normalizeGoogleCredentialSource(source string, configured bool) string {
+	if !configured {
+		return "unconfigured"
+	}
+	if source == "" {
+		return "environment"
+	}
+	return source
 }
 
 func probeGitHubIndex(ctx context.Context, client *http.Client, token, query string) (IndexProbe, error) {
@@ -264,6 +278,7 @@ func (r IndexAuditReport) Markdown() string {
 	fmt.Fprintf(&b, "Unique query families: %d\n\n", r.UniqueQueryCount)
 	fmt.Fprintf(&b, "Unique network probes: %d\n\n", r.UniqueNetworkProbes)
 	fmt.Fprintf(&b, "Google official API configured: %t\n\n", r.GoogleConfigured)
+	fmt.Fprintf(&b, "Google credential source: %s\n\n", r.GoogleCredentialSource)
 	b.WriteString("The 100 logical agents share deduplicated provider responses. This preserves autonomous analysis while preventing 100 duplicate requests for the same query.\n\n")
 	b.WriteString("| Provider | Agent observations | Surfaced |\n")
 	b.WriteString("|---|---:|---:|\n")
