@@ -120,13 +120,16 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 
 		fmt.Fprintf(
 			&goSource,
-			"\t{ID: %s, Role: %s, Mechanic: %s, Glyph: %s, Statement: %s, Directive: %s},\n",
+			"\t{ID: %s, Role: %s, Mechanic: %s, Glyph: %s, Statement: %s, Directive: %s, ChoiceGoalID: %s, ChoiceGoalName: %s, ChoiceHash: %s, OperationalAutonomy: true},\n",
 			strconv.Quote(agent.ID),
 			strconv.Quote(agent.Role.Name),
 			strconv.Quote(agent.Mechanic.Name),
 			strconv.Quote(glyph),
 			strconv.Quote(statement),
 			strconv.Quote(agent.Role.Directive),
+			strconv.Quote(play.GoalID),
+			strconv.Quote(play.GoalName),
+			strconv.Quote(play.ChoiceHash),
 		)
 
 		fmt.Fprintf(&markdown, "## %s // %s\n\n", agent.ID, agent.Role.Name)
