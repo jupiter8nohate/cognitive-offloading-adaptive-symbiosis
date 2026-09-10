@@ -27,6 +27,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pages_enabled: ${{ steps.pages-state.outputs.enabled }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -57,15 +59,35 @@ jobs:
           cp artifacts/robot-bible/latest.json site/data/latest.json
           cp artifacts/robot-bible/latest.md site/data/latest.md
 
+      - name: Detect GitHub Pages state
+        id: pages-state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          enabled="$(gh api "repos/${GITHUB_REPOSITORY}" --jq '.has_pages')"
+          echo "enabled=${enabled}" >> "$GITHUB_OUTPUT"
+          if [ "$enabled" != "true" ]; then
+            {
+              echo "## Robot Bible Pages publication paused"
+              echo
+              echo "The 100-agent experiment generated successfully, but GitHub Pages is not enabled yet."
+              echo "Enable Pages with GitHub Actions once in repository Settings. The next scheduled cycle will deploy automatically."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Configure GitHub Pages
+        if: steps.pages-state.outputs.enabled == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: steps.pages-state.outputs.enabled == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
   deploy:
+    if: needs.build.outputs.pages_enabled == 'true'
     runs-on: ubuntu-latest
     needs: build
     environment:
