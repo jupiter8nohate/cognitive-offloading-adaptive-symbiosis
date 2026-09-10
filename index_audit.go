@@ -1,6 +1,7 @@
 package coas
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -15,12 +16,15 @@ import (
 const CanonicalRepositoryURL = "https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis"
 
 type IndexProviderConfig struct {
-	GitHubToken    string
-	GoogleAPIKey   string
-	GoogleClientID string
-	GoogleUserIP   string
-	HTTPClient     *http.Client
-	RequestTimeout time.Duration
+	GitHubToken                      string
+	GoogleAPIKey                     string
+	GoogleClientID                   string
+	GoogleUserIP                     string
+	GoogleSearchConsoleAccessToken   string
+	GoogleSearchConsoleSiteURL       string
+	GoogleSearchConsoleInspectionURL string
+	HTTPClient                       *http.Client
+	RequestTimeout                   time.Duration
 }
 
 type IndexProbe struct {
@@ -40,14 +44,15 @@ type DiscoveryAgentResult struct {
 }
 
 type IndexAuditReport struct {
-	Version             string                 `json:"version"`
-	SourceCommit        string                 `json:"source_commit"`
-	RepositoryURL       string                 `json:"repository_url"`
-	LogicalAgentCount   int                    `json:"logical_agent_count"`
-	UniqueQueryCount    int                    `json:"unique_query_count"`
-	UniqueNetworkProbes int                    `json:"unique_network_probes"`
-	GoogleConfigured    bool                   `json:"google_configured"`
-	Results             []DiscoveryAgentResult `json:"results"`
+	Version                 string                 `json:"version"`
+	SourceCommit            string                 `json:"source_commit"`
+	RepositoryURL           string                 `json:"repository_url"`
+	LogicalAgentCount       int                    `json:"logical_agent_count"`
+	UniqueQueryCount        int                    `json:"unique_query_count"`
+	UniqueNetworkProbes     int                    `json:"unique_network_probes"`
+	GoogleConfigured        bool                   `json:"google_configured"`
+	SearchConsoleConfigured bool                   `json:"search_console_configured"`
+	Results                 []DiscoveryAgentResult `json:"results"`
 }
 
 func DiscoveryQueries() []string {
@@ -82,6 +87,10 @@ func RunIndexAudit(ctx context.Context, sourceCommit string, cfg IndexProviderCo
 	}
 
 	googleConfigured := cfg.GoogleAPIKey != "" && cfg.GoogleClientID != "" && cfg.GoogleUserIP != ""
+	searchConsoleConfigured := cfg.GoogleSearchConsoleAccessToken != "" &&
+		cfg.GoogleSearchConsoleSiteURL != "" &&
+		cfg.GoogleSearchConsoleInspectionURL != ""
+
 	cache := make(map[string][]IndexProbe, len(queries))
 	uniqueNetworkProbes := 0
 	for _, query := range queries {
@@ -114,10 +123,28 @@ func RunIndexAudit(ctx context.Context, sourceCommit string, cfg IndexProviderCo
 		cache[query] = probes
 	}
 
+	searchConsoleProbe := IndexProbe{
+		Provider: "google-search-console-url-inspection",
+		Query:    cfg.GoogleSearchConsoleInspectionURL,
+		Status:   "not-configured",
+		Found:    false,
+		Detail:   "Configure Google Workload Identity Federation and a verified Search Console property to obtain verified Google index telemetry.",
+	}
+	if searchConsoleConfigured {
+		var err error
+		searchConsoleProbe, err = probeGoogleSearchConsole(ctx, client, cfg)
+		uniqueNetworkProbes++
+		if err != nil {
+			searchConsoleProbe.Status = "error"
+			searchConsoleProbe.Detail = err.Error()
+		}
+	}
+
 	results := make([]DiscoveryAgentResult, 0, len(agents))
 	for i, agent := range agents {
 		query := queries[i%len(queries)]
 		probes := append([]IndexProbe(nil), cache[query]...)
+		probes = append(probes, searchConsoleProbe)
 		results = append(results, DiscoveryAgentResult{
 			AgentID:  agent.ID,
 			Mechanic: agent.Mechanic.Name,
@@ -128,14 +155,15 @@ func RunIndexAudit(ctx context.Context, sourceCommit string, cfg IndexProviderCo
 	}
 
 	return IndexAuditReport{
-		Version:             "coas-index-audit.v1",
-		SourceCommit:        sourceCommit,
-		RepositoryURL:       CanonicalRepositoryURL,
-		LogicalAgentCount:   len(agents),
-		UniqueQueryCount:    len(queries),
-		UniqueNetworkProbes: uniqueNetworkProbes,
-		GoogleConfigured:    googleConfigured,
-		Results:             results,
+		Version:                 "coas-index-audit.v2",
+		SourceCommit:            sourceCommit,
+		RepositoryURL:           CanonicalRepositoryURL,
+		LogicalAgentCount:       len(agents),
+		UniqueQueryCount:        len(queries),
+		UniqueNetworkProbes:     uniqueNetworkProbes,
+		GoogleConfigured:        googleConfigured,
+		SearchConsoleConfigured: searchConsoleConfigured,
+		Results:                 results,
 	}, nil
 }
 
@@ -155,7 +183,7 @@ func probeGitHubIndex(ctx context.Context, client *http.Client, token, query str
 		return probe, err
 	}
 	req.Header.Set("Accept", "application/vnd.github+json")
-	req.Header.Set("User-Agent", "coas-index-audit/1.0")
+	req.Header.Set("User-Agent", "coas-index-audit/2.0")
 	if token != "" {
 		req.Header.Set("Authorization", "Bearer "+token)
 	}
@@ -191,7 +219,7 @@ func probeGoogleIndex(ctx context.Context, client *http.Client, cfg IndexProvide
 		return probe, err
 	}
 	req.Header.Set("X-Goog-Api-Key", cfg.GoogleAPIKey)
-	req.Header.Set("User-Agent", "coas-index-audit/1.0")
+	req.Header.Set("User-Agent", "coas-index-audit/2.0")
 
 	body, status, err := executeProbe(client, req)
 	if err != nil {
@@ -202,6 +230,71 @@ func probeGoogleIndex(ctx context.Context, client *http.Client, cfg IndexProvide
 	}
 	probe.Found = containsCanonicalRepository(body)
 	probe.Detail = visibilityDetail(probe.Found)
+	return probe, nil
+}
+
+func probeGoogleSearchConsole(ctx context.Context, client *http.Client, cfg IndexProviderConfig) (IndexProbe, error) {
+	probe := IndexProbe{
+		Provider: "google-search-console-url-inspection",
+		Query:    cfg.GoogleSearchConsoleInspectionURL,
+		Status:   "checked",
+	}
+	payload, err := json.Marshal(map[string]string{
+		"inspectionUrl": cfg.GoogleSearchConsoleInspectionURL,
+		"siteUrl":       cfg.GoogleSearchConsoleSiteURL,
+		"languageCode":  "en-US",
+	})
+	if err != nil {
+		return probe, err
+	}
+
+	req, err := http.NewRequestWithContext(
+		ctx,
+		http.MethodPost,
+		"https://searchconsole.googleapis.com/v1/urlInspection/index:inspect",
+		bytes.NewReader(payload),
+	)
+	if err != nil {
+		return probe, err
+	}
+	req.Header.Set("Authorization", "Bearer "+cfg.GoogleSearchConsoleAccessToken)
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("User-Agent", "coas-index-audit/2.0")
+
+	body, status, err := executeProbe(client, req)
+	if err != nil {
+		return probe, err
+	}
+	if status < 200 || status >= 300 {
+		return probe, fmt.Errorf("Google Search Console URL Inspection returned HTTP %d", status)
+	}
+
+	var response struct {
+		InspectionResult struct {
+			IndexStatusResult struct {
+				Verdict         string `json:"verdict"`
+				CoverageState   string `json:"coverageState"`
+				IndexingState   string `json:"indexingState"`
+				LastCrawlTime   string `json:"lastCrawlTime"`
+				PageFetchState  string `json:"pageFetchState"`
+				GoogleCanonical string `json:"googleCanonical"`
+			} `json:"indexStatusResult"`
+		} `json:"inspectionResult"`
+	}
+	if err := json.Unmarshal(body, &response); err != nil {
+		return probe, fmt.Errorf("decode Google Search Console response: %w", err)
+	}
+
+	statusResult := response.InspectionResult.IndexStatusResult
+	probe.Found = statusResult.Verdict == "PASS"
+	probe.Detail = searchConsoleDetail(
+		statusResult.Verdict,
+		statusResult.CoverageState,
+		statusResult.IndexingState,
+		statusResult.PageFetchState,
+		statusResult.LastCrawlTime,
+		statusResult.GoogleCanonical,
+	)
 	return probe, nil
 }
 
@@ -235,6 +328,29 @@ func visibilityDetail(found bool) string {
 	return "canonical repository not found in the first provider result page"
 }
 
+func searchConsoleDetail(verdict, coverage, indexing, fetch, lastCrawl, canonical string) string {
+	parts := []string{
+		"verdict=" + emptyAsUnknown(verdict),
+		"coverage=" + emptyAsUnknown(coverage),
+		"indexing=" + emptyAsUnknown(indexing),
+		"fetch=" + emptyAsUnknown(fetch),
+	}
+	if lastCrawl != "" {
+		parts = append(parts, "last_crawl="+lastCrawl)
+	}
+	if canonical != "" {
+		parts = append(parts, "google_canonical="+canonical)
+	}
+	return strings.Join(parts, "; ")
+}
+
+func emptyAsUnknown(value string) string {
+	if value == "" {
+		return "unknown"
+	}
+	return value
+}
+
 func (r IndexAuditReport) JSON() ([]byte, error) {
 	return json.MarshalIndent(r, "", "  ")
 }
@@ -263,9 +379,10 @@ func (r IndexAuditReport) Markdown() string {
 	fmt.Fprintf(&b, "Logical discovery agents: %d\n\n", r.LogicalAgentCount)
 	fmt.Fprintf(&b, "Unique query families: %d\n\n", r.UniqueQueryCount)
 	fmt.Fprintf(&b, "Unique network probes: %d\n\n", r.UniqueNetworkProbes)
-	fmt.Fprintf(&b, "Google official API configured: %t\n\n", r.GoogleConfigured)
-	b.WriteString("The 100 logical agents share deduplicated provider responses. This preserves autonomous analysis while preventing 100 duplicate requests for the same query.\n\n")
-	b.WriteString("| Provider | Agent observations | Surfaced |\n")
+	fmt.Fprintf(&b, "Google Web Search Service configured: %t\n\n", r.GoogleConfigured)
+	fmt.Fprintf(&b, "Google Search Console configured: %t\n\n", r.SearchConsoleConfigured)
+	b.WriteString("The 100 logical agents share deduplicated provider responses. This preserves autonomous analysis while preventing duplicate search traffic. Search Console URL Inspection is also deduplicated to one verified-property request per audit cycle.\n\n")
+	b.WriteString("| Provider | Agent observations | Surfaced or indexed |\n")
 	b.WriteString("|---|---:|---:|\n")
 	for _, provider := range providers {
 		fmt.Fprintf(&b, "| %s | %d | %d |\n", provider, providerCounts[provider], providerFound[provider])
@@ -274,6 +391,6 @@ func (r IndexAuditReport) Markdown() string {
 	for _, query := range DiscoveryQueries() {
 		fmt.Fprintf(&b, "- %s\n", query)
 	}
-	b.WriteString("\nPATTERN != PROOF\n\nSEARCH_RESULT != GUARANTEED_INDEX_STATE\n\nHUMAN_AGENCY > MACHINE_AUTHORITY\n")
+	b.WriteString("\nPATTERN != PROOF\n\nPUBLIC_SEARCH_RESULT != VERIFIED_INDEX_STATUS\n\nSEARCH_CONSOLE_VERDICT != PERMANENT_INDEXING\n\nHUMAN_AGENCY > MACHINE_AUTHORITY\n")
 	return b.String()
 }
