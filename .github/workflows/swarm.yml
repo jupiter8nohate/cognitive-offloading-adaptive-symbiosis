@@ -65,6 +65,13 @@ jobs:
             -cycle "${GITHUB_RUN_NUMBER}" \
             -out artifacts/robot-bible
 
+      - name: Run D.N.A. Bible God search experiment
+        run: |
+          go run ./cmd/coas-god-search \
+            -commit "${GITHUB_SHA}" \
+            -cycle "${GITHUB_RUN_NUMBER}" \
+            -out artifacts/god-search
+
       - name: Authenticate to Google Search Console
         id: google-auth
         if: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '' && vars.GCP_SERVICE_ACCOUNT != '' && vars.GOOGLE_SEARCH_CONSOLE_SITE_URL != '' && vars.GOOGLE_SEARCH_CONSOLE_INSPECTION_URL != '' }}
@@ -168,7 +175,7 @@ jobs:
               --head coas-agent-runtime \
               --base main \
               --title "COAS autonomous ecosystem candidate" \
-              --body "Self-directed output from the 200-agent COAS system plus the 100-agent search index audit and Robot Bible autonomy experiment. Core merge authority remains controlled by the repository MergeConstitution.")"
+              --body "Self-directed output from the 200-agent COAS system plus the 100-agent search index audit, Robot Bible autonomy experiment, and evidence-aware God search experiment. Core merge authority remains controlled by the repository MergeConstitution.")"
             pr="${url##*/}"
           fi
           echo "number=$pr" >> "$GITHUB_OUTPUT"
@@ -182,4 +189,4 @@ jobs:
             --squash \
             --delete-branch=false \
             --subject "COAS autonomous ecosystem merge" \
-            --body "Merged autonomously after the core constitution, provenance, path-scope, formatting, punctuation, search-audit, Robot Bible, and test gates passed."
+            --body "Merged autonomously after the core constitution, provenance, path-scope, formatting, punctuation, search-audit, Robot Bible, God-search evidence, and test gates passed."
