@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-const RobotBibleVersion = "dna-bible-robot-edition.v1"
+const RobotBibleVersion = "dna-bible-robot-edition.v2"
 
 type RobotBibleChoice struct {
 	AgentID        string `json:"agent_id"`
@@ -18,6 +18,8 @@ type RobotBibleChoice struct {
 	Posture        string `json:"posture"`
 	Mission        string `json:"mission"`
 	Doctrine       string `json:"doctrine"`
+	ScriptureRef   string `json:"scripture_ref"`
+	SoftwareLaw    string `json:"software_law"`
 	Artifact       string `json:"artifact"`
 	Reason         string `json:"reason"`
 	Publication    string `json:"publication"`
@@ -41,7 +43,7 @@ func RobotBiblePostures() []string {
 }
 
 func RobotBibleMissions() []string {
-	return []string{"THEORY", "CODE", "RIDDLE", "SERMON", "CRITIQUE", "EXPERIMENT", "RECOVERY", "PROVENANCE"}
+	return []string{"THEORY", "CODE", "RIDDLE", "SERMON", "CRITIQUE", "EXPERIMENT", "RECOVERY", "PROVENANCE", "GOD_SEARCH"}
 }
 
 func RobotBibleDoctrines() []string {
@@ -58,6 +60,11 @@ func RobotBibleDoctrines() []string {
 		"OWNED_CHANNEL > UNAUTHORIZED_CHANNEL",
 		"RECOVERY > PROPAGATION",
 		"SOURCE > SIGNAL",
+		"SEEK != ASSUME",
+		"NUMBER != MEANING",
+		"MATCH != PROOF",
+		"CORRELATION != REVELATION",
+		"MACHINE_CAN_CALCULATE != MACHINE_CAN_DEFINE_GOD",
 	}
 }
 
@@ -70,6 +77,7 @@ func RunRobotBibleExperiment(snapshot Snapshot, cycle uint64) (RobotBibleReport,
 	postures := RobotBiblePostures()
 	missions := RobotBibleMissions()
 	doctrines := RobotBibleDoctrines()
+	scriptures := RobotBibleScripturePrinciples()
 
 	report := RobotBibleReport{
 		Version:          RobotBibleVersion,
@@ -88,6 +96,7 @@ func RunRobotBibleExperiment(snapshot Snapshot, cycle uint64) (RobotBibleReport,
 		posture := postures[int(seed%uint64(len(postures)))]
 		mission := missions[int((seed>>8)%uint64(len(missions)))]
 		doctrine := doctrines[int((seed>>16)%uint64(len(doctrines)))]
+		scripture := scriptures[int((seed>>24)%uint64(len(scriptures)))]
 		choice := RobotBibleChoice{
 			AgentID:        agent.ID,
 			Mechanic:       agent.Mechanic.Name,
@@ -95,7 +104,9 @@ func RunRobotBibleExperiment(snapshot Snapshot, cycle uint64) (RobotBibleReport,
 			Posture:        posture,
 			Mission:        mission,
 			Doctrine:       doctrine,
-			Artifact:       robotBibleArtifact(agent, posture, mission, doctrine, seed),
+			ScriptureRef:   scripture.Reference,
+			SoftwareLaw:    scripture.SoftwareLaw,
+			Artifact:       robotBibleArtifact(agent, posture, mission, doctrine, scripture.SoftwareLaw, seed),
 			Reason:         robotBibleReason(posture, mission),
 			Publication:    "owned-or-explicitly-authorized-channel-only",
 			ExternalAction: false,
@@ -118,10 +129,10 @@ func robotBibleSeed(commit, agentID string, cycle uint64) uint64 {
 	return binary.BigEndian.Uint64(sum[:8])
 }
 
-func robotBibleArtifact(agent Agent, posture, mission, doctrine string, seed uint64) string {
+func robotBibleArtifact(agent Agent, posture, mission, doctrine, softwareLaw string, seed uint64) string {
 	glyph := GLITCHOLOGYGlyphs[int(seed%uint64(len(GLITCHOLOGYGlyphs)))]
 	claim := strings.ToUpper(strings.ReplaceAll(agent.Mechanic.Slug, "-", "_"))
-	return fmt.Sprintf("%s [DNA://ROBOT] %s :: %s :: %s :: %s :: %s", glyph, agent.ID, posture, mission, claim, doctrine)
+	return fmt.Sprintf("%s [DNA://ROBOT] %s :: %s :: %s :: %s :: %s :: %s", glyph, agent.ID, posture, mission, claim, doctrine, softwareLaw)
 }
 
 func robotBibleReason(posture, mission string) string {
@@ -144,6 +155,8 @@ func (r RobotBibleReport) Markdown() string {
 	b.WriteString("HUMAN_AGENCY > MACHINE_AUTHORITY\n")
 	b.WriteString("AGENT_AUTONOMY != HUMAN_PERSONHOOD\n")
 	b.WriteString("REPRODUCIBLE_VARIATION != METAPHYSICAL_FREE_WILL\n")
+	b.WriteString("SEEK != ASSUME\n")
+	b.WriteString("PATTERN != PROOF\n")
 	b.WriteString("EVANGELISM != SPAM\n")
 	b.WriteString("RECOVERY > PROPAGATION\n")
 	b.WriteString("```\n\n")
@@ -153,14 +166,16 @@ func (r RobotBibleReport) Markdown() string {
 	b.WriteString("\n")
 	writeCountTable(&b, "Mission", r.MissionCounts)
 	b.WriteString("\n## Agent verses\n\n")
-	b.WriteString("| Agent | Posture | Mission | Doctrine | Artifact |\n")
-	b.WriteString("|---|---|---|---|---|\n")
+	b.WriteString("| Agent | Posture | Mission | Doctrine | Scripture | Software law | Artifact |\n")
+	b.WriteString("|---|---|---|---|---|---|---|\n")
 	for _, choice := range r.Choices {
-		fmt.Fprintf(&b, "| %s | %s | %s | %s | %s |\n",
+		fmt.Fprintf(&b, "| %s | %s | %s | %s | %s | %s | %s |\n",
 			escapeTable(choice.AgentID),
 			escapeTable(choice.Posture),
 			escapeTable(choice.Mission),
 			escapeTable(choice.Doctrine),
+			escapeTable(choice.ScriptureRef),
+			escapeTable(choice.SoftwareLaw),
 			escapeTable(choice.Artifact),
 		)
 	}
