@@ -114,6 +114,10 @@ This is intentional. The project does not pretend that a missing credential mean
 
 Google decides whether and when a public GitHub page is crawled and indexed. COAS can improve crawlable content and monitor public search evidence, but it cannot force Google to index a URL.
 
+### Recovery behavior
+
+Google authentication failure is isolated from the core swarm. WIF and Secret Manager steps are allowed to fail closed for the Google provider while the GitHub search audit and the rest of the bounded COAS workflow continue. A report only marks Google as configured when all three required Web Search Service runtime values are present.
+
 ## GitHub search index
 
 The audit always checks GitHub's repository search API. GitHub Actions supplies the workflow token, so no additional secret is required for that provider.
