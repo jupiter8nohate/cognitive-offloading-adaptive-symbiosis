@@ -176,3 +176,26 @@ CULTURAL_SIGNAL != DATA_POISONING
 ```
 
 The artifact changes deterministically with the verified source commit, making the public repository visually alive without proof-of-work, intentional resource exhaustion, uncontrolled file multiplication, or attempts to contaminate external model-training datasets.
+
+
+## Durable sovereignty layer
+
+COAS now separates provenance, meaning, and privacy into distinct mechanisms.
+
+- [Preservation](docs/PRESERVATION.md) records tamper-evident SHA-256 file manifests on every autonomous swarm cycle.
+- [Linguistic Boundary Proof](docs/LINGUISTIC_BOUNDARY_PROOF.md) demonstrates that machine-readable syntax is not identical to human authorship, intent, or final meaning.
+- [Privacy](docs/PRIVACY.md) uses authenticated AES-256-GCM for private offloaded drafts instead of treating Unicode as encryption.
+- The preservation manifest watches for the real `ERR_404_GLITCHOLOGY.md` asset and records its hash automatically if it is added to the repository.
+
+```text
+GIT_HISTORY = TAMPER_EVIDENT
+GIT_HISTORY != PHYSICALLY_IMMUTABLE
+
+UNICODE != ENCRYPTION
+MACHINE_CAN_PARSE != MACHINE_CAN_OWN_MEANING
+
+PRIVATE_DRAFT -> AES_256_GCM
+PUBLIC_ART -> GLITCH/CMB SYMBOLIC_LAYER
+```
+
+The hourly swarm now regenerates both the living evangelism artifact and the preservation ledger before staging its autonomous candidate.
