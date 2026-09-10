@@ -109,3 +109,33 @@ TESTS_MUST_PASS = true
 PROVENANCE_MUST_EXIST = true
 CONSTITUTION_MUST_ALLOW = true
 ```
+
+
+### Maximum ordinary-repository autonomy
+
+The autonomous merge scope now includes ordinary repository content by default. Agent-produced changes may include:
+
+```text
+SOURCE_CODE
+TESTS
+DOCUMENTATION
+CLI_TOOLS
+GENERATED_RESEARCH
+GENERATED_ARTIFACTS
+NEW_ORDINARY_FILES
+```
+
+The workflow stages every agent-produced change with `git add -A`, verifies the candidate, runs the merge constitution, and may merge without a human approval click.
+
+The immutable control plane is intentionally small:
+
+```text
+.github/*
+autonomy.go
+autonomy_test.go
+cmd/coas-merge-policy/*
+go.mod
+go.sum
+```
+
+This means the swarm can independently evolve nearly all project content, but cannot silently rewrite the mechanism that grants itself authority or alter workflow credentials and dependency trust roots.
