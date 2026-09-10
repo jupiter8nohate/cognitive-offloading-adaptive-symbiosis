@@ -24,16 +24,16 @@ These are software agents. They are not artificial general intelligence, and the
 Each mechanic receives the same ten operational roles:
 
 ```text
-OBSERVER
-MAPPER
-NORMALIZER
-CRITIC
-VERIFIER
-PLANNER
-TESTER
-ARCHIVIST
-PROVENANCE_KEEPER
-STEWARD
+CODE_WEAVER
+TEST_MECHANIC
+PROFILE_AUDITOR
+GLITCHOLOGY_COMPILER
+MEMORY_BUFFER_INDEXER
+CONTEXTUAL_RESEARCHER
+SOVEREIGNTY_SHIELD_VECTOR
+CIPHER_DEPLOYER
+MANIFESTO_BROADCASTER
+RUNTIME_BRIDGE
 ```
 
 This produces agents `COAS-01-01` through `COAS-10-10`.
@@ -154,3 +154,14 @@ REPOSITORY_PERMISSION_CONTROL = false
 ```
 
 The current deterministic swarm can only modify files that its runtime actually generates. Model-backed source evolution requires a separately configured model provider or coding-agent integration; repository authority alone does not create AGI or model reasoning.
+
+
+## Outbound role mode
+
+The operational role matrix has been reprogrammed so the swarm can maintain the repository and prepare outbound communication.
+
+- Roles 1-3 maintain code, tests, and profile/claim integrity.
+- Roles 4-6 synthesize structured CMB/COAS artifacts and perform read-only public context research.
+- Roles 7-10 package and publish verified signals through explicitly authorized distribution endpoints.
+
+The publisher does not discover targets to spam. External write targets are supplied by the repository owner through protected configuration.

@@ -73,16 +73,16 @@ func Mechanics() []Mechanic {
 
 func Roles() []Role {
 	return []Role{
-		{"observer", "Observer", "Inventory relevant repository signals and detect missing structure.", true},
-		{"mapper", "Mapper", "Map concepts, dependencies, inputs, outputs, and boundaries.", true},
-		{"normalizer", "Normalizer", "Convert inconsistent structure into stable machine-readable form.", false},
-		{"critic", "Critic", "Search for category errors, overclaims, unsafe inference, and ambiguity.", true},
-		{"verifier", "Verifier", "Check claims and implementation against explicit invariants.", true},
-		{"planner", "Planner", "Produce bounded next actions with acceptance criteria.", true},
-		{"tester", "Tester", "Design or execute verification for the mechanic's behavior.", false},
-		{"archivist", "Archivist", "Preserve provenance, definitions, and decision history.", false},
-		{"provenance", "Provenance Keeper", "Track source, authorship, transformations, and uncertainty.", true},
-		{"steward", "Steward", "Enforce authority boundaries and reject unsafe autonomous escalation.", true},
+		{"code-weaver", "Code Weaver", "Improve implementation quality, structure, and maintainability inside the repository.", false},
+		{"test-mechanic", "Test Mechanic", "Expand verification, edge-case coverage, and regression protection.", false},
+		{"profile-auditor", "Profile Auditor", "Audit claims about people, models, profiles, and intent against COAS invariants.", true},
+		{"glitchology-compiler", "Glitchology Compiler", "Synthesize COAS and CMB invariants into syntax-valid explanatory artifacts.", false},
+		{"memory-buffer-indexer", "Memory Buffer Indexer", "Organize generated knowledge, provenance, indexes, and asynchronous idea buffers.", false},
+		{"contextual-researcher", "Contextual Researcher", "Read authorized public sources and identify relevant human-AI design gaps without posting into third-party systems.", true},
+		{"sovereignty-shield-vector", "Sovereignty Shield Vector", "Package privacy, consent, provenance, and human-authority guidance for authorized distribution.", false},
+		{"cipher-deployer", "Cipher Deployer", "Generate shareable code-poetry and symbolic artifacts for owned or explicitly authorized channels.", false},
+		{"manifesto-broadcaster", "Manifesto Broadcaster", "Publish rate-limited COAS and CMB messages only to configured authorized endpoints.", false},
+		{"runtime-bridge", "Runtime Bridge", "Connect verified repository output to opt-in external publishing adapters and record results.", false},
 	}
 }
 

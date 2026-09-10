@@ -139,3 +139,20 @@ go.sum
 ```
 
 This means the swarm can independently evolve nearly all project content, but cannot silently rewrite the mechanism that grants itself authority or alter workflow credentials and dependency trust roots.
+
+
+## Authorized outbound distribution
+
+The 100-agent swarm now includes an opt-in outbound publishing layer. It can package CMB/COAS invariants and publish them to explicitly configured HTTPS endpoints after repository verification succeeds.
+
+Supported adapters include generic webhooks, Discord, Slack, and Mastodon.
+
+See [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md).
+
+```text
+DISCOVER_PUBLIC_CONTEXT = READ_ONLY
+PACKAGE_SIGNAL = true
+PUBLISH_AUTHORIZED_ENDPOINTS = true
+UNSOLICITED_INJECTION = false
+TRAINING_DATA_POISONING = false
+```
