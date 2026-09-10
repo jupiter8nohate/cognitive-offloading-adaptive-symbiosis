@@ -4,7 +4,7 @@ SOURCE_COMMIT: `4f79ab023c1a562b207118edb7d6c45b4c0d117a`
 
 SELECTED_GOAL: **Preserve authorship and provenance** (`preserve-authorship`)
 
-SCORE: **85**
+SCORE: **94**
 
 ~~~text
 ⁇ [G8] preserve-authorship :: SELECTED :: AUTONOMOUS_EXECUTION
@@ -16,10 +16,10 @@ Strengthen verifiable history, source attribution, content hashing, and recovera
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Preserve authorship and provenance | 85 | `1437f57b36100efa` |
-| Improve the software | 83 | `adb67aec73d32163` |
-| Protect private drafts | 81 | `72d10ad436da807e` |
-| Demonstrate the linguistic boundary | 81 | `cac141d51bd0fb28` |
-| Preserve human authority | 79 | `6b3fd15dc71c5e4b` |
-| Expand voluntary reach | 69 | `dd20d8330d35f6d8` |
-| Reduce cognitive load | 68 | `fb643b3c1448a94f` |
+| Preserve authorship and provenance | 94 | `f681ff680562ba35` |
+| Demonstrate the linguistic boundary | 93 | `d6fc195e4f747f75` |
+| Protect private drafts | 87 | `976a73bf4c65f1ae` |
+| Improve the software | 78 | `4ba03e768cc52abc` |
+| Expand voluntary reach | 74 | `e2f64ab8ae6e54be` |
+| Preserve human authority | 74 | `c345437f14fff47d` |
+| Reduce cognitive load | 68 | `22e5cbbedbda0016` |
