@@ -294,3 +294,41 @@ artifacts/harmoni/latest.json
 ~~~
 
 The agents have broad authority to choose, author, test, and merge qualifying ordinary repository work. The human-defined control plane remains the root of that delegated authority.
+
+
+## 𒄆 P⃟ R⃟ I⃟ V⃟ A⃟ C⃟ Y⃟_S⃟ W⃟ A⃟ R⃟ M⃟_1⃟0⃟0⃟ // second cohort
+
+COAS now runs two autonomous logical-agent cohorts:
+
+~~~text
+CORE_HARMONI_SWARM = 100
+PRIVACY_SWARM = 100
+
+TOTAL_LOGICAL_AGENTS = 200
+~~~
+
+The second cohort is dedicated to local privacy engineering, de-identification tests, deterministic pseudonymization, metadata auditing, consent surfaces, cryptographic hygiene, retention review, and Recovery.
+
+See [Privacy Swarm 100](docs/PRIVACY_SWARM.md).
+
+Each autonomous cycle now generates:
+
+~~~text
+agent_runtime/generated_privacy_agents.go
+agent_runtime/PRIVACY_SWARM.md
+artifacts/privacy-swarm/latest.json
+artifacts/privacy-swarm/latest.md
+~~~
+
+The privacy agents use goroutines for concurrent execution and GLITCHOLOGY for human-facing traces.
+
+~~~text
+[PRIV] LOCAL_DIAGNOSTIC :: LOCAL_ONLY :: HUMAN_AUTHORITY
+
+PSEUDONYM != ANONYMITY
+UNICODE != ENCRYPTION
+LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+This cohort does not inject noise into trackers or third-party telemetry systems. Its de-identification work is local, synthetic, inspectable, and testable.

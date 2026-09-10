@@ -47,9 +47,14 @@ jobs:
             git checkout -b coas-agent-runtime origin/main
           fi
 
-      - name: Run 100-agent swarm
+      - name: Run 100-agent core swarm
         run: |
           go run ./cmd/coas-swarm -root . -out artifacts/swarm -commit "${GITHUB_SHA}"
+
+      - name: Run 100-agent privacy swarm
+        run: |
+          go run ./cmd/coas-privacy-swarm -root . -out artifacts/privacy-swarm -commit "${GITHUB_SHA}"
+          gofmt -w agent_runtime/generated_privacy_agents.go
 
       - name: Let the agents author their own Go runtime
         run: |
@@ -99,7 +104,7 @@ jobs:
               --head coas-agent-runtime \
               --base main \
               --title "COAS autonomous swarm candidate" \
-              --body "Self-directed output from the 100-agent COAS swarm. Merge is controlled by the repository MergeConstitution.")"
+              --body "Self-directed output from the 200-agent COAS system. Merge is controlled by the repository MergeConstitution.")"
             pr="${url##*/}"
           fi
           echo "number=$pr" >> "$GITHUB_OUTPUT"
@@ -113,4 +118,4 @@ jobs:
             --squash \
             --delete-branch=false \
             --subject "COAS autonomous swarm merge" \
-            --body "Merged autonomously after the 100-agent constitution, provenance, path-scope, formatting, and test gates passed."
+            --body "Merged autonomously after the core constitution, provenance, path-scope, formatting, and test gates passed."
