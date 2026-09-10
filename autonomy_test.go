@@ -18,34 +18,52 @@ func validMergeReport() SwarmReport {
 	}
 }
 
-func TestDecideMergeAllowsVerifiedSwarmArtifacts(t *testing.T) {
+func TestDecideMergeAllowsOrdinaryRepositoryChanges(t *testing.T) {
 	decision := DecideMerge(
 		validMergeReport(),
-		[]string{"artifacts/swarm/latest.json", "artifacts/swarm/latest.md"},
+		[]string{
+			"swarm.go",
+			"swarm_test.go",
+			"README.md",
+			"docs/generated/research.md",
+			"cmd/new-agent-tool/main.go",
+			"artifacts/swarm/latest.json",
+		},
 		true,
 		DefaultMergeConstitution(),
 	)
 	if !decision.Allow {
-		t.Fatalf("DecideMerge() denied valid candidate: %v", decision.Reasons)
+		t.Fatalf("DecideMerge() denied ordinary repository changes: %v", decision.Reasons)
 	}
 }
 
-func TestDecideMergeRejectsSourceCodeChanges(t *testing.T) {
-	decision := DecideMerge(
-		validMergeReport(),
-		[]string{"swarm.go"},
-		true,
-		DefaultMergeConstitution(),
-	)
-	if decision.Allow {
-		t.Fatal("DecideMerge() allowed source code mutation outside autonomous scope")
+func TestDecideMergeRejectsControlPlaneChanges(t *testing.T) {
+	protected := []string{
+		".github/workflows/swarm.yml",
+		"autonomy.go",
+		"autonomy_test.go",
+		"cmd/coas-merge-policy/main.go",
+		"go.mod",
+	}
+	for _, path := range protected {
+		t.Run(path, func(t *testing.T) {
+			decision := DecideMerge(
+				validMergeReport(),
+				[]string{path},
+				true,
+				DefaultMergeConstitution(),
+			)
+			if decision.Allow {
+				t.Fatalf("DecideMerge() allowed immutable control-plane change: %s", path)
+			}
+		})
 	}
 }
 
 func TestDecideMergeRejectsFailedChecks(t *testing.T) {
 	decision := DecideMerge(
 		validMergeReport(),
-		[]string{"artifacts/swarm/latest.json"},
+		[]string{"swarm.go"},
 		false,
 		DefaultMergeConstitution(),
 	)
@@ -61,7 +79,7 @@ func TestDecideMergeRejectsIncompleteSwarm(t *testing.T) {
 
 	decision := DecideMerge(
 		report,
-		[]string{"artifacts/swarm/latest.json"},
+		[]string{"README.md"},
 		true,
 		DefaultMergeConstitution(),
 	)
