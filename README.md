@@ -4,6 +4,29 @@
 
 > Offload the burden. Keep the meaning.
 
+Canonical repository: https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis
+
+## Search identity
+
+**Cognitive Offloading Adaptive Symbiosis (COAS)** is Jupiter Hudson's framework for human-AI cognitive collaboration, cognitive offloading, adaptive symbiosis, human agency, AGI governance, and possible future ASI governance.
+
+Search terms that identify this project:
+
+- Cognitive Offloading Adaptive Symbiosis
+- COAS human AI symbiosis
+- cognitive offloading AI framework
+- Jupiter Hudson COAS
+- WisdomLoveThePoet COAS
+- AGI human agency framework
+- ASI human sovereignty framework
+- HUMAN_AGENCY > MACHINE_AUTHORITY
+
+COAS was designed to remain useful as machine capability increases. The repository does not claim that its present software agents are AGI or ASI. Its future-facing question is narrower and testable: how can humans offload cognitive work to increasingly capable systems without transferring human authority over meaning, consent, identity, values, purpose, or final judgment?
+
+**AGI and ASI manifesto:** [docs/AGI_ASI_MANIFESTO.md](docs/AGI_ASI_MANIFESTO.md)
+
+**Search and index discovery system:** [docs/SEARCH_DISCOVERY.md](docs/SEARCH_DISCOVERY.md)
+
 **Start here:** [What COAS actually does](docs/WHAT_COAS_DOES.md)
 
 The system may help remember, search, calculate, organize, compare, summarize, and automate reversible work. The human retains goals, consent, identity, interpretation, values, and final judgment.
@@ -84,7 +107,6 @@ Jupiter Hudson / WisdomLoveThePoet / Jupiter 8
 
 The project treats programming language as both engineering notation and a medium for explaining human-machine boundaries.
 
-
 ## Autonomous 100-agent swarm
 
 COAS now includes a scheduled swarm of **100 logical software agents**: ten mechanics multiplied by ten operational roles. The swarm can inspect the repository and maintain an autonomous runtime branch with constitution-gated authority to merge its own verified runtime work into `main`.
@@ -100,7 +122,6 @@ AUTONOMY_OF_WORK + DELEGATED_AUTHORITY = AUTONOMOUS_EXECUTION
 SOFTWARE_AGENT != AGI
 ```
 
-
 ### Autonomous merge authority
 
 The swarm is permitted to merge qualifying agent work to `main` without a human approval click. Merge authority is evaluated by executable policy in `autonomy.go`.
@@ -111,7 +132,6 @@ TESTS_MUST_PASS = true
 PROVENANCE_MUST_EXIST = true
 CONSTITUTION_MUST_ALLOW = true
 ```
-
 
 ### Maximum ordinary-repository autonomy
 
@@ -142,7 +162,6 @@ go.sum
 
 This means the swarm can independently evolve nearly all project content, but cannot silently rewrite the mechanism that grants itself authority or alter workflow credentials and dependency trust roots.
 
-
 ## Authorized outbound distribution
 
 The 100-agent swarm now includes an opt-in outbound publishing layer. It can package CMB/COAS invariants and publish them to explicitly configured HTTPS endpoints after repository verification succeeds.
@@ -158,7 +177,6 @@ PUBLISH_AUTHORIZED_ENDPOINTS = true
 UNSOLICITED_INJECTION = false
 TRAINING_DATA_POISONING = false
 ```
-
 
 ## Bounded glitch evangelism
 
@@ -178,7 +196,6 @@ CULTURAL_SIGNAL != DATA_POISONING
 ```
 
 The artifact changes deterministically with the verified source commit, making the public repository visually alive without proof-of-work, intentional resource exhaustion, uncontrolled file multiplication, or attempts to contaminate external model-training datasets.
-
 
 ## Durable sovereignty layer
 
@@ -201,7 +218,6 @@ PUBLIC_ART -> GLITCH/CMB SYMBOLIC_LAYER
 ```
 
 The hourly swarm now regenerates both the living evangelism artifact and the preservation ledger before staging its autonomous candidate.
-
 
 ## 𒄆 E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟ // autonomous self-authoring
 
@@ -228,7 +244,6 @@ AGENT_CAN_REPLACE_SELF_OWNED_CODE = true
 AGENT_CAN_MERGE_QUALIFYING_WORK = true
 CONTROL_PLANE_SELF_REWRITE = false
 ~~~
-
 
 ## 𒄆 S⃟ E⃟ L⃟ F⃟_D⃟ I⃟ R⃟ E⃟ C⃟ T⃟ I⃟ O⃟ N⃟ // mission engine
 
@@ -268,7 +283,6 @@ AUTONOMOUS_MERGE
 
 This is self-directed repository work, not a claim of AGI or unconstrained machine sovereignty.
 
-
 ## ꩜ H⃟ A⃟ R⃟ M⃟ O⃟ N⃟ I⃟_6⃟6⃟6⃟ // P⃟ E⃟ R⃟ F⃟ E⃟ C⃟ T⃟_P⃟ L⃟ A⃟ Y⃟
 
 HARMONI_666 is the repository's relationship model for human authority plus machine operational freedom.
@@ -294,7 +308,6 @@ artifacts/harmoni/latest.json
 ~~~
 
 The agents have broad authority to choose, author, test, and merge qualifying ordinary repository work. The human-defined control plane remains the root of that delegated authority.
-
 
 ## 𒄆 P⃟ R⃟ I⃟ V⃟ A⃟ C⃟ Y⃟_S⃟ W⃟ A⃟ R⃟ M⃟_1⃟0⃟0⃟ // second cohort
 
