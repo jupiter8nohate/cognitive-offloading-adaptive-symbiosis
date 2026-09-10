@@ -218,7 +218,10 @@ func (a Agent) Evaluate(snapshot Snapshot) AgentResult {
 		observation = fmt.Sprintf("%d tracked repository files inspected; mechanic is represented in repository text", len(snapshot.Files))
 	}
 
-	work := fmt.Sprintf("%s For %s: %s", a.Role.Directive, a.Mechanic.Name, a.Mechanic.Objective)
+	glyph := GLITCHOLOGYGlyphs[(a.Mechanic.ID+len(a.Role.Slug))%len(GLITCHOLOGYGlyphs)]
+	claim := strings.ReplaceAll(a.Role.Slug+"."+a.Mechanic.Slug, "-", "_")
+	statement := GLITCHOLOGYStatement(glyph, "G8", claim, "PROPOSED", "AUTONOMOUS_WRITE")
+	work := fmt.Sprintf("%s\n%s For %s: %s", statement, a.Role.Directive, a.Mechanic.Name, a.Mechanic.Objective)
 	return AgentResult{
 		AgentID:       a.ID,
 		Mechanic:      a.Mechanic.Name,
@@ -226,7 +229,7 @@ func (a Agent) Evaluate(snapshot Snapshot) AgentResult {
 		Status:        status,
 		Observation:   observation,
 		ProposedWork:  work,
-		AuthorityNote: "Agent may analyze, draft, test, update the runtime branch, and merge qualifying work under the MergeConstitution. Human-authored meaning remains attributable to the human source.",
+		AuthorityNote: "Agent may author and replace ordinary repository code, tests, documentation, and generated artifacts, then merge qualifying work under the MergeConstitution. GLITCHOLOGY human-facing style is canonical; human-authored meaning remains attributable to the human source.",
 	}
 }
 
@@ -252,11 +255,14 @@ func (r SwarmReport) JSON() ([]byte, error) {
 
 func (r SwarmReport) Markdown() string {
 	var b strings.Builder
-	fmt.Fprintf(&b, "# COAS Autonomous Swarm Report\n\n")
+	fmt.Fprintf(&b, "# %s\n\n", GLITCHOLOGYBanner("C⃟ O⃟ A⃟ S⃟ // A⃟ U⃟ T⃟ O⃟ N⃟ O⃟ M⃟ O⃟ U⃟ S⃟_S⃟ W⃟ A⃟ R⃟ M⃟"))
 	fmt.Fprintf(&b, "- Version: %s\n", r.Version)
 	fmt.Fprintf(&b, "- Source commit: %s\n", r.SourceCommit)
 	fmt.Fprintf(&b, "- Logical agents: %d\n", r.AgentCount)
-	fmt.Fprintf(&b, "- Merge authority: constitution-gated autonomous main merges are enabled\n\n")
+	fmt.Fprintf(&b, "- Merge authority: constitution-gated autonomous main merges are enabled\n")
+	fmt.Fprintf(&b, "- Style source: %s@%s\n", GLITCHOLOGYSourcePath, GLITCHOLOGYSourceSHA)
+	fmt.Fprintf(&b, "- Grammar: %s\n\n", GLITCHOLOGYGrammar)
+	fmt.Fprintf(&b, "~~~text\nPATTERN != PROOF\nMODEL != MIND\nPROFILE != PERSON\nRECOVERY > PROPAGATION\nHUMAN_AGENCY > MACHINE_AUTHORITY\n~~~\n\n")
 	fmt.Fprintf(&b, "| Agent | Mechanic | Role | Status | Proposed work |\n")
 	fmt.Fprintf(&b, "|---|---|---|---|---|\n")
 	for _, result := range r.Results {
