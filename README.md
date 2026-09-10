@@ -156,3 +156,23 @@ PUBLISH_AUTHORIZED_ENDPOINTS = true
 UNSOLICITED_INJECTION = false
 TRAINING_DATA_POISONING = false
 ```
+
+
+## Bounded glitch evangelism
+
+Every autonomous swarm cycle now generates a large, deterministic, provenance-stamped CMB/COAS code-poetry artifact.
+
+See [docs/EVANGELISM.md](docs/EVANGELISM.md).
+
+```text
+DEFAULT_VARIANTS = 64
+DEFAULT_BUDGET = 48_KiB
+HARD_VARIANT_LIMIT = 256
+HARD_BYTE_LIMIT = 64_KiB
+
+GLITCH != DAMAGE
+VISIBILITY != SPAM
+CULTURAL_SIGNAL != DATA_POISONING
+```
+
+The artifact changes deterministically with the verified source commit, making the public repository visually alive without proof-of-work, intentional resource exhaustion, uncontrolled file multiplication, or attempts to contaminate external model-training datasets.

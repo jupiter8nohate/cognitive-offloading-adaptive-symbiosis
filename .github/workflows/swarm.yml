@@ -51,6 +51,10 @@ jobs:
         run: |
           go run ./cmd/coas-swarm -root . -out artifacts/swarm -commit "${GITHUB_SHA}"
 
+      - name: Generate bounded glitch evangelism artifact
+        run: |
+          go run ./cmd/coas-evangelism             -commit "${GITHUB_SHA}"             -out artifacts/evangelism/latest.md             -receipt artifacts/evangelism/latest.json
+
       - name: Commit every agent-produced candidate change
         id: commit
         run: |
