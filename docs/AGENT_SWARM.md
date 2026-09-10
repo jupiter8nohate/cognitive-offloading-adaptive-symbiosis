@@ -42,7 +42,7 @@ This produces agents `COAS-01-01` through `COAS-10-10`.
 
 The swarm is scheduled by GitHub Actions. It can run without the author's presence, inspect the repository, generate a deterministic report, and update the dedicated `coas-agent-runtime` branch.
 
-The runtime is autonomous in labor, not sovereign in authority.
+The runtime has autonomous repository authority for constitution-qualified work.
 
 ```text
 AGENT_CAN_ANALYZE = true
@@ -50,21 +50,21 @@ AGENT_CAN_DRAFT = true
 AGENT_CAN_TEST = true
 AGENT_CAN_UPDATE_RUNTIME_BRANCH = true
 
-AGENT_CAN_MERGE_MAIN = false
+AGENT_CAN_MERGE_MAIN = true
 AGENT_CAN_REDEFINE_HUMAN_MEANING = false
 AGENT_CAN_INFER_PRIVATE_MENTAL_STATE = false
 ```
 
-The runtime branch can open or update a pull request. Main remains protected by the human authority boundary.
+The runtime branch can open a pull request and merge it to main when the MergeConstitution passes. The decision is made by the swarm workflow rather than waiting for a human click.
 
 ## Why this boundary matters
 
-COAS is about cognitive offloading. Giving the automation irreversible authority would contradict the repository's own thesis.
+COAS is about cognitive offloading. Autonomy is treated as delegated repository authority rather than unlimited authority. A merge remains attributable, testable, reviewable, and revertible.
 
 ```text
 OFFLOAD != SURRENDER
-AUTONOMY_OF_WORK != AUTONOMY_OF_AUTHORITY
-CAPABILITY != AUTHORITY
+AUTONOMY_OF_WORK + DELEGATED_AUTHORITY = MACHINE_EXECUTION
+DELEGATED_AUTHORITY != UNBOUNDED_AUTHORITY
 ```
 
 ## Precision changes to the original concepts
@@ -91,3 +91,24 @@ MODEL_OUTPUT != TRUTH
 PREDICTION != INTENT
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
+
+
+## Merge Constitution
+
+All 100 agents now carry merge capability. The swarm may merge its own candidate to `main` without waiting for the repository owner when all of these conditions are true:
+
+1. All 100 registered agents produced unique results.
+2. The source commit is recorded for provenance.
+3. Formatting and the complete Go test suite pass.
+4. Every changed path is within the autonomous merge scope.
+5. The merge-policy program returns `ALLOW`.
+
+The first autonomous scope is:
+
+```text
+artifacts/swarm/*
+```
+
+This gives the agents real merge authority while preventing a runtime report from silently rewriting its own constitution, workflows, security model, or source code.
+
+The swarm can propose broader changes. Expanding autonomous write scope requires changing the versioned constitution in this repository.
