@@ -20,10 +20,11 @@ func main() {
 	defer cancel()
 
 	report, err := coas.RunIndexAudit(ctx, *commit, coas.IndexProviderConfig{
-		GitHubToken:    os.Getenv("GITHUB_TOKEN"),
-		GoogleAPIKey:   os.Getenv("GOOGLE_WEB_SEARCH_API_KEY"),
-		GoogleClientID: os.Getenv("GOOGLE_WEB_SEARCH_CLIENT_ID"),
-		GoogleUserIP:   os.Getenv("GOOGLE_WEB_SEARCH_USER_IP"),
+		GitHubToken:            os.Getenv("GITHUB_TOKEN"),
+		GoogleAPIKey:           os.Getenv("GOOGLE_WEB_SEARCH_API_KEY"),
+		GoogleClientID:         os.Getenv("GOOGLE_WEB_SEARCH_CLIENT_ID"),
+		GoogleUserIP:           os.Getenv("GOOGLE_WEB_SEARCH_USER_IP"),
+		GoogleCredentialSource: os.Getenv("COAS_GOOGLE_CREDENTIAL_SOURCE"),
 	})
 	if err != nil {
 		fatal(err)
