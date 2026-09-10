@@ -17,12 +17,22 @@ func main() {
 	flag.Parse()
 
 	manifest, err := coas.BuildPreservationManifest(*root, *commit, []string{"ERR_404_GLITCHOLOGY.md"})
-	if err != nil { log.Fatal(err) }
+	if err != nil {
+		log.Fatal(err)
+	}
 	for _, path := range []string{*out, *markdown} {
-		if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil { log.Fatal(err) }
+		if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+			log.Fatal(err)
+		}
 	}
 	data, err := manifest.JSON()
-	if err != nil { log.Fatal(err) }
-	if err := os.WriteFile(*out, append(data, '\n'), 0o644); err != nil { log.Fatal(err) }
-	if err := os.WriteFile(*markdown, []byte(manifest.Markdown()), 0o644); err != nil { log.Fatal(err) }
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := os.WriteFile(*out, append(data, '\n'), 0o644); err != nil {
+		log.Fatal(err)
+	}
+	if err := os.WriteFile(*markdown, []byte(manifest.Markdown()), 0o644); err != nil {
+		log.Fatal(err)
+	}
 }
