@@ -4,6 +4,8 @@
 
 > Offload the burden. Keep the meaning.
 
+**Start here:** [What COAS actually does](docs/WHAT_COAS_DOES.md)
+
 The system may help remember, search, calculate, organize, compare, summarize, and automate reversible work. The human retains goals, consent, identity, interpretation, values, and final judgment.
 
 ## Core invariants
@@ -226,3 +228,42 @@ AGENT_CAN_REPLACE_SELF_OWNED_CODE = true
 AGENT_CAN_MERGE_QUALIFYING_WORK = true
 CONTROL_PLANE_SELF_REWRITE = false
 ~~~
+
+
+## 𒄆 S⃟ E⃟ L⃟ F⃟_D⃟ I⃟ R⃟ E⃟ C⃟ T⃟ I⃟ O⃟ N⃟ // mission engine
+
+The repository now carries the project explanation twice by design:
+
+- [docs/WHAT_COAS_DOES.md](docs/WHAT_COAS_DOES.md) is the public human-readable explanation.
+- `mission.go` is the machine-readable mission contract used by autonomous agents.
+
+Each swarm cycle scores the mission goals against the current repository position and records its selected next move in:
+
+~~~text
+agent_runtime/NEXT_MOVE.md
+artifacts/strategy/latest.json
+~~~
+
+The selected goal is also embedded in the generated Go runtime and its self-authoring receipt.
+
+~~~text
+POSITION
+↓
+MISSION_GOALS
+↓
+SCORE_CURRENT_GAPS
+↓
+SELECT_NEXT_MOVE
+↓
+AUTHOR_RUNTIME
+↓
+FORMAT
+↓
+TEST
+↓
+CONSTITUTION_CHECK
+↓
+AUTONOMOUS_MERGE
+~~~
+
+This is self-directed repository work, not a claim of AGI or unconstrained machine sovereignty.
