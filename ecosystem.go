@@ -16,10 +16,10 @@ type EcosystemAction string
 
 const (
 	ActionInjectGlitchLocal   EcosystemAction = "INJECT_GLITCH_LOCAL"
-	ActionMutateSelfRuntime  EcosystemAction = "MUTATE_SELF_RUNTIME"
-	ActionHibernate          EcosystemAction = "HIBERNATE"
+	ActionMutateSelfRuntime   EcosystemAction = "MUTATE_SELF_RUNTIME"
+	ActionHibernate           EcosystemAction = "HIBERNATE"
 	ActionForkEphemeralWorker EcosystemAction = "FORK_EPHEMERAL_WORKER"
-	ActionHarmoni666         EcosystemAction = "HARMONI_666"
+	ActionHarmoni666          EcosystemAction = "HARMONI_666"
 )
 
 type EcosystemConfig struct {
@@ -29,14 +29,14 @@ type EcosystemConfig struct {
 }
 
 type AutonomousNodeState struct {
-	ID            string          `json:"id"`
-	Cohort        string          `json:"cohort"`
-	Role          string          `json:"role"`
-	Mechanic      string          `json:"mechanic"`
-	Energy        int             `json:"energy"`
-	Generation    int             `json:"generation"`
-	LastAction    EcosystemAction `json:"last_action"`
-	Signature     string          `json:"signature"`
+	ID         string          `json:"id"`
+	Cohort     string          `json:"cohort"`
+	Role       string          `json:"role"`
+	Mechanic   string          `json:"mechanic"`
+	Energy     int             `json:"energy"`
+	Generation int             `json:"generation"`
+	LastAction EcosystemAction `json:"last_action"`
+	Signature  string          `json:"signature"`
 }
 
 type EcosystemState struct {
@@ -48,35 +48,35 @@ type EcosystemState struct {
 }
 
 type EcosystemDecision struct {
-	Cycle                 int             `json:"cycle"`
-	AgentID               string          `json:"agent_id"`
-	Cohort                string          `json:"cohort"`
-	EnergyBefore          int             `json:"energy_before"`
-	EnergyAfter           int             `json:"energy_after"`
-	SystemPressure        int             `json:"system_pressure"`
-	GlobalPressure        int             `json:"global_pressure"`
-	HarmoniRecommended    bool            `json:"harmoni_recommended"`
-	Action                EcosystemAction `json:"action"`
-	Reason                string          `json:"reason"`
-	Signature             string          `json:"signature"`
-	GlitchTrace           string          `json:"glitch_trace"`
-	SpawnedWorkerID       string          `json:"spawned_worker_id,omitempty"`
-	Executed              bool            `json:"executed"`
-	Outcome               string          `json:"outcome"`
+	Cycle              int             `json:"cycle"`
+	AgentID            string          `json:"agent_id"`
+	Cohort             string          `json:"cohort"`
+	EnergyBefore       int             `json:"energy_before"`
+	EnergyAfter        int             `json:"energy_after"`
+	SystemPressure     int             `json:"system_pressure"`
+	GlobalPressure     int             `json:"global_pressure"`
+	HarmoniRecommended bool            `json:"harmoni_recommended"`
+	Action             EcosystemAction `json:"action"`
+	Reason             string          `json:"reason"`
+	Signature          string          `json:"signature"`
+	GlitchTrace        string          `json:"glitch_trace"`
+	SpawnedWorkerID    string          `json:"spawned_worker_id,omitempty"`
+	Executed           bool            `json:"executed"`
+	Outcome            string          `json:"outcome"`
 }
 
 type EcosystemRun struct {
-	Version             string              `json:"version"`
-	SourceCommit        string              `json:"source_commit"`
-	DecisionSeed        string              `json:"decision_seed"`
-	BaseAgentCount      int                 `json:"base_agent_count"`
-	Cycles              int                 `json:"cycles"`
-	EphemeralWorkers    int                 `json:"ephemeral_workers"`
-	HarmoniCycles       int                 `json:"harmoni_cycles"`
-	ExternalWrites      bool                `json:"external_writes"`
-	UnboundedReplication bool               `json:"unbounded_replication"`
-	Decisions           []EcosystemDecision `json:"decisions"`
-	State               EcosystemState      `json:"state"`
+	Version              string              `json:"version"`
+	SourceCommit         string              `json:"source_commit"`
+	DecisionSeed         string              `json:"decision_seed"`
+	BaseAgentCount       int                 `json:"base_agent_count"`
+	Cycles               int                 `json:"cycles"`
+	EphemeralWorkers     int                 `json:"ephemeral_workers"`
+	HarmoniCycles        int                 `json:"harmoni_cycles"`
+	ExternalWrites       bool                `json:"external_writes"`
+	UnboundedReplication bool                `json:"unbounded_replication"`
+	Decisions            []EcosystemDecision `json:"decisions"`
+	State                EcosystemState      `json:"state"`
 }
 
 func DefaultEcosystemConfig() EcosystemConfig {
