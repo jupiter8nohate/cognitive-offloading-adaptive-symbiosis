@@ -15,12 +15,12 @@ import (
 const CanonicalRepositoryURL = "https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis"
 
 type IndexProviderConfig struct {
-	GitHubToken       string
-	GoogleAPIKey      string
-	GoogleClientID    string
-	GoogleUserIP      string
-	HTTPClient        *http.Client
-	RequestTimeout    time.Duration
+	GitHubToken    string
+	GoogleAPIKey   string
+	GoogleClientID string
+	GoogleUserIP   string
+	HTTPClient     *http.Client
+	RequestTimeout time.Duration
 }
 
 type IndexProbe struct {
@@ -40,14 +40,14 @@ type DiscoveryAgentResult struct {
 }
 
 type IndexAuditReport struct {
-	Version              string                 `json:"version"`
-	SourceCommit         string                 `json:"source_commit"`
-	RepositoryURL        string                 `json:"repository_url"`
-	LogicalAgentCount    int                    `json:"logical_agent_count"`
-	UniqueQueryCount     int                    `json:"unique_query_count"`
-	UniqueNetworkProbes  int                    `json:"unique_network_probes"`
-	GoogleConfigured     bool                   `json:"google_configured"`
-	Results              []DiscoveryAgentResult `json:"results"`
+	Version             string                 `json:"version"`
+	SourceCommit        string                 `json:"source_commit"`
+	RepositoryURL       string                 `json:"repository_url"`
+	LogicalAgentCount   int                    `json:"logical_agent_count"`
+	UniqueQueryCount    int                    `json:"unique_query_count"`
+	UniqueNetworkProbes int                    `json:"unique_network_probes"`
+	GoogleConfigured    bool                   `json:"google_configured"`
+	Results             []DiscoveryAgentResult `json:"results"`
 }
 
 func DiscoveryQueries() []string {
