@@ -57,6 +57,14 @@ func TestBuildSelfAuthoredRuntimeUsesCanonicalGLITCHOLOGY(t *testing.T) {
 	if !strings.Contains(runtime.GoSource, "SelectedGoalID") || !strings.Contains(runtime.Markdown, "SELECTED_AUTONOMOUS_GOAL") {
 		t.Fatal("selected autonomous mission goal is missing from generated outputs")
 	}
+	if runtime.Receipt.HarmoniPlays != 100 {
+		t.Fatalf("harmoni plays = %d, want 100", runtime.Receipt.HarmoniPlays)
+	}
+	for _, required := range []string{"HarmoniRelationship", "ChoiceGoalID", "ChoiceHash", "OperationalAutonomy"} {
+		if !strings.Contains(runtime.GoSource, required) {
+			t.Fatalf("self-authored runtime missing %q", required)
+		}
+	}
 }
 
 func TestSelfAuthorFingerprintIgnoresItsOwnGeneratedNamespace(t *testing.T) {
