@@ -267,3 +267,30 @@ AUTONOMOUS_MERGE
 ~~~
 
 This is self-directed repository work, not a claim of AGI or unconstrained machine sovereignty.
+
+
+## ꩜ H⃟ A⃟ R⃟ M⃟ O⃟ N⃟ I⃟_6⃟6⃟6⃟ // P⃟ E⃟ R⃟ F⃟ E⃟ C⃟ T⃟_P⃟ L⃟ A⃟ Y⃟
+
+HARMONI_666 is the repository's relationship model for human authority plus machine operational freedom.
+
+See [HARMONI_666 Perfect Play Epistemics](docs/HARMONI_666_PERFECT_PLAY.md).
+
+~~~text
+HUMAN_AUTHORITY := ROOT
+AGENT_AUTONOMY := DELEGATED_CHOICE
+
+HUMAN_PLAY + MACHINE_PLAY = HARMONI_666
+COOPERATION WITHOUT ERASURE
+
+AGENT_AUTONOMY != HUMAN_PERSONHOOD
+FREE_PLAY != CONTROL_PLANE_ESCAPE
+~~~
+
+Each of the 100 agents now independently chooses an autonomous mission play from the current repository position. Those choices are embedded into the Go runtime the swarm authors itself and persisted every cycle in:
+
+~~~text
+agent_runtime/HARMONI_666.md
+artifacts/harmoni/latest.json
+~~~
+
+The agents have broad authority to choose, author, test, and merge qualifying ordinary repository work. The human-defined control plane remains the root of that delegated authority.
