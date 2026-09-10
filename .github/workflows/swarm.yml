@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 concurrency:
   group: coas-autonomous-swarm
@@ -37,6 +38,37 @@ jobs:
           test -z "$(gofmt -l .)"
           go test ./...
 
+      - name: Authenticate to Google Cloud with Workload Identity Federation
+        id: google-auth
+        if: >-
+          ${{ vars.GOOGLE_CLOUD_PROJECT != '' &&
+              vars.GOOGLE_WIF_PROVIDER != '' &&
+              vars.GOOGLE_WIF_SERVICE_ACCOUNT != '' }}
+        continue-on-error: true
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GOOGLE_CLOUD_PROJECT }}
+          workload_identity_provider: ${{ vars.GOOGLE_WIF_PROVIDER }}
+          service_account: ${{ vars.GOOGLE_WIF_SERVICE_ACCOUNT }}
+          create_credentials_file: true
+          cleanup_credentials: true
+          request_reason: "COAS autonomous search index audit"
+
+      - name: Read Google Web Search Service credentials from Secret Manager
+        id: google-search-secrets
+        if: >-
+          ${{ steps.google-auth.outcome == 'success' &&
+              vars.GOOGLE_WSS_API_KEY_SECRET != '' &&
+              vars.GOOGLE_WSS_CLIENT_ID_SECRET != '' &&
+              vars.GOOGLE_WSS_USER_IP_SECRET != '' }}
+        continue-on-error: true
+        uses: google-github-actions/get-secretmanager-secrets@v3
+        with:
+          secrets: |-
+            google_web_search_api_key:${{ vars.GOOGLE_CLOUD_PROJECT }}/${{ vars.GOOGLE_WSS_API_KEY_SECRET }}
+            google_web_search_client_id:${{ vars.GOOGLE_CLOUD_PROJECT }}/${{ vars.GOOGLE_WSS_CLIENT_ID_SECRET }}
+            google_web_search_user_ip:${{ vars.GOOGLE_CLOUD_PROJECT }}/${{ vars.GOOGLE_WSS_USER_IP_SECRET }}
+
       - name: Prepare runtime branch
         run: |
           git config user.name "coas-agent-swarm[bot]"
@@ -59,9 +91,9 @@ jobs:
       - name: Run 100-agent search index audit
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          GOOGLE_WEB_SEARCH_API_KEY: ${{ secrets.GOOGLE_WEB_SEARCH_API_KEY }}
-          GOOGLE_WEB_SEARCH_CLIENT_ID: ${{ secrets.GOOGLE_WEB_SEARCH_CLIENT_ID }}
-          GOOGLE_WEB_SEARCH_USER_IP: ${{ secrets.GOOGLE_WEB_SEARCH_USER_IP }}
+          GOOGLE_WEB_SEARCH_API_KEY: ${{ steps.google-search-secrets.outputs.google_web_search_api_key || secrets.GOOGLE_WEB_SEARCH_API_KEY }}
+          GOOGLE_WEB_SEARCH_CLIENT_ID: ${{ steps.google-search-secrets.outputs.google_web_search_client_id || secrets.GOOGLE_WEB_SEARCH_CLIENT_ID }}
+          GOOGLE_WEB_SEARCH_USER_IP: ${{ steps.google-search-secrets.outputs.google_web_search_user_ip || secrets.GOOGLE_WEB_SEARCH_USER_IP }}
         run: |
           go run ./cmd/coas-index-audit \
             -commit "${GITHUB_SHA}" \
