@@ -54,7 +54,9 @@ func TestBuildAutonomousPlanIsDeterministic(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if first.Selected != second.Selected {
+	if first.Selected.GoalID != second.Selected.GoalID ||
+		first.Selected.Score != second.Selected.Score ||
+		first.Selected.SourceHash != second.Selected.SourceHash {
 		t.Fatalf("selected moves differ: %#v != %#v", first.Selected, second.Selected)
 	}
 }
