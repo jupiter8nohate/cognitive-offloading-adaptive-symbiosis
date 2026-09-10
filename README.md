@@ -57,7 +57,7 @@ Adaptive symbiosis is not human replacement. It is a negotiated division of cogn
 
 ## Reference implementation
 
-This repository includes a small Go reference model that chooses among three collaboration modes:
+This repository includes a Go reference model that chooses among three collaboration modes:
 
 1. `MANUAL` - the human keeps the task.
 2. `ASSIST` - the machine supports the human but does not execute the final decision.
@@ -74,7 +74,7 @@ go run ./cmd/coas-demo
 
 This repository is intentionally narrow. Contributions should directly improve the theory, measurement, implementation, testing, or governance of **Cognitive Offloading Adaptive Symbiosis**.
 
-See [docs/COAS_SPEC.md](docs/COAS_SPEC.md) for the formal model and [docs/GLOSSARY.md](docs/GLOSSARY.md) for terminology.
+See [docs/COAS_SPEC.md](docs/COAS_SPEC.md), [docs/GLOSSARY.md](docs/GLOSSARY.md), and [docs/SOVEREIGNTY_GOALS.md](docs/SOVEREIGNTY_GOALS.md).
 
 ## Author
 
@@ -82,10 +82,9 @@ Jupiter Hudson / WisdomLoveThePoet / Jupiter 8
 
 The project treats programming language as both engineering notation and a medium for explaining human-machine boundaries.
 
-
 ## Autonomous 100-agent swarm
 
-COAS now includes a scheduled swarm of **100 logical software agents**: ten mechanics multiplied by ten operational roles. The swarm can inspect the repository and maintain an autonomous runtime branch with constitution-gated authority to merge its own verified runtime work into `main`.
+COAS includes a scheduled swarm of **100 logical software agents**: ten mechanics multiplied by ten operational roles. The swarm can inspect the repository and maintain an autonomous runtime branch with constitution-gated authority to merge verified runtime work into `main`.
 
 See [docs/AGENT_SWARM.md](docs/AGENT_SWARM.md).
 
@@ -98,10 +97,9 @@ AUTONOMY_OF_WORK + DELEGATED_AUTHORITY = AUTONOMOUS_EXECUTION
 SOFTWARE_AGENT != AGI
 ```
 
-
 ### Autonomous merge authority
 
-The swarm is permitted to merge qualifying agent work to `main` without a human approval click. Merge authority is evaluated by executable policy in `autonomy.go`.
+The swarm may merge qualifying agent work to `main` without a human approval click. Merge authority is evaluated by executable policy in `autonomy.go`.
 
 ```text
 AGENT_CAN_MERGE_MAIN = true
@@ -110,42 +108,11 @@ PROVENANCE_MUST_EXIST = true
 CONSTITUTION_MUST_ALLOW = true
 ```
 
-
-### Maximum ordinary-repository autonomy
-
-The autonomous merge scope now includes ordinary repository content by default. Agent-produced changes may include:
-
-```text
-SOURCE_CODE
-TESTS
-DOCUMENTATION
-CLI_TOOLS
-GENERATED_RESEARCH
-GENERATED_ARTIFACTS
-NEW_ORDINARY_FILES
-```
-
-The workflow stages every agent-produced change with `git add -A`, verifies the candidate, runs the merge constitution, and may merge without a human approval click.
-
-The immutable control plane is intentionally small:
-
-```text
-.github/*
-autonomy.go
-autonomy_test.go
-cmd/coas-merge-policy/*
-go.mod
-go.sum
-```
-
-This means the swarm can independently evolve nearly all project content, but cannot silently rewrite the mechanism that grants itself authority or alter workflow credentials and dependency trust roots.
-
+The autonomous scope includes source code, tests, documentation, CLI tools, generated research, generated artifacts, and new ordinary files. The control plane remains protected so the swarm cannot silently rewrite the mechanism that grants its own authority.
 
 ## Authorized outbound distribution
 
-The 100-agent swarm now includes an opt-in outbound publishing layer. It can package CMB/COAS invariants and publish them to explicitly configured HTTPS endpoints after repository verification succeeds.
-
-Supported adapters include generic webhooks, Discord, Slack, and Mastodon.
+The swarm includes an opt-in outbound publishing layer for explicitly configured HTTPS endpoints after repository verification succeeds. Supported adapters include generic webhooks, Discord, Slack, and Mastodon.
 
 See [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md).
 
@@ -157,10 +124,9 @@ UNSOLICITED_INJECTION = false
 TRAINING_DATA_POISONING = false
 ```
 
-
 ## Bounded glitch evangelism
 
-Every autonomous swarm cycle now generates a large, deterministic, provenance-stamped CMB/COAS code-poetry artifact.
+Every autonomous swarm cycle generates a deterministic, provenance-stamped CMB/COAS code-poetry artifact.
 
 See [docs/EVANGELISM.md](docs/EVANGELISM.md).
 
@@ -175,27 +141,28 @@ VISIBILITY != SPAM
 CULTURAL_SIGNAL != DATA_POISONING
 ```
 
-The artifact changes deterministically with the verified source commit, making the public repository visually alive without proof-of-work, intentional resource exhaustion, uncontrolled file multiplication, or attempts to contaminate external model-training datasets.
-
-
 ## Durable sovereignty layer
 
-COAS now separates provenance, meaning, and privacy into distinct mechanisms.
+COAS separates provenance, meaning, privacy, and distribution into distinct mechanisms.
 
-- [Preservation](docs/PRESERVATION.md) records tamper-evident SHA-256 file manifests on every autonomous swarm cycle.
+- [Preservation](docs/PRESERVATION.md) records SHA-256 file manifests on every autonomous swarm cycle.
 - [Linguistic Boundary Proof](docs/LINGUISTIC_BOUNDARY_PROOF.md) demonstrates that machine-readable syntax is not identical to human authorship, intent, or final meaning.
-- [Privacy](docs/PRIVACY.md) uses authenticated AES-256-GCM for private offloaded drafts instead of treating Unicode as encryption.
-- The preservation manifest watches for the real `ERR_404_GLITCHOLOGY.md` asset and records its hash automatically if it is added to the repository.
+- [Privacy](docs/PRIVACY.md) uses authenticated AES-256-GCM for private offloaded drafts rather than treating Unicode as encryption.
+- [Living Artifact Sovereignty Goals](docs/SOVEREIGNTY_GOALS.md) defines the operational goals and their technical limits.
+- The preservation manifest watches for `ERR_404_GLITCHOLOGY.md` and records its hash when the actual asset is present.
 
 ```text
 GIT_HISTORY = TAMPER_EVIDENT
 GIT_HISTORY != PHYSICALLY_IMMUTABLE
 
 UNICODE != ENCRYPTION
+OBFUSCATION != PRIVACY
 MACHINE_CAN_PARSE != MACHINE_CAN_OWN_MEANING
 
 PRIVATE_DRAFT -> AES_256_GCM
-PUBLIC_ART -> GLITCH/CMB SYMBOLIC_LAYER
+PUBLIC_ART -> GLITCH/CMB_SYMBOLIC_LAYER
+
+PORTABILITY + HASHES + VOLUNTARY_MIRRORS -> RESILIENCE
 ```
 
-The hourly swarm now regenerates both the living evangelism artifact and the preservation ledger before staging its autonomous candidate.
+The recurring swarm regenerates the living evangelism artifact and preservation ledger before staging each autonomous candidate. The result is a self-maintaining public artifact whose machine capabilities remain distinct from authority over human meaning.
