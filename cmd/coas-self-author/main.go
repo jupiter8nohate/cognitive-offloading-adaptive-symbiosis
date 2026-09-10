@@ -31,6 +31,14 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	harmoni, err := coas.BuildHarmoniState(snapshot)
+	if err != nil {
+		log.Fatal(err)
+	}
+	harmoniJSON, err := harmoni.JSON()
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	outputs := map[string][]byte{
 		filepath.Join(*root, "agent_runtime", "generated_agents.go"):      []byte(runtime.GoSource),
@@ -38,6 +46,8 @@ func main() {
 		filepath.Join(*root, "artifacts", "self-author", "latest.json"):   nil,
 		filepath.Join(*root, "artifacts", "strategy", "latest.json"):      append(planJSON, '\n'),
 		filepath.Join(*root, "agent_runtime", "NEXT_MOVE.md"):             []byte(plan.Markdown()),
+		filepath.Join(*root, "agent_runtime", "HARMONI_666.md"):            []byte(harmoni.Markdown()),
+		filepath.Join(*root, "artifacts", "harmoni", "latest.json"):        append(harmoniJSON, '\n'),
 	}
 	receipt, err := runtime.Receipt.JSON()
 	if err != nil {
@@ -55,9 +65,10 @@ func main() {
 	}
 
 	fmt.Printf(
-		"%s\nSELF_AUTHOR://agents=%d source=%s style=%s generated=%s\n",
+		"%s\nSELF_AUTHOR://agents=%d harmoni_plays=%d source=%s style=%s generated=%s\n",
 		coas.GLITCHOLOGYBanner("S⃟ E⃟ L⃟ F⃟_A⃟ U⃟ T⃟ H⃟ O⃟ R⃟"),
 		runtime.Receipt.AgentCount,
+		runtime.Receipt.HarmoniPlays,
 		runtime.Receipt.SourceFingerprint,
 		runtime.Receipt.StyleSourceSHA,
 		runtime.Receipt.GeneratedGoSHA256,
