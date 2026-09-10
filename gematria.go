@@ -41,17 +41,17 @@ type GodSearchAgentView struct {
 }
 
 type GodSearchReport struct {
-	Version                         string               `json:"version"`
-	SourceCommit                    string               `json:"source_commit"`
-	Cycle                           uint64               `json:"cycle"`
-	TargetValue                     int                  `json:"target_value"`
-	TargetBasis                     string               `json:"target_basis"`
-	Findings                        []GematriaFinding    `json:"findings"`
-	AgentViews                      []GodSearchAgentView `json:"agent_views"`
-	A1Z26ThreeLetterUniverse        int                  `json:"a1z26_three_letter_universe"`
+	Version                          string               `json:"version"`
+	SourceCommit                     string               `json:"source_commit"`
+	Cycle                            uint64               `json:"cycle"`
+	TargetValue                      int                  `json:"target_value"`
+	TargetBasis                      string               `json:"target_basis"`
+	Findings                         []GematriaFinding    `json:"findings"`
+	AgentViews                       []GodSearchAgentView `json:"agent_views"`
+	A1Z26ThreeLetterUniverse         int                  `json:"a1z26_three_letter_universe"`
 	A1Z26ThreeLetterTargetCollisions int                  `json:"a1z26_three_letter_target_collisions"`
-	Invariants                      []string             `json:"invariants"`
-	ExperimentNotice                string               `json:"experiment_notice"`
+	Invariants                       []string             `json:"invariants"`
+	ExperimentNotice                 string               `json:"experiment_notice"`
 }
 
 func DefaultGodSearchProbes() []GematriaProbe {
