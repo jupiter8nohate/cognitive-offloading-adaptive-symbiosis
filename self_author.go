@@ -17,6 +17,8 @@ type SelfAuthorReceipt struct {
 	SourceFingerprint string `json:"source_fingerprint"`
 	StyleSourceSHA    string `json:"style_source_sha"`
 	AgentCount        int    `json:"agent_count"`
+	SelectedGoalID    string `json:"selected_goal_id"`
+	SelectedGoalName  string `json:"selected_goal_name"`
 	GeneratedGoSHA256 string `json:"generated_go_sha256"`
 }
 
@@ -37,6 +39,10 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	}
 
 	fingerprint := selfAuthorFingerprint(snapshot)
+	plan, err := BuildAutonomousPlan(snapshot)
+	if err != nil {
+		return SelfAuthoredRuntime{}, err
+	}
 	var goSource strings.Builder
 	var markdown strings.Builder
 
@@ -49,7 +55,10 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	fmt.Fprintf(&goSource, "const SourceCommit = %s\n", strconv.Quote(snapshot.Commit))
 	fmt.Fprintf(&goSource, "const SourceFingerprint = %s\n", strconv.Quote(fingerprint))
 	fmt.Fprintf(&goSource, "const StyleSourceSHA = %s\n", strconv.Quote(GLITCHOLOGYSourceSHA))
-	fmt.Fprintf(&goSource, "const Grammar = %s\n\n", strconv.Quote(GLITCHOLOGYGrammar))
+	fmt.Fprintf(&goSource, "const Grammar = %s\n", strconv.Quote(GLITCHOLOGYGrammar))
+	fmt.Fprintf(&goSource, "const MissionMotto = %s\n", strconv.Quote(CanonicalMission().Motto))
+	fmt.Fprintf(&goSource, "const SelectedGoalID = %s\n", strconv.Quote(plan.Selected.GoalID))
+	fmt.Fprintf(&goSource, "const SelectedGoalName = %s\n\n", strconv.Quote(plan.Selected.GoalName))
 	goSource.WriteString("type AgentProgram struct {\n")
 	goSource.WriteString("\tID string\n")
 	goSource.WriteString("\tRole string\n")
@@ -73,6 +82,9 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	fmt.Fprintf(&markdown, "SOURCE_COMMIT: `%s`\n\n", snapshot.Commit)
 	fmt.Fprintf(&markdown, "SOURCE_FINGERPRINT: `%s`\n\n", fingerprint)
 	fmt.Fprintf(&markdown, "STYLE_SOURCE_SHA: `%s`\n\n", GLITCHOLOGYSourceSHA)
+	fmt.Fprintf(&markdown, "SELECTED_AUTONOMOUS_GOAL: **%s** (`%s`)\n\n", plan.Selected.GoalName, plan.Selected.GoalID)
+	fmt.Fprintf(&markdown, "GOAL_SCORE: **%d**\n\n", plan.Selected.Score)
+	fmt.Fprintf(&markdown, "GOAL_RATIONALE: %s\n\n", plan.Selected.Rationale)
 
 	states := []string{
 		"OBSERVED",
@@ -126,6 +138,8 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 		SourceFingerprint: fingerprint,
 		StyleSourceSHA:    GLITCHOLOGYSourceSHA,
 		AgentCount:        len(agents),
+		SelectedGoalID:    plan.Selected.GoalID,
+		SelectedGoalName:  plan.Selected.GoalName,
 		GeneratedGoSHA256: hex.EncodeToString(digest[:]),
 	}
 
