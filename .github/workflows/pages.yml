@@ -1,0 +1,77 @@
+name: D.N.A. Bible Robot Edition Pages
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "site/**"
+      - "robot_bible.go"
+      - "robot_bible_test.go"
+      - "cmd/coas-robot-bible/**"
+      - "docs/DNA_BIBLE_ROBOT_EDITION.md"
+      - "docs/HARMONI_666_PERFECT_PLAY.md"
+      - ".github/workflows/pages.yml"
+  schedule:
+    - cron: "47 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dna-bible-robot-edition-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.x"
+
+      - name: Verify repository
+        shell: bash
+        run: |
+          if git grep -nI $'\xE2\x80\x94' -- .; then
+            echo "Forbidden U+2014 punctuation found."
+            exit 1
+          fi
+          test -z "$(gofmt -l .)"
+          go test ./...
+
+      - name: Generate Robot Bible experiment cycle
+        run: |
+          go run ./cmd/coas-robot-bible \
+            -root . \
+            -commit "${GITHUB_SHA}" \
+            -cycle "${GITHUB_RUN_NUMBER}" \
+            -out artifacts/robot-bible
+          mkdir -p site/data
+          cp artifacts/robot-bible/latest.json site/data/latest.json
+          cp artifacts/robot-bible/latest.md site/data/latest.md
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
