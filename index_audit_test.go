@@ -41,6 +41,9 @@ func TestRunIndexAuditUses100LogicalAgentsAndDeduplicatesQueries(t *testing.T) {
 	if report.UniqueNetworkProbes != len(DiscoveryQueries()) {
 		t.Fatalf("expected %d unique probes, got %d", len(DiscoveryQueries()), report.UniqueNetworkProbes)
 	}
+	if report.GoogleCredentialSource != "unconfigured" {
+		t.Fatalf("expected unconfigured Google credential source, got %q", report.GoogleCredentialSource)
+	}
 	for _, result := range report.Results {
 		if len(result.Probes) != 2 {
 			t.Fatalf("expected GitHub plus Google status for %s, got %d probes", result.AgentID, len(result.Probes))
@@ -69,10 +72,11 @@ func TestRunIndexAuditUsesOfficialGoogleProviderWhenConfigured(t *testing.T) {
 	})}
 
 	report, err := RunIndexAudit(context.Background(), "abc123", IndexProviderConfig{
-		HTTPClient:     client,
-		GoogleAPIKey:   "key",
-		GoogleClientID: "client",
-		GoogleUserIP:   "203.0.113.10",
+		HTTPClient:             client,
+		GoogleAPIKey:           "key",
+		GoogleClientID:         "client",
+		GoogleUserIP:           "203.0.113.10",
+		GoogleCredentialSource: "wif-secret-manager",
 	})
 	if err != nil {
 		t.Fatalf("RunIndexAudit returned error: %v", err)
@@ -84,7 +88,16 @@ func TestRunIndexAuditUsesOfficialGoogleProviderWhenConfigured(t *testing.T) {
 	if !report.GoogleConfigured {
 		t.Fatal("expected Google provider to be configured")
 	}
+	if report.GoogleCredentialSource != "wif-secret-manager" {
+		t.Fatalf("expected WIF credential source, got %q", report.GoogleCredentialSource)
+	}
 	if report.UniqueNetworkProbes != wantCalls {
 		t.Fatalf("expected %d unique probes, got %d", wantCalls, report.UniqueNetworkProbes)
+	}
+}
+
+func TestGoogleCredentialSourceDefaultsToEnvironment(t *testing.T) {
+	if got := normalizeGoogleCredentialSource("", true); got != "environment" {
+		t.Fatalf("expected environment source, got %q", got)
 	}
 }
