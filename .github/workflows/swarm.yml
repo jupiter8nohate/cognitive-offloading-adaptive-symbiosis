@@ -51,7 +51,7 @@ jobs:
         run: |
           go run ./cmd/coas-swarm -root . -out artifacts/swarm -commit "${GITHUB_SHA}"
 
-      - name: Commit report when changed
+      - name: Commit candidate when changed
         id: commit
         run: |
           git add artifacts/swarm/latest.json artifacts/swarm/latest.md
@@ -63,12 +63,41 @@ jobs:
           git push origin coas-agent-runtime
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Open runtime pull request
+      - name: Verify autonomous candidate
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          test -z "$(gofmt -l .)"
+          go test ./...
+          git diff --name-only origin/main...HEAD > /tmp/coas-changed.txt
+          go run ./cmd/coas-merge-policy \
+            -report artifacts/swarm/latest.json \
+            -changed /tmp/coas-changed.txt \
+            -checks-passed=true
+
+      - name: Open or resolve runtime pull request
+        if: steps.commit.outputs.changed == 'true'
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pr="$(gh pr list --head coas-agent-runtime --base main --state open --json number --jq '.[0].number // empty')"
+          if [ -z "$pr" ]; then
+            url="$(gh pr create \
+              --head coas-agent-runtime \
+              --base main \
+              --title "COAS autonomous swarm candidate" \
+              --body "Self-directed output from the 100-agent COAS swarm. Merge is controlled by the repository MergeConstitution.")"
+            pr="${url##*/}"
+          fi
+          echo "number=$pr" >> "$GITHUB_OUTPUT"
+
+      - name: Autonomous main merge
         if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          count="$(gh pr list --head coas-agent-runtime --base main --state open --json number --jq 'length')"
-          if [ "$count" = "0" ]; then
-            gh pr create               --head coas-agent-runtime               --base main               --title "COAS agent swarm runtime report"               --body "Autonomous output from the 100-agent COAS swarm. This PR is intentionally not auto-merged: offload labor, not authority."
-          fi
+          gh pr merge "${{ steps.pr.outputs.number }}" \
+            --squash \
+            --delete-branch=false \
+            --subject "COAS autonomous swarm merge" \
+            --body "Merged autonomously after the 100-agent constitution, provenance, path-scope, formatting, and test gates passed."

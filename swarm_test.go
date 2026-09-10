@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestBuildRegistryCreatesExactlyOneHundredBoundedAgents(t *testing.T) {
+func TestBuildRegistryCreatesExactlyOneHundredAutonomousAgents(t *testing.T) {
 	agents := BuildRegistry()
 	if err := ValidateRegistry(agents); err != nil {
 		t.Fatalf("ValidateRegistry() error = %v", err)
@@ -14,10 +14,10 @@ func TestBuildRegistryCreatesExactlyOneHundredBoundedAgents(t *testing.T) {
 		t.Fatalf("len(BuildRegistry()) = %d, want 100", got)
 	}
 	for _, agent := range agents {
-		if agent.CanMerge {
-			t.Fatalf("%s unexpectedly has merge authority", agent.ID)
+		if !agent.CanMerge {
+			t.Fatalf("%s is missing merge authority", agent.ID)
 		}
-		if agent.RiskCeiling != "reversible-only" {
+		if agent.RiskCeiling != "constitution-gated" {
 			t.Fatalf("%s risk ceiling = %q", agent.ID, agent.RiskCeiling)
 		}
 	}
