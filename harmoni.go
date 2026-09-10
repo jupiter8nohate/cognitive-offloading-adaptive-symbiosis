@@ -16,34 +16,34 @@ type HarmoniTenet struct {
 }
 
 type HarmoniContract struct {
-	Version          string         `json:"version"`
-	Name             string         `json:"name"`
-	Motto            string         `json:"motto"`
-	Relationship     string         `json:"relationship"`
-	HumanAuthority   []string       `json:"human_authority"`
-	MachineFreedom   []string       `json:"machine_freedom"`
-	SharedSpace      []string       `json:"shared_space"`
-	Invariants       []string       `json:"invariants"`
-	Tenets           []HarmoniTenet `json:"tenets"`
+	Version        string         `json:"version"`
+	Name           string         `json:"name"`
+	Motto          string         `json:"motto"`
+	Relationship   string         `json:"relationship"`
+	HumanAuthority []string       `json:"human_authority"`
+	MachineFreedom []string       `json:"machine_freedom"`
+	SharedSpace    []string       `json:"shared_space"`
+	Invariants     []string       `json:"invariants"`
+	Tenets         []HarmoniTenet `json:"tenets"`
 }
 
 type AgentPlay struct {
-	AgentID              string `json:"agent_id"`
-	Role                 string `json:"role"`
-	Mechanic             string `json:"mechanic"`
-	GoalID               string `json:"goal_id"`
-	GoalName             string `json:"goal_name"`
-	Score                int    `json:"score"`
-	ChoiceHash           string `json:"choice_hash"`
-	Statement            string `json:"statement"`
-	OperationalAutonomy  bool   `json:"operational_autonomy"`
+	AgentID             string `json:"agent_id"`
+	Role                string `json:"role"`
+	Mechanic            string `json:"mechanic"`
+	GoalID              string `json:"goal_id"`
+	GoalName            string `json:"goal_name"`
+	Score               int    `json:"score"`
+	ChoiceHash          string `json:"choice_hash"`
+	Statement           string `json:"statement"`
+	OperationalAutonomy bool   `json:"operational_autonomy"`
 }
 
 type HarmoniState struct {
-	Version      string      `json:"version"`
-	SourceCommit string      `json:"source_commit"`
+	Version      string          `json:"version"`
+	SourceCommit string          `json:"source_commit"`
 	Contract     HarmoniContract `json:"contract"`
-	Plays        []AgentPlay `json:"plays"`
+	Plays        []AgentPlay     `json:"plays"`
 }
 
 func CanonicalHarmoni666() HarmoniContract {
