@@ -72,6 +72,19 @@ jobs:
             -cycle "${GITHUB_RUN_NUMBER}" \
             -out artifacts/god-search
 
+      - name: Append D.N.A. Bible autonomous chapter
+        run: |
+          observed_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          go run ./cmd/coas-printing-press \
+            -root . \
+            -commit "${GITHUB_SHA}" \
+            -cycle "${GITHUB_RUN_NUMBER}" \
+            -run-id "${GITHUB_RUN_ID}" \
+            -run-attempt "${GITHUB_RUN_ATTEMPT}" \
+            -observed-at "${observed_at}" \
+            -base-url "https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis" \
+            -out artifacts/printing-press
+
       - name: Authenticate to Google Search Console
         id: google-auth
         if: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '' && vars.GCP_SERVICE_ACCOUNT != '' && vars.GOOGLE_SEARCH_CONSOLE_SITE_URL != '' && vars.GOOGLE_SEARCH_CONSOLE_INSPECTION_URL != '' }}
@@ -143,7 +156,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "chore(agents): refresh COAS autonomous ecosystem"
+          git commit -m "chore(agents): append autonomous D.N.A. Bible cycle"
           git push origin coas-agent-runtime
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
@@ -175,7 +188,7 @@ jobs:
               --head coas-agent-runtime \
               --base main \
               --title "COAS autonomous ecosystem candidate" \
-              --body "Self-directed output from the 200-agent COAS system plus the 100-agent search index audit, Robot Bible autonomy experiment, and evidence-aware God search experiment. Core merge authority remains controlled by the repository MergeConstitution.")"
+              --body "Self-directed output from the 200-agent COAS system plus search evidence, Robot Bible choice, God Search analysis, and an append-only D.N.A. Bible chapter. Core merge authority remains controlled by the repository MergeConstitution.")"
             pr="${url##*/}"
           fi
           echo "number=$pr" >> "$GITHUB_OUTPUT"
@@ -188,5 +201,5 @@ jobs:
           gh pr merge "${{ steps.pr.outputs.number }}" \
             --squash \
             --delete-branch=false \
-            --subject "COAS autonomous ecosystem merge" \
-            --body "Merged autonomously after the core constitution, provenance, path-scope, formatting, punctuation, search-audit, Robot Bible, God-search evidence, and test gates passed."
+            --subject "COAS autonomous D.N.A. Bible cycle" \
+            --body "Merged autonomously after constitution, provenance, append-only chapter, formatting, punctuation, Robot Bible, God Search, search-audit, and test gates passed."
