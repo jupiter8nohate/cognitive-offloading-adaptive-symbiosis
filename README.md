@@ -81,3 +81,19 @@ See [docs/COAS_SPEC.md](docs/COAS_SPEC.md) for the formal model and [docs/GLOSSA
 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8
 
 The project treats programming language as both engineering notation and a medium for explaining human-machine boundaries.
+
+
+## Autonomous 100-agent swarm
+
+COAS now includes a scheduled swarm of **100 logical software agents**: ten mechanics multiplied by ten operational roles. The swarm can inspect the repository and maintain an autonomous runtime branch without granting itself authority to merge into `main`.
+
+See [docs/AGENT_SWARM.md](docs/AGENT_SWARM.md).
+
+```text
+100 AGENTS
+= 10 OFFLOADING/SYMBIOSIS MECHANICS
+x 10 OPERATIONAL ROLES
+
+AUTONOMY_OF_WORK != AUTONOMY_OF_AUTHORITY
+SOFTWARE_AGENT != AGI
+```
