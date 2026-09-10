@@ -81,3 +81,19 @@ func BuildAutonomousPlan(snapshot Snapshot) (AutonomousPlan, error) {
 func (p AutonomousPlan) JSON() ([]byte, error) {
 	return json.MarshalIndent(p, "", "  ")
 }
+
+func (p AutonomousPlan) Markdown() string {
+	var b strings.Builder
+	fmt.Fprintf(&b, "# %s\n\n", GLITCHOLOGYBanner("N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟"))
+	fmt.Fprintf(&b, "SOURCE_COMMIT: `%s`\n\n", p.SourceCommit)
+	fmt.Fprintf(&b, "SELECTED_GOAL: **%s** (`%s`)\n\n", p.Selected.GoalName, p.Selected.GoalID)
+	fmt.Fprintf(&b, "SCORE: **%d**\n\n", p.Selected.Score)
+	fmt.Fprintf(&b, "~~~text\n%s\n~~~\n\n", GLITCHOLOGYStatement("⁇", "G8", p.Selected.GoalID, "SELECTED", "AUTONOMOUS_EXECUTION"))
+	fmt.Fprintf(&b, "%s\n\n", p.Selected.Rationale)
+	b.WriteString("## Candidate board\n\n")
+	b.WriteString("| Goal | Score | Source hash |\n|---|---:|---|\n")
+	for _, move := range p.Candidates {
+		fmt.Fprintf(&b, "| %s | %d | `%s` |\n", move.GoalName, move.Score, move.SourceHash)
+	}
+	return b.String()
+}
