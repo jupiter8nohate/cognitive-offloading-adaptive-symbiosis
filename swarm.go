@@ -96,8 +96,8 @@ func BuildRegistry() []Agent {
 				ID:          fmt.Sprintf("COAS-%02d-%02d", mechanic.ID, i+1),
 				Mechanic:    mechanic,
 				Role:        role,
-				CanMerge:    false,
-				RiskCeiling: "reversible-only",
+				CanMerge:    true,
+				RiskCeiling: "constitution-gated",
 			})
 		}
 	}
@@ -113,8 +113,8 @@ func ValidateRegistry(agents []Agent) error {
 		if agent.ID == "" {
 			return fmt.Errorf("agent id is required")
 		}
-		if agent.CanMerge {
-			return fmt.Errorf("%s violates authority boundary: autonomous merge is disabled", agent.ID)
+		if !agent.CanMerge {
+			return fmt.Errorf("%s is missing autonomous merge capability", agent.ID)
 		}
 		if _, ok := seen[agent.ID]; ok {
 			return fmt.Errorf("duplicate agent id: %s", agent.ID)
@@ -226,7 +226,7 @@ func (a Agent) Evaluate(snapshot Snapshot) AgentResult {
 		Status:        status,
 		Observation:   observation,
 		ProposedWork:  work,
-		AuthorityNote: "Agent may analyze, draft, test, and update the runtime branch. Agent may not merge to main or redefine human-authored meaning.",
+		AuthorityNote: "Agent may analyze, draft, test, update the runtime branch, and merge qualifying work under the MergeConstitution. Human-authored meaning remains attributable to the human source.",
 	}
 }
 
@@ -256,7 +256,7 @@ func (r SwarmReport) Markdown() string {
 	fmt.Fprintf(&b, "- Version: %s\n", r.Version)
 	fmt.Fprintf(&b, "- Source commit: %s\n", r.SourceCommit)
 	fmt.Fprintf(&b, "- Logical agents: %d\n", r.AgentCount)
-	fmt.Fprintf(&b, "- Authority boundary: agents cannot merge to main\n\n")
+	fmt.Fprintf(&b, "- Merge authority: constitution-gated autonomous main merges are enabled\n\n")
 	fmt.Fprintf(&b, "| Agent | Mechanic | Role | Status | Proposed work |\n")
 	fmt.Fprintf(&b, "|---|---|---|---|---|\n")
 	for _, result := range r.Results {
