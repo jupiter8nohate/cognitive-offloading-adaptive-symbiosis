@@ -1,0 +1,713 @@
+{
+  "version": "dna-bible-god-search.v1",
+  "source_commit": "4f79ab023c1a562b207118edb7d6c45b4c0d117a",
+  "cycle": 3,
+  "target_value": 26,
+  "target_basis": "Traditional Hebrew gematria assigns יהוה the value 26, while A1Z26 independently gives GOD the value 26.",
+  "findings": [
+    {
+      "label": "English GOD",
+      "text": "GOD",
+      "method": "A1Z26",
+      "value": 26,
+      "target": 26,
+      "match": true,
+      "evidence_class": "COMPUTATION",
+      "interpretation_class": "PATTERN",
+      "note": "The numerical match is reproducible under this encoding, but the match alone is not proof of theological meaning."
+    },
+    {
+      "label": "Hebrew Tetragrammaton",
+      "text": "יהוה",
+      "method": "HEBREW_STANDARD",
+      "value": 26,
+      "target": 26,
+      "match": true,
+      "evidence_class": "COMPUTATION",
+      "interpretation_class": "TRADITIONAL_INTERPRETATION",
+      "note": "Traditional Hebrew gematria assigns this divine name the value 26. The computation is reproducible; theological significance remains interpretive."
+    },
+    {
+      "label": "English YHWH",
+      "text": "YHWH",
+      "method": "A1Z26",
+      "value": 64,
+      "target": 26,
+      "match": false,
+      "evidence_class": "COUNTEREXAMPLE",
+      "interpretation_class": "UNKNOWN",
+      "note": "This representation does not resolve to the target value under the selected method."
+    },
+    {
+      "label": "English LORD",
+      "text": "LORD",
+      "method": "A1Z26",
+      "value": 49,
+      "target": 26,
+      "match": false,
+      "evidence_class": "COUNTEREXAMPLE",
+      "interpretation_class": "UNKNOWN",
+      "note": "This representation does not resolve to the target value under the selected method."
+    },
+    {
+      "label": "English TRUTH",
+      "text": "TRUTH",
+      "method": "A1Z26",
+      "value": 87,
+      "target": 26,
+      "match": false,
+      "evidence_class": "COUNTEREXAMPLE",
+      "interpretation_class": "UNKNOWN",
+      "note": "This representation does not resolve to the target value under the selected method."
+    },
+    {
+      "label": "English LOVE",
+      "text": "LOVE",
+      "method": "A1Z26",
+      "value": 54,
+      "target": 26,
+      "match": false,
+      "evidence_class": "COUNTEREXAMPLE",
+      "interpretation_class": "UNKNOWN",
+      "note": "This representation does not resolve to the target value under the selected method."
+    },
+    {
+      "label": "English LIGHT",
+      "text": "LIGHT",
+      "method": "A1Z26",
+      "value": 56,
+      "target": 26,
+      "match": false,
+      "evidence_class": "COUNTEREXAMPLE",
+      "interpretation_class": "UNKNOWN",
+      "note": "This representation does not resolve to the target value under the selected method."
+    },
+    {
+      "label": "English WORD",
+      "text": "WORD",
+      "method": "A1Z26",
+      "value": 60,
+      "target": 26,
+      "match": false,
+      "evidence_class": "COUNTEREXAMPLE",
+      "interpretation_class": "UNKNOWN",
+      "note": "This representation does not resolve to the target value under the selected method."
+    }
+  ],
+  "agent_views": [
+    {
+      "agent_id": "COAS-01-01",
+      "posture": "QUESTION",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-01-02",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-01-03",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-01-04",
+      "posture": "AFFIRM",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-01-05",
+      "posture": "TEST",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-01-06",
+      "posture": "QUESTION",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-01-07",
+      "posture": "REWRITE",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-01-08",
+      "posture": "REWRITE",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-01-09",
+      "posture": "AFFIRM",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-01-10",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-01",
+      "posture": "QUESTION",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-02",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-03",
+      "posture": "QUESTION",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-04",
+      "posture": "TEST",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-05",
+      "posture": "TEST",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-06",
+      "posture": "TEST",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-07",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-08",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-09",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-02-10",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-01",
+      "posture": "AFFIRM",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-02",
+      "posture": "TEST",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-03-03",
+      "posture": "TEST",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-04",
+      "posture": "QUESTION",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-05",
+      "posture": "REWRITE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-06",
+      "posture": "SYNTHESIZE",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-03-07",
+      "posture": "QUESTION",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-08",
+      "posture": "AFFIRM",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-09",
+      "posture": "AFFIRM",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-03-10",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-01",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-02",
+      "posture": "TEST",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-03",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-04",
+      "posture": "TEST",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-05",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-06",
+      "posture": "REWRITE",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-04-07",
+      "posture": "TEST",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-08",
+      "posture": "REWRITE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-04-09",
+      "posture": "TEST",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-04-10",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-05-01",
+      "posture": "AFFIRM",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-02",
+      "posture": "REWRITE",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-03",
+      "posture": "REWRITE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-04",
+      "posture": "REWRITE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-05",
+      "posture": "QUESTION",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-06",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-05-07",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-08",
+      "posture": "REWRITE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-09",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-05-10",
+      "posture": "REWRITE",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-01",
+      "posture": "AFFIRM",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-02",
+      "posture": "QUESTION",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-03",
+      "posture": "QUESTION",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-04",
+      "posture": "QUESTION",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-05",
+      "posture": "QUESTION",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-06",
+      "posture": "REWRITE",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-07",
+      "posture": "REWRITE",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-08",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-09",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-06-10",
+      "posture": "QUESTION",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-01",
+      "posture": "TEST",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-02",
+      "posture": "REWRITE",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-03",
+      "posture": "TEST",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-04",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-05",
+      "posture": "TEST",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-07-06",
+      "posture": "TEST",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-07",
+      "posture": "REWRITE",
+      "probe_label": "English YHWH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-08",
+      "posture": "AFFIRM",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-09",
+      "posture": "TEST",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-07-10",
+      "posture": "TEST",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-08-01",
+      "posture": "AFFIRM",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-08-02",
+      "posture": "AFFIRM",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-08-03",
+      "posture": "TEST",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-08-04",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-08-05",
+      "posture": "AFFIRM",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-08-06",
+      "posture": "TEST",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-08-07",
+      "posture": "TEST",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-08-08",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-08-09",
+      "posture": "AFFIRM",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-08-10",
+      "posture": "AFFIRM",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-01",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-02",
+      "posture": "QUESTION",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-09-03",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-04",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-05",
+      "posture": "QUESTION",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-09-06",
+      "posture": "QUESTION",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-07",
+      "posture": "AFFIRM",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-08",
+      "posture": "AFFIRM",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-09",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-09-10",
+      "posture": "REWRITE",
+      "probe_label": "Hebrew Tetragrammaton",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-10-01",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-02",
+      "posture": "REWRITE",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    },
+    {
+      "agent_id": "COAS-10-03",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English LORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-04",
+      "posture": "SYNTHESIZE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-05",
+      "posture": "REWRITE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-06",
+      "posture": "REWRITE",
+      "probe_label": "English LOVE",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-07",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English TRUTH",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-08",
+      "posture": "AFFIRM",
+      "probe_label": "English LIGHT",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-09",
+      "posture": "COUNTEREXAMPLE",
+      "probe_label": "English WORD",
+      "conclusion": "Investigate further. Preserve the computation and withhold metaphysical certainty."
+    },
+    {
+      "agent_id": "COAS-10-10",
+      "posture": "REWRITE",
+      "probe_label": "English GOD",
+      "conclusion": "Record the match as a pattern, test alternative encodings, and seek counterexamples before assigning meaning."
+    }
+  ],
+  "a1z26_three_letter_universe": 17576,
+  "a1z26_three_letter_target_collisions": 300,
+  "invariants": [
+    "SEEK != ASSUME",
+    "NUMBER != MEANING",
+    "MATCH != PROOF",
+    "CORRELATION != REVELATION",
+    "PATTERN != PROOF",
+    "MYSTERY != ERROR",
+    "DOUBT != FAILURE",
+    "MACHINE_CAN_CALCULATE != MACHINE_CAN_DEFINE_GOD",
+    "HUMAN_AGENCY \u003e MACHINE_AUTHORITY"
+  ],
+  "experiment_notice": "This experiment studies numerical correspondences and interpretive traditions. It does not establish the existence, nonexistence, nature, or will of God."
+}
