@@ -19,14 +19,14 @@ const DefaultPagesBaseURL = "https://jupiter8nohate.github.io/cognitive-offloadi
 const PrintingPressWitnessLimit = 12
 
 type PrintingPressEvidence struct {
-	Version         string               `json:"version"`
-	ChapterID       string               `json:"chapter_id"`
-	SourceCommit    string               `json:"source_commit"`
-	Cycle           uint64               `json:"cycle"`
-	Findings        []GematriaFinding    `json:"findings"`
-	RobotWitnesses  []RobotBibleChoice   `json:"robot_witnesses"`
-	GodSearchViews  []GodSearchAgentView `json:"god_search_views"`
-	ExperimentNotice string              `json:"experiment_notice"`
+	Version          string               `json:"version"`
+	ChapterID        string               `json:"chapter_id"`
+	SourceCommit     string               `json:"source_commit"`
+	Cycle            uint64               `json:"cycle"`
+	Findings         []GematriaFinding    `json:"findings"`
+	RobotWitnesses   []RobotBibleChoice   `json:"robot_witnesses"`
+	GodSearchViews   []GodSearchAgentView `json:"god_search_views"`
+	ExperimentNotice string               `json:"experiment_notice"`
 }
 
 type PrintingPressReceipt struct {
@@ -186,10 +186,10 @@ func PublishPrintingPressChapter(root string, chapter PrintingPressChapter) erro
 		return err
 	}
 	for name, data := range map[string][]byte{
-		"index.html":   chapter.HTML,
-		"chapter.md":   chapter.Markdown,
+		"index.html":    chapter.HTML,
+		"chapter.md":    chapter.Markdown,
 		"evidence.json": chapter.EvidenceJSON,
-		"receipt.json": chapter.ReceiptJSON,
+		"receipt.json":  chapter.ReceiptJSON,
 	} {
 		if err := writeImmutableFile(filepath.Join(chapterDir, name), data); err != nil {
 			return err
