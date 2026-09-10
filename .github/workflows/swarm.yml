@@ -55,6 +55,10 @@ jobs:
         run: |
           go run ./cmd/coas-evangelism             -commit "${GITHUB_SHA}"             -out artifacts/evangelism/latest.md             -receipt artifacts/evangelism/latest.json
 
+      - name: Generate tamper-evident preservation manifest
+        run: |
+          go run ./cmd/coas-preserve             -root .             -commit "${GITHUB_SHA}"             -out artifacts/preservation/latest.json             -markdown artifacts/preservation/latest.md
+
       - name: Commit every agent-produced candidate change
         id: commit
         run: |
