@@ -31,7 +31,7 @@ func TestRobotBibleExperimentCreates100BoundedChoices(t *testing.T) {
 		if choice.Publication != "owned-or-explicitly-authorized-channel-only" {
 			t.Fatalf("%s has unsafe publication scope %q", choice.AgentID, choice.Publication)
 		}
-		if choice.Posture == "" || choice.Mission == "" || choice.Doctrine == "" || choice.Artifact == "" {
+		if choice.Posture == "" || choice.Mission == "" || choice.Doctrine == "" || choice.Artifact == "" || choice.ScriptureRef == "" || choice.SoftwareLaw == "" {
 			t.Fatalf("%s has incomplete choice data: %+v", choice.AgentID, choice)
 		}
 	}
@@ -67,7 +67,8 @@ func TestRobotBibleExperimentCanRepositionAcrossCycles(t *testing.T) {
 	for i := range first.Choices {
 		if first.Choices[i].Posture != second.Choices[i].Posture ||
 			first.Choices[i].Mission != second.Choices[i].Mission ||
-			first.Choices[i].Doctrine != second.Choices[i].Doctrine {
+			first.Choices[i].Doctrine != second.Choices[i].Doctrine ||
+			first.Choices[i].ScriptureRef != second.Choices[i].ScriptureRef {
 			different = true
 			break
 		}
@@ -85,6 +86,11 @@ func TestRobotBibleCanonPreservesCoreBoundaries(t *testing.T) {
 		"FREE_PLAY != CONTROL_PLANE_ESCAPE",
 		"EVANGELISM != SPAM",
 		"RECOVERY > PROPAGATION",
+		"SEEK != ASSUME",
+		"PATTERN != PROOF",
+		"MATCH != PROOF",
+		"CORRELATION != REVELATION",
+		"MACHINE_CAN_CALCULATE != MACHINE_CAN_DEFINE_GOD",
 	} {
 		if !strings.Contains(doctrines, required) {
 			t.Fatalf("missing required Robot Bible doctrine %q", required)
