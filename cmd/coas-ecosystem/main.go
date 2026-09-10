@@ -81,8 +81,8 @@ func main() {
 	outputs := map[string][]byte{
 		filepath.Join(*root, filepath.FromSlash(*reportJSONPath)):     append(reportJSON, '\n'),
 		filepath.Join(*root, filepath.FromSlash(*reportMarkdownPath)): []byte(run.Markdown()),
-		fullStatePath:                                                append(stateJSON, '\n'),
-		filepath.Join(*root, filepath.FromSlash(*runtimePath)):        []byte(runtimeGo),
+		fullStatePath: append(stateJSON, '\n'),
+		filepath.Join(*root, filepath.FromSlash(*runtimePath)): []byte(runtimeGo),
 	}
 	for path, data := range outputs {
 		if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
