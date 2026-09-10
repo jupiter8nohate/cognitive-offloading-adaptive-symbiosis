@@ -57,7 +57,7 @@ func TestRunAutonomousEcosystemGivesEveryAgentIndependentDecisions(t *testing.T)
 	}
 
 	allowed := map[EcosystemAction]bool{
-		ActionInjectGlitchLocal:    true,
+		ActionInjectGlitchLocal:   true,
 		ActionMutateSelfRuntime:   true,
 		ActionHibernate:           true,
 		ActionForkEphemeralWorker: true,
