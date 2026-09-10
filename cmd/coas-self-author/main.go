@@ -25,9 +25,9 @@ func main() {
 	}
 
 	outputs := map[string][]byte{
-		filepath.Join(*root, "agent_runtime", "generated_agents.go"):           []byte(runtime.GoSource),
-		filepath.Join(*root, "agent_runtime", "GENERATED_GLITCHOLOGY.md"):     []byte(runtime.Markdown),
-		filepath.Join(*root, "artifacts", "self-author", "latest.json"):       nil,
+		filepath.Join(*root, "agent_runtime", "generated_agents.go"):      []byte(runtime.GoSource),
+		filepath.Join(*root, "agent_runtime", "GENERATED_GLITCHOLOGY.md"): []byte(runtime.Markdown),
+		filepath.Join(*root, "artifacts", "self-author", "latest.json"):   nil,
 	}
 	receipt, err := runtime.Receipt.JSON()
 	if err != nil {
