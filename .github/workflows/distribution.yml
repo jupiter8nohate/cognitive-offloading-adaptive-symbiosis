@@ -1,0 +1,67 @@
+name: Authorized COAS distribution
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Go verification"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coas-distribution-${{ github.event.workflow_run.head_sha || github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (
+        github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_branch == 'main'
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve source commit
+        id: source
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_run" ]; then
+            echo "sha=$RUN_SHA" >> "$GITHUB_OUTPUT"
+          else
+            echo "sha=$CURRENT_SHA" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout verified source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.source.outputs.sha }}
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.x"
+
+      - name: Verify source
+        run: |
+          test -z "$(gofmt -l .)"
+          go test ./...
+
+      - name: Publish to authorized endpoints
+        env:
+          COAS_DISTRIBUTION_ENABLED: ${{ vars.COAS_DISTRIBUTION_ENABLED }}
+          COAS_DISTRIBUTION_TARGETS_JSON: ${{ secrets.COAS_DISTRIBUTION_TARGETS_JSON }}
+        run: |
+          if [ -z "$COAS_DISTRIBUTION_TARGETS_JSON" ]; then
+            echo "No authorized distribution targets configured."
+            exit 0
+          fi
+          if [ "$COAS_DISTRIBUTION_ENABLED" != "true" ]; then
+            echo "Distribution is not enabled."
+            exit 0
+          fi
+          go run ./cmd/coas-distribute -commit "${{ steps.source.outputs.sha }}"
