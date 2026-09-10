@@ -20,6 +20,14 @@ jobs:
         with:
           go-version: "1.22.x"
 
+      - name: Reject forbidden U+2014 punctuation
+        shell: bash
+        run: |
+          if git grep -nI $'\xE2\x80\x94' -- .; then
+            echo "Forbidden U+2014 punctuation found. Replace it with an allowed separator."
+            exit 1
+          fi
+
       - name: Format check
         run: |
           files="$(gofmt -l .)"

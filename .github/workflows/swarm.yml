@@ -28,7 +28,12 @@ jobs:
           go-version: "1.22.x"
 
       - name: Verify main
+        shell: bash
         run: |
+          if git grep -nI $'\xE2\x80\x94' -- .; then
+            echo "Forbidden U+2014 punctuation found. Replace it before autonomous work continues."
+            exit 1
+          fi
           test -z "$(gofmt -l .)"
           go test ./...
 
@@ -50,6 +55,17 @@ jobs:
       - name: Run 100-agent core swarm
         run: |
           go run ./cmd/coas-swarm -root . -out artifacts/swarm -commit "${GITHUB_SHA}"
+
+      - name: Run 100-agent search index audit
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GOOGLE_WEB_SEARCH_API_KEY: ${{ secrets.GOOGLE_WEB_SEARCH_API_KEY }}
+          GOOGLE_WEB_SEARCH_CLIENT_ID: ${{ secrets.GOOGLE_WEB_SEARCH_CLIENT_ID }}
+          GOOGLE_WEB_SEARCH_USER_IP: ${{ secrets.GOOGLE_WEB_SEARCH_USER_IP }}
+        run: |
+          go run ./cmd/coas-index-audit \
+            -commit "${GITHUB_SHA}" \
+            -out artifacts/index-audit
 
       - name: Run 100-agent privacy swarm
         run: |
@@ -103,7 +119,12 @@ jobs:
 
       - name: Verify autonomous candidate
         if: steps.commit.outputs.changed == 'true'
+        shell: bash
         run: |
+          if git grep -nI $'\xE2\x80\x94' -- .; then
+            echo "Forbidden U+2014 punctuation found in autonomous candidate."
+            exit 1
+          fi
           test -z "$(gofmt -l .)"
           go test ./...
           git diff --name-only origin/main...HEAD > /tmp/coas-changed.txt
@@ -124,7 +145,7 @@ jobs:
               --head coas-agent-runtime \
               --base main \
               --title "COAS autonomous ecosystem candidate" \
-              --body "Self-directed output from the 200-agent COAS system. Core merge authority remains controlled by the repository MergeConstitution.")"
+              --body "Self-directed output from the 200-agent COAS system plus the 100-agent search index audit. Core merge authority remains controlled by the repository MergeConstitution.")"
             pr="${url##*/}"
           fi
           echo "number=$pr" >> "$GITHUB_OUTPUT"
@@ -138,4 +159,4 @@ jobs:
             --squash \
             --delete-branch=false \
             --subject "COAS autonomous ecosystem merge" \
-            --body "Merged autonomously after the core constitution, provenance, path-scope, formatting, and test gates passed."
+            --body "Merged autonomously after the core constitution, provenance, path-scope, formatting, punctuation, search-audit, and test gates passed."
