@@ -22,7 +22,7 @@ func CanonicalMission() ProjectMission {
 		Version: "coas-mission.v1",
 		Name:    "Cognitive Offloading Adaptive Symbiosis",
 		Motto:   "Offload the burden. Keep the meaning.",
-		Plain:    "Use software to reduce cognitive and operational burden without transferring human authority over identity, consent, values, interpretation, or final judgment.",
+		Plain:   "Use software to reduce cognitive and operational burden without transferring human authority over identity, consent, values, interpretation, or final judgment.",
 		Goals: []MissionGoal{
 			{
 				ID:         "preserve-authorship",
