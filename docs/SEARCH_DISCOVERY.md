@@ -68,7 +68,7 @@ SEARCH_RESULT != GUARANTEED_INDEX_STATE
 
 COAS does not scrape Google Search result pages.
 
-When the repository is configured with access to Google's official Web Search Service API, the index audit can run Google queries using these repository secrets:
+When the repository is configured with access to Google's official Web Search Service API, the index audit can run Google queries using these runtime values:
 
 ```text
 GOOGLE_WEB_SEARCH_API_KEY
@@ -76,9 +76,41 @@ GOOGLE_WEB_SEARCH_CLIENT_ID
 GOOGLE_WEB_SEARCH_USER_IP
 ```
 
-The automated Google provider remains disabled when those values are absent.
+Google Web Search Service requires a valid API key and designated partner client ID. Workload Identity Federation does not replace those requirements.
 
-This is intentional. The project does not pretend that a missing API credential means the page is absent from Google, and it does not bypass provider controls with HTML scraping.
+### Preferred keyless credential path
+
+The preferred production architecture uses GitHub OIDC, Google Workload Identity Federation, a restricted Google service account, and Google Secret Manager.
+
+```text
+GITHUB ACTIONS
+      |
+      v
+GITHUB OIDC
+      |
+      v
+GOOGLE WORKLOAD IDENTITY FEDERATION
+      |
+      v
+RESTRICTED COAS SERVICE ACCOUNT
+      |
+      v
+SECRET MANAGER
+      |
+      v
+WEB SEARCH SERVICE VALUES
+      |
+      v
+100-AGENT INDEX AUDIT
+```
+
+The hourly workflow requests a short-lived Google identity only when the required repository variables are configured. It then reads the Web Search Service values from Secret Manager. The older GitHub Secrets path remains available as a fallback.
+
+See [Google Workload Identity Federation for COAS Search Auditing](GOOGLE_WIF_SETUP.md) for the one-time setup.
+
+The automated Google provider remains disabled when the required Web Search Service values are absent.
+
+This is intentional. The project does not pretend that a missing credential means the page is absent from Google, and it does not bypass provider controls with HTML scraping.
 
 Google decides whether and when a public GitHub page is crawled and indexed. COAS can improve crawlable content and monitor public search evidence, but it cannot force Google to index a URL.
 
@@ -93,11 +125,13 @@ The main autonomous swarm runs on its existing hourly schedule.
 Each cycle can:
 
 1. verify Go formatting and tests;
-2. run the 100-agent COAS swarm;
-3. run the index audit;
-4. write a provenance-linked search report;
-5. verify the repository punctuation policy;
-6. merge qualifying generated evidence through the existing constitution gate.
+2. obtain a short-lived Google identity when WIF is configured;
+3. retrieve authorized Web Search Service values from Google Secret Manager;
+4. run the 100-agent COAS swarm;
+5. run the index audit;
+6. write a provenance-linked search report;
+7. verify the repository punctuation policy;
+8. merge qualifying generated evidence through the existing constitution gate.
 
 The search audit is read-only with respect to third-party search systems.
 
