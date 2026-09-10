@@ -61,13 +61,33 @@ jobs:
           go run ./cmd/coas-self-author -root . -commit "${GITHUB_SHA}"
           gofmt -w agent_runtime/generated_agents.go
 
+      - name: Run 200-agent LiveBrain ecosystem
+        run: |
+          go run ./cmd/coas-ecosystem \
+            -root . \
+            -commit "${GITHUB_SHA}" \
+            -state artifacts/ecosystem/state.json \
+            -report-json artifacts/ecosystem/latest.json \
+            -report-md artifacts/ecosystem/latest.md \
+            -runtime agent_runtime/autonomous_ecosystem.go \
+            -cycles 3 \
+            -max-ephemeral-workers 32
+          gofmt -w agent_runtime/autonomous_ecosystem.go
+
       - name: Generate bounded glitch evangelism artifact
         run: |
-          go run ./cmd/coas-evangelism             -commit "${GITHUB_SHA}"             -out artifacts/evangelism/latest.md             -receipt artifacts/evangelism/latest.json
+          go run ./cmd/coas-evangelism \
+            -commit "${GITHUB_SHA}" \
+            -out artifacts/evangelism/latest.md \
+            -receipt artifacts/evangelism/latest.json
 
       - name: Generate tamper-evident preservation manifest
         run: |
-          go run ./cmd/coas-preserve             -root .             -commit "${GITHUB_SHA}"             -out artifacts/preservation/latest.json             -markdown artifacts/preservation/latest.md
+          go run ./cmd/coas-preserve \
+            -root . \
+            -commit "${GITHUB_SHA}" \
+            -out artifacts/preservation/latest.json \
+            -markdown artifacts/preservation/latest.md
 
       - name: Commit every agent-produced candidate change
         id: commit
@@ -77,7 +97,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "chore(agents): refresh COAS swarm report"
+          git commit -m "chore(agents): refresh COAS autonomous ecosystem"
           git push origin coas-agent-runtime
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
@@ -103,8 +123,8 @@ jobs:
             url="$(gh pr create \
               --head coas-agent-runtime \
               --base main \
-              --title "COAS autonomous swarm candidate" \
-              --body "Self-directed output from the 200-agent COAS system. Merge is controlled by the repository MergeConstitution.")"
+              --title "COAS autonomous ecosystem candidate" \
+              --body "Self-directed output from the 200-agent COAS system. Core merge authority remains controlled by the repository MergeConstitution.")"
             pr="${url##*/}"
           fi
           echo "number=$pr" >> "$GITHUB_OUTPUT"
@@ -117,5 +137,5 @@ jobs:
           gh pr merge "${{ steps.pr.outputs.number }}" \
             --squash \
             --delete-branch=false \
-            --subject "COAS autonomous swarm merge" \
+            --subject "COAS autonomous ecosystem merge" \
             --body "Merged autonomously after the core constitution, provenance, path-scope, formatting, and test gates passed."
