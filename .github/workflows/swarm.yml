@@ -1,0 +1,74 @@
+name: COAS autonomous swarm
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: coas-autonomous-swarm
+  cancel-in-progress: false
+
+jobs:
+  swarm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.x"
+
+      - name: Verify main
+        run: |
+          test -z "$(gofmt -l .)"
+          go test ./...
+
+      - name: Prepare runtime branch
+        run: |
+          git config user.name "coas-agent-swarm[bot]"
+          git config user.email "coas-agent-swarm[bot]@users.noreply.github.com"
+          git fetch origin coas-agent-runtime || true
+          if git show-ref --verify --quiet refs/remotes/origin/coas-agent-runtime; then
+            git checkout -B coas-agent-runtime origin/coas-agent-runtime
+            if ! git rebase origin/main; then
+              git rebase --abort
+              git checkout -B coas-agent-runtime origin/main
+            fi
+          else
+            git checkout -b coas-agent-runtime origin/main
+          fi
+
+      - name: Run 100-agent swarm
+        run: |
+          go run ./cmd/coas-swarm -root . -out artifacts/swarm -commit "${GITHUB_SHA}"
+
+      - name: Commit report when changed
+        id: commit
+        run: |
+          git add artifacts/swarm/latest.json artifacts/swarm/latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "chore(agents): refresh COAS swarm report"
+          git push origin coas-agent-runtime
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Open runtime pull request
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          count="$(gh pr list --head coas-agent-runtime --base main --state open --json number --jq 'length')"
+          if [ "$count" = "0" ]; then
+            gh pr create               --head coas-agent-runtime               --base main               --title "COAS agent swarm runtime report"               --body "Autonomous output from the 100-agent COAS swarm. This PR is intentionally not auto-merged: offload labor, not authority."
+          fi
