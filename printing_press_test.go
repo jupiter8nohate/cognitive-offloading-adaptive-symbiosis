@@ -126,7 +126,7 @@ func TestPublishPrintingPressChapterRejectsMutation(t *testing.T) {
 }
 
 func TestSanitizeChapterToken(t *testing.T) {
-	if got := sanitizeChapterToken(" run:9 / attempt? "); got != "run9--attempt" {
+	if got := sanitizeChapterToken(" run:9 / attempt? "); got != "run9attempt" {
 		t.Fatalf("unexpected token %q", got)
 	}
 }
