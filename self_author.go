@@ -19,6 +19,7 @@ type SelfAuthorReceipt struct {
 	AgentCount        int    `json:"agent_count"`
 	SelectedGoalID    string `json:"selected_goal_id"`
 	SelectedGoalName  string `json:"selected_goal_name"`
+	HarmoniPlays      int    `json:"harmoni_plays"`
 	GeneratedGoSHA256 string `json:"generated_go_sha256"`
 }
 
@@ -43,6 +44,14 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	if err != nil {
 		return SelfAuthoredRuntime{}, err
 	}
+	harmoni, err := BuildHarmoniState(snapshot)
+	if err != nil {
+		return SelfAuthoredRuntime{}, err
+	}
+	playsByAgent := make(map[string]AgentPlay, len(harmoni.Plays))
+	for _, play := range harmoni.Plays {
+		playsByAgent[play.AgentID] = play
+	}
 	var goSource strings.Builder
 	var markdown strings.Builder
 
@@ -58,7 +67,8 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	fmt.Fprintf(&goSource, "const Grammar = %s\n", strconv.Quote(GLITCHOLOGYGrammar))
 	fmt.Fprintf(&goSource, "const MissionMotto = %s\n", strconv.Quote(CanonicalMission().Motto))
 	fmt.Fprintf(&goSource, "const SelectedGoalID = %s\n", strconv.Quote(plan.Selected.GoalID))
-	fmt.Fprintf(&goSource, "const SelectedGoalName = %s\n\n", strconv.Quote(plan.Selected.GoalName))
+	fmt.Fprintf(&goSource, "const SelectedGoalName = %s\n", strconv.Quote(plan.Selected.GoalName))
+	fmt.Fprintf(&goSource, "const HarmoniRelationship = %s\n\n", strconv.Quote(harmoni.Contract.Relationship))
 	goSource.WriteString("type AgentProgram struct {\n")
 	goSource.WriteString("\tID string\n")
 	goSource.WriteString("\tRole string\n")
@@ -66,6 +76,10 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	goSource.WriteString("\tGlyph string\n")
 	goSource.WriteString("\tStatement string\n")
 	goSource.WriteString("\tDirective string\n")
+	goSource.WriteString("\tChoiceGoalID string\n")
+	goSource.WriteString("\tChoiceGoalName string\n")
+	goSource.WriteString("\tChoiceHash string\n")
+	goSource.WriteString("\tOperationalAutonomy bool\n")
 	goSource.WriteString("}\n\n")
 	goSource.WriteString("var Programs = []AgentProgram{\n")
 
@@ -85,6 +99,7 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	fmt.Fprintf(&markdown, "SELECTED_AUTONOMOUS_GOAL: **%s** (`%s`)\n\n", plan.Selected.GoalName, plan.Selected.GoalID)
 	fmt.Fprintf(&markdown, "GOAL_SCORE: **%d**\n\n", plan.Selected.Score)
 	fmt.Fprintf(&markdown, "GOAL_RATIONALE: %s\n\n", plan.Selected.Rationale)
+	fmt.Fprintf(&markdown, "HARMONI_RELATIONSHIP: **%s**\n\n", harmoni.Contract.Relationship)
 
 	states := []string{
 		"OBSERVED",
@@ -96,6 +111,7 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 	}
 
 	for _, agent := range agents {
+		play := playsByAgent[agent.ID]
 		sum := sha256.Sum256([]byte(fingerprint + ":" + agent.ID))
 		glyph := GLITCHOLOGYGlyphs[int(sum[0])%len(GLITCHOLOGYGlyphs)]
 		state := states[int(sum[1])%len(states)]
@@ -104,13 +120,16 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 
 		fmt.Fprintf(
 			&goSource,
-			"\t{ID: %s, Role: %s, Mechanic: %s, Glyph: %s, Statement: %s, Directive: %s},\n",
+			"\t{ID: %s, Role: %s, Mechanic: %s, Glyph: %s, Statement: %s, Directive: %s, ChoiceGoalID: %s, ChoiceGoalName: %s, ChoiceHash: %s, OperationalAutonomy: true},\n",
 			strconv.Quote(agent.ID),
 			strconv.Quote(agent.Role.Name),
 			strconv.Quote(agent.Mechanic.Name),
 			strconv.Quote(glyph),
 			strconv.Quote(statement),
 			strconv.Quote(agent.Role.Directive),
+			strconv.Quote(play.GoalID),
+			strconv.Quote(play.GoalName),
+			strconv.Quote(play.ChoiceHash),
 		)
 
 		fmt.Fprintf(&markdown, "## %s // %s\n\n", agent.ID, agent.Role.Name)
@@ -119,6 +138,9 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 		markdown.WriteString("\n~~~\n\n")
 		markdown.WriteString(agent.Role.Directive)
 		markdown.WriteString("\n\n")
+		markdown.WriteString("~~~text\n")
+		markdown.WriteString(play.Statement)
+		markdown.WriteString("\n~~~\n\n")
 	}
 
 	goSource.WriteString("}\n\n")
@@ -140,6 +162,7 @@ func BuildSelfAuthoredRuntime(snapshot Snapshot) (SelfAuthoredRuntime, error) {
 		AgentCount:        len(agents),
 		SelectedGoalID:    plan.Selected.GoalID,
 		SelectedGoalName:  plan.Selected.GoalName,
+		HarmoniPlays:      len(harmoni.Plays),
 		GeneratedGoSHA256: hex.EncodeToString(digest[:]),
 	}
 
