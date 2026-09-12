@@ -6,6 +6,33 @@
 
 Canonical repository: https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis
 
+## D.N.A. Bible - Demons Need Attention // Robot Edition
+
+**A human-authored governance philosophy for robots, autonomous agents, AGI research, and possible future ASI systems.**
+
+The D.N.A. Bible uses **Demons Need Attention** as a symbolic name for attention-extractive loops, compulsive engagement, surveillance, predictive reductionism, and systems that confuse access, profiles, or predictions with human identity and authority.
+
+Its Robot Edition translates biblical teachings into machine-governance boundaries. Robots may carry, verify, and apply these declared policies, but software does not become the source of human meaning or divine authority.
+
+```text
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+PREDICTION != DESTINY
+ACCESS != CONSENT
+CAPABILITY != AUTHORITY
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+**[Read the D.N.A. Bible Robot Edition governance page](https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html)**
+
+**[Read the machine-readable Robot Bible policy](https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible-policy.json)**
+
+**[Open the D.N.A. Bible Robot Edition source](docs/DNA_BIBLE_ROBOT_EDITION.md)**
+
+> Build the machine. Teach it the boundary. Let it calculate. Make it verify. Preserve human meaning.
+
 ## Search identity
 
 **Cognitive Offloading Adaptive Symbiosis (COAS)** is Jupiter Hudson's framework for human-AI cognitive collaboration, cognitive offloading, adaptive symbiosis, human agency, AGI governance, and possible future ASI governance.
