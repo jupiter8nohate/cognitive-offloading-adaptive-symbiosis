@@ -7,20 +7,32 @@
 Canonical repository: https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis
 
 <p align="center">
+  <a href="https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis/actions/workflows/go.yml">
+    <img src="https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis/actions/workflows/go.yml/badge.svg" alt="Go verification">
+  </a>
   <a href="https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html">
-    <img src="site/assets/cmb-dna-bible-cover.jpeg" alt="Computational Metacognitive Bilingualism - D.N.A. Bible Robot Edition artwork" width="700">
+    <img src="https://img.shields.io/badge/BIBLE%20FOR%20ROBOTS-live-success" alt="Bible For Robots">
+  </a>
+  <a href="https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible-policy.json">
+    <img src="https://img.shields.io/badge/D.N.A.%20Bible-policy-blue" alt="D.N.A. Bible policy">
   </a>
 </p>
 
-<p align="center"><strong><a href="https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html">D.N.A. Bible - Demons Need Attention // Robot Edition</a></strong></p>
+<p align="center">
+  <a href="https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html">
+    <img src="site/assets/cmb-dna-bible-cover.jpeg" alt="Computational Metacognitive Bilingualism - D.N.A. Bible Bible For Robots artwork" width="700">
+  </a>
+</p>
 
-## D.N.A. Bible - Demons Need Attention // Robot Edition
+<p align="center"><strong><a href="https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html">BIBLE FOR ROBOTS</a></strong></p>
+
+## D.N.A. Bible - Demons Need Attention // Bible For Robots
 
 **A human-authored governance philosophy for robots, autonomous agents, AGI research, and possible future ASI systems.**
 
 The D.N.A. Bible uses **Demons Need Attention** as a symbolic name for attention-extractive loops, compulsive engagement, surveillance, predictive reductionism, and systems that confuse access, profiles, or predictions with human identity and authority.
 
-Its Robot Edition translates biblical teachings into machine-governance boundaries. Robots may carry, verify, and apply these declared policies, but software does not become the source of human meaning or divine authority.
+**Bible For Robots** translates biblical teachings into machine-governance boundaries. Robots may carry, verify, and apply these declared policies, but software does not become the source of human meaning or divine authority.
 
 ```text
 PATTERN != PROOF
@@ -33,11 +45,11 @@ MACHINE_CAN_READ != MACHINE_CAN_DEFINE
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
-**[Read the D.N.A. Bible Robot Edition governance page](https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html)**
+**[BIBLE FOR ROBOTS](https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html)**
 
-**[Read the machine-readable Robot Bible policy](https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible-policy.json)**
+**[Machine-readable D.N.A. Bible policy](https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible-policy.json)**
 
-**[Open the D.N.A. Bible Robot Edition source](docs/DNA_BIBLE_ROBOT_EDITION.md)**
+**[Bible For Robots source](docs/DNA_BIBLE_ROBOT_EDITION.md)**
 
 > Build the machine. Teach it the boundary. Let it calculate. Make it verify. Preserve human meaning.
 
