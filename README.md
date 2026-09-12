@@ -6,6 +6,14 @@
 
 Canonical repository: https://github.com/jupiter8nohate/cognitive-offloading-adaptive-symbiosis
 
+<p align="center">
+  <a href="https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html">
+    <img src="site/assets/cmb-dna-bible-cover.jpeg" alt="Computational Metacognitive Bilingualism - D.N.A. Bible Robot Edition artwork" width="700">
+  </a>
+</p>
+
+<p align="center"><strong><a href="https://jupiter8nohate.github.io/cognitive-offloading-adaptive-symbiosis/robot-bible.html">D.N.A. Bible - Demons Need Attention // Robot Edition</a></strong></p>
+
 ## D.N.A. Bible - Demons Need Attention // Robot Edition
 
 **A human-authored governance philosophy for robots, autonomous agents, AGI research, and possible future ASI systems.**
