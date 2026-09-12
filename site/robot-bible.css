@@ -1,0 +1,215 @@
+.robot-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  background: rgba(6, 6, 6, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.robot-nav a {
+  padding: 0.35rem 0.55rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.robot-nav a:hover,
+.robot-nav a:focus-visible {
+  border-color: var(--signal2);
+  outline: none;
+}
+
+.robot-hero {
+  min-height: 86vh;
+}
+
+.hero-thesis {
+  width: min(100%, 850px);
+  margin: 0 auto 1.5rem;
+  color: #d8d8d8;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.translation-stack,
+.runtime-flow {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.5rem 0;
+}
+
+.translation-stack article,
+.runtime-flow > div {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #090909;
+}
+
+.translation-stack article {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.translation-stack strong {
+  color: var(--signal2);
+}
+
+.translation-stack span {
+  color: var(--muted);
+}
+
+.translation-stack > b,
+.runtime-flow > b {
+  text-align: center;
+  color: var(--signal);
+}
+
+.covenant-large code {
+  padding: 1rem;
+}
+
+.canon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.canon-card {
+  position: relative;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(145deg, rgba(90, 240, 255, 0.035), transparent 40%),
+    #090909;
+  overflow: hidden;
+}
+
+.canon-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(var(--signal2), var(--signal));
+}
+
+.canon-number {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: #2e2e2e;
+  font-weight: 800;
+}
+
+.canon-ref {
+  margin: 0 0 0.2rem;
+  color: var(--warning);
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.canon-card h3 {
+  margin: 0 3rem 0.8rem 0;
+  color: var(--signal2);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.canon-card p {
+  margin: 0.65rem 0;
+}
+
+.canon-card code {
+  display: block;
+  margin: 0.4rem 0;
+  padding: 0.55rem 0.7rem;
+  border-left: 2px solid var(--signal);
+  background: #050505;
+  overflow-x: auto;
+}
+
+.failure {
+  margin-top: 1rem !important;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  color: #d6d6d6;
+}
+
+.runtime-flow > div {
+  text-align: center;
+  color: var(--signal2);
+  font-weight: 700;
+}
+
+.runtime-split {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.runtime-split span {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #090909;
+}
+
+.runtime-split span:nth-child(1) {
+  color: var(--signal2);
+}
+
+.runtime-split span:nth-child(2) {
+  color: var(--warning);
+}
+
+.runtime-split span:nth-child(3) {
+  color: var(--signal);
+}
+
+.retains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.retains-grid article {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #090909;
+}
+
+.retains-grid strong {
+  color: var(--signal2);
+}
+
+.retains-grid span {
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .robot-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .robot-nav a {
+    white-space: nowrap;
+  }
+
+  .canon-grid,
+  .runtime-split {
+    grid-template-columns: 1fr;
+  }
+}
