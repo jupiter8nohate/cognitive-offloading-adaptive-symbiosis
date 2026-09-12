@@ -1,0 +1,43 @@
+name: Repair D.N.A. Bible cover
+
+on:
+  push:
+    branches:
+      - repair-dna-cover-binary
+
+permissions:
+  contents: write
+
+jobs:
+  repair-cover:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download valid CMB cover
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p site/assets
+          curl --fail --location --retry 3 \
+            'https://raw.githubusercontent.com/jupiter8nohate/computational-metacognitive-bilingualism/main/docs/media/cmb-cognitive-offloading-adaptive-symbiosis.jpg' \
+            --output site/assets/cmb-dna-bible-cover.jpeg
+
+          test "$(xxd -p -l 3 site/assets/cmb-dna-bible-cover.jpeg)" = "ffd8ff"
+          test "$(wc -c < site/assets/cmb-dna-bible-cover.jpeg)" -gt 5000
+
+      - name: Commit repaired binary
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/assets/cmb-dna-bible-cover.jpeg
+          if git diff --cached --quiet; then
+            echo 'Cover already matches source.'
+            exit 0
+          fi
+          git commit -m 'Repair D.N.A. Bible cover binary'
+          git push origin HEAD:repair-dna-cover-binary
