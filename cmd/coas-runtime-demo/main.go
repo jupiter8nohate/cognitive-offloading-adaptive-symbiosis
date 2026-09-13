@@ -25,14 +25,14 @@ func main() {
 		WorkerCapabilities: []string{"observe"},
 		Run: func(_ context.Context, task coasruntime.Task, _ coasruntime.State) (coasruntime.StepResult, []coasruntime.Evidence, error) {
 			return coasruntime.StepResult{
-				Input:     task.Goal,
-				Output:    "observation recorded",
-				Succeeded: true,
-			}, []coasruntime.Evidence{{
-				Classification: coasruntime.ClassFact,
-				Claim:          "the clean-room observer executed successfully",
-				Source:         "coas-runtime-demo",
-			}}, nil
+					Input:     task.Goal,
+					Output:    "observation recorded",
+					Succeeded: true,
+				}, []coasruntime.Evidence{{
+					Classification: coasruntime.ClassFact,
+					Claim:          "the clean-room observer executed successfully",
+					Source:         "coas-runtime-demo",
+				}}, nil
 		},
 	}
 
