@@ -47,6 +47,45 @@ func TestBoundedGovernor(t *testing.T) {
 	}
 }
 
+func TestEngineRequiresConfirmationBeforeExecution(t *testing.T) {
+	memory := NewInMemoryMemory()
+	engine, err := NewEngine(BoundedGovernor{}, SequencePlanner{}, memory, StrictVerifier{})
+	if err != nil {
+		t.Fatalf("NewEngine() error = %v", err)
+	}
+
+	called := false
+	if err := engine.Register(FuncWorker{
+		WorkerName:         "GUARDED_WORKER",
+		WorkerCapabilities: []string{"verify"},
+		Run: func(context.Context, Task, State) (StepResult, []Evidence, error) {
+			called = true
+			return StepResult{Succeeded: true}, nil, nil
+		},
+	}); err != nil {
+		t.Fatal(err)
+	}
+
+	result, err := engine.Run(context.Background(), Task{
+		ID:            "confirm-1",
+		Goal:          "require human confirmation",
+		CognitiveLoad: 80,
+		Stakes:        20,
+		Reversibility: 100,
+		Capabilities:  []string{"verify"},
+		MaxSteps:      1,
+	})
+	if err != nil {
+		t.Fatalf("Run() error = %v", err)
+	}
+	if !result.AwaitingConfirmation {
+		t.Fatal("result should be awaiting confirmation")
+	}
+	if called {
+		t.Fatal("worker executed before confirmation")
+	}
+}
+
 func TestEngineRunsRegisteredCapabilities(t *testing.T) {
 	memory := NewInMemoryMemory()
 	engine, err := NewEngine(BoundedGovernor{}, SequencePlanner{}, memory, StrictVerifier{})
@@ -74,13 +113,14 @@ func TestEngineRunsRegisteredCapabilities(t *testing.T) {
 	}
 
 	result, err := engine.Run(context.Background(), Task{
-		ID:            "verify-1",
-		Goal:          "verify clean-room runtime",
-		CognitiveLoad: 80,
-		Stakes:        20,
-		Reversibility: 100,
-		Capabilities:  []string{"verify"},
-		MaxSteps:      3,
+		ID:             "verify-1",
+		Goal:           "verify clean-room runtime",
+		CognitiveLoad:  80,
+		Stakes:         20,
+		Reversibility:  100,
+		Capabilities:   []string{"verify"},
+		MaxSteps:       3,
+		HumanConfirmed: true,
 	})
 	if err != nil {
 		t.Fatalf("Run() error = %v", err)
@@ -134,13 +174,14 @@ func TestEngineRecoversByContinuingAfterWorkerFailure(t *testing.T) {
 	}
 
 	result, err := engine.Run(context.Background(), Task{
-		ID:            "recover-1",
-		Goal:          "demonstrate bounded recovery",
-		CognitiveLoad: 75,
-		Stakes:        10,
-		Reversibility: 100,
-		Capabilities:  []string{"first", "second"},
-		MaxSteps:      4,
+		ID:             "recover-1",
+		Goal:           "demonstrate bounded recovery",
+		CognitiveLoad:  75,
+		Stakes:         10,
+		Reversibility:  100,
+		Capabilities:   []string{"first", "second"},
+		MaxSteps:       4,
+		HumanConfirmed: true,
 	})
 	if err != nil {
 		t.Fatalf("Run() error = %v", err)
