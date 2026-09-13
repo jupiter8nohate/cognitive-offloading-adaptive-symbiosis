@@ -30,13 +30,14 @@ const (
 
 // Task is the unit of delegated cognitive work.
 type Task struct {
-	ID            string
-	Goal          string
-	CognitiveLoad int
-	Stakes        int
-	Reversibility int
-	Capabilities  []string
-	MaxSteps      int
+	ID             string
+	Goal           string
+	CognitiveLoad  int
+	Stakes         int
+	Reversibility  int
+	Capabilities   []string
+	MaxSteps       int
+	HumanConfirmed bool
 }
 
 // AuthorityDecision is an inspectable runtime permission decision.
@@ -59,14 +60,15 @@ type Evidence struct {
 
 // Result is the terminal state of a task execution.
 type Result struct {
-	TaskID     string
-	Mode       Mode
-	Completed  bool
-	Summary    string
-	Steps      []StepResult
-	Evidence   []Evidence
-	StartedAt  time.Time
-	FinishedAt time.Time
+	TaskID               string
+	Mode                 Mode
+	Completed            bool
+	AwaitingConfirmation bool
+	Summary              string
+	Steps                []StepResult
+	Evidence             []Evidence
+	StartedAt            time.Time
+	FinishedAt           time.Time
 }
 
 // StepResult records one bounded worker action.
@@ -150,13 +152,13 @@ func (e *Engine) Register(worker Worker) error {
 
 	e.mu.Lock()
 	defer e.mu.Unlock()
-	for _, cap := range caps {
-		if cap == "" {
+	for _, capability := range caps {
+		if capability == "" {
 			return fmt.Errorf("worker %q declares an empty capability", worker.Name())
 		}
-		e.workers[cap] = append(e.workers[cap], worker)
-		sort.SliceStable(e.workers[cap], func(i, j int) bool {
-			return e.workers[cap][i].Name() < e.workers[cap][j].Name()
+		e.workers[capability] = append(e.workers[capability], worker)
+		sort.SliceStable(e.workers[capability], func(i, j int) bool {
+			return e.workers[capability][i].Name() < e.workers[capability][j].Name()
 		})
 	}
 	return nil
@@ -181,6 +183,14 @@ func (e *Engine) Run(ctx context.Context, task Task) (Result, error) {
 
 	if decision.Mode == ModeManual {
 		result.Summary = "manual mode selected; no machine execution performed"
+		result.FinishedAt = time.Now().UTC()
+		_ = e.Memory.AppendResult(ctx, result)
+		return result, nil
+	}
+
+	if decision.HumanConfirmationRequired && !task.HumanConfirmed {
+		result.AwaitingConfirmation = true
+		result.Summary = "human confirmation required before execution"
 		result.FinishedAt = time.Now().UTC()
 		_ = e.Memory.AppendResult(ctx, result)
 		return result, nil
@@ -221,10 +231,6 @@ func (e *Engine) Run(ctx context.Context, task Task) (Result, error) {
 			}
 			result.Evidence = append(result.Evidence, item)
 			state.PriorEvidence = append(state.PriorEvidence, item)
-		}
-
-		if execErr != nil {
-			continue
 		}
 	}
 
@@ -271,6 +277,9 @@ func validateTask(task Task) error {
 	}
 	if task.MaxSteps <= 0 || task.MaxSteps > 100 {
 		return errors.New("max steps must be between 1 and 100")
+	}
+	if len(task.Capabilities) > task.MaxSteps {
+		return errors.New("max steps must cover all requested capabilities")
 	}
 	return nil
 }
