@@ -98,14 +98,14 @@ func TestEngineRunsRegisteredCapabilities(t *testing.T) {
 		WorkerCapabilities: []string{"verify"},
 		Run: func(_ context.Context, task Task, _ State) (StepResult, []Evidence, error) {
 			return StepResult{
-				Input:     task.Goal,
-				Output:    "verified",
-				Succeeded: true,
-			}, []Evidence{{
-				Classification: ClassFact,
-				Claim:          "test worker completed",
-				Source:         "runtime unit test",
-			}}, nil
+					Input:     task.Goal,
+					Output:    "verified",
+					Succeeded: true,
+				}, []Evidence{{
+					Classification: ClassFact,
+					Claim:          "test worker completed",
+					Source:         "runtime unit test",
+				}}, nil
 		},
 	}
 	if err := engine.Register(worker); err != nil {
