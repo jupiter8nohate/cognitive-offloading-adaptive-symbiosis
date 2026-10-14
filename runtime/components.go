@@ -115,6 +115,9 @@ func (StrictVerifier) Verify(_ context.Context, task Task, result Result) error 
 	if len(result.Steps) == 0 {
 		return errors.New("no execution steps were produced")
 	}
+	if len(result.Steps) != len(task.Capabilities) {
+		return fmt.Errorf("only %d of %d required capabilities were attempted", len(result.Steps), len(task.Capabilities))
+	}
 
 	successes := 0
 	for _, step := range result.Steps {
