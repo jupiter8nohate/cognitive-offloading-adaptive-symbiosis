@@ -42,10 +42,11 @@ jobs:
     if: ${{ needs.preflight.outputs.ready == 'true' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout without persistent write credentials
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -201,7 +202,10 @@ jobs:
       - name: Commit and publish verified candidate branch
         if: steps.stage.outputs.changed == 'true'
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          gh auth setup-git
           git commit -m "chore(agents): append verified autonomous D.N.A. Bible cycle"
           git push --set-upstream origin "${{ steps.branch.outputs.name }}"
 
