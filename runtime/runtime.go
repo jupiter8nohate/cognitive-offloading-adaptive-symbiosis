@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 	"sort"
+	"strings"
 	"sync"
 	"time"
-	"strings"
 )
 
 // Mode defines the maximum authority granted to a runtime task.
