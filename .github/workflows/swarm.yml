@@ -15,7 +15,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      ready: ${{ steps.gate.outputs.ready }}
+    steps:
+      - name: Prevent overlapping autonomous proposals
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          pending="$(gh pr list --state open --limit 200 --json headRefName --jq '[.[] | select(.headRefName | startswith("coas-cycle-"))] | length')"
+          if [ "$pending" -gt 0 ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "An autonomous candidate PR is already open. Preserve it for review or merge before starting another cycle." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
   swarm:
+    needs: preflight
+    if: ${{ needs.preflight.outputs.ready == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,20 +62,17 @@ jobs:
           test -z "$(gofmt -l .)"
           go test ./...
 
-      - name: Prepare runtime branch
+      - name: Prepare isolated runtime branch
+        id: branch
+        shell: bash
         run: |
           git config user.name "coas-agent-swarm[bot]"
           git config user.email "coas-agent-swarm[bot]@users.noreply.github.com"
-          git fetch origin coas-agent-runtime || true
-          if git show-ref --verify --quiet refs/remotes/origin/coas-agent-runtime; then
-            git checkout -B coas-agent-runtime origin/coas-agent-runtime
-            if ! git rebase origin/main; then
-              git rebase --abort
-              git checkout -B coas-agent-runtime origin/main
-            fi
-          else
-            git checkout -b coas-agent-runtime origin/main
-          fi
+          git fetch origin main
+          branch="coas-cycle-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git checkout -B "$branch" origin/main
+          echo "name=$branch" >> "$GITHUB_OUTPUT"
+          echo "Candidate branch: $branch" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Run 100-agent core swarm
         run: |
@@ -148,20 +169,20 @@ jobs:
             -out artifacts/preservation/latest.json \
             -markdown artifacts/preservation/latest.md
 
-      - name: Commit every agent-produced candidate change
-        id: commit
+      - name: Stage candidate
+        id: stage
+        shell: bash
         run: |
           git add -A
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
+            echo "No generated changes to publish." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-          git commit -m "chore(agents): append autonomous D.N.A. Bible cycle"
-          git push origin coas-agent-runtime
-          echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Verify autonomous candidate
-        if: steps.commit.outputs.changed == 'true'
+      - name: Verify staged candidate before publication
+        if: steps.stage.outputs.changed == 'true'
         shell: bash
         run: |
           if git grep -nI $'\xE2\x80\x94' -- .; then
@@ -170,36 +191,49 @@ jobs:
           fi
           test -z "$(gofmt -l .)"
           go test ./...
-          git diff --name-only origin/main...HEAD > /tmp/coas-changed.txt
+          go vet ./...
+          git diff --cached --name-only > /tmp/coas-changed.txt
           go run ./cmd/coas-merge-policy \
             -report artifacts/swarm/latest.json \
             -changed /tmp/coas-changed.txt \
             -checks-passed=true
 
-      - name: Open or resolve runtime pull request
-        if: steps.commit.outputs.changed == 'true'
+      - name: Commit and publish verified candidate branch
+        if: steps.stage.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git commit -m "chore(agents): append verified autonomous D.N.A. Bible cycle"
+          git push --set-upstream origin "${{ steps.branch.outputs.name }}"
+
+      - name: Open candidate pull request
+        if: steps.stage.outputs.changed == 'true'
         id: pr
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
         run: |
-          pr="$(gh pr list --head coas-agent-runtime --base main --state open --json number --jq '.[0].number // empty')"
-          if [ -z "$pr" ]; then
-            url="$(gh pr create \
-              --head coas-agent-runtime \
-              --base main \
-              --title "COAS autonomous ecosystem candidate" \
-              --body "Self-directed output from the 200-agent COAS system plus search evidence, Robot Bible choice, God Search analysis, and an append-only D.N.A. Bible chapter. Core merge authority remains controlled by the repository MergeConstitution.")"
-            pr="${url##*/}"
-          fi
-          echo "number=$pr" >> "$GITHUB_OUTPUT"
+          url="$(gh pr create \
+            --head "${{ steps.branch.outputs.name }}" \
+            --base main \
+            --title "COAS autonomous D.N.A. Bible cycle ${GITHUB_RUN_NUMBER}" \
+            --body "Generated from a fresh main checkout. Before publication, the workflow ran formatting checks, Go unit tests, go vet, and the COAS merge constitution. This PR preserves evidence and the append-only chapter. No workflow or control-plane changes are authorized.")"
+          echo "number=${url##*/}" >> "$GITHUB_OUTPUT"
+          echo "Candidate PR: $url" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Autonomous main merge
-        if: steps.commit.outputs.changed == 'true'
+      - name: Merge verified candidate when repository policy permits
+        if: steps.stage.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
         run: |
-          gh pr merge "${{ steps.pr.outputs.number }}" \
+          if gh pr merge "${{ steps.pr.outputs.number }}" \
             --squash \
             --delete-branch=false \
             --subject "COAS autonomous D.N.A. Bible cycle" \
-            --body "Merged autonomously after constitution, provenance, append-only chapter, formatting, punctuation, Robot Bible, God Search, search-audit, and test gates passed."
+            --body "Merged only after staged code verification and the COAS merge constitution passed."; then
+            echo "Candidate merged successfully." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Merge not permitted yet. Candidate PR remains open for human review or required checks." >> "$GITHUB_STEP_SUMMARY"
+          fi
