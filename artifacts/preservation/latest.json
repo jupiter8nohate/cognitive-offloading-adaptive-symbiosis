@@ -1,6 +1,6 @@
 {
   "version": "coas-preservation.v1",
-  "source_commit": "4f79ab023c1a562b207118edb7d6c45b4c0d117a",
+  "source_commit": "16531a6c7bee9ed888d32d8dcb94e052a0f20753",
   "entries": [
     {
       "path": ".github/workflows/distribution.yml",
@@ -19,8 +19,8 @@
     },
     {
       "path": ".github/workflows/swarm.yml",
-      "sha256": "e4c4d551d7399c814a4511888cf6b8a7beea12efbf9a9556491a455c011e803d",
-      "bytes": 7850
+      "sha256": "722cd00c93fd640fed872d0b04e9f536a2477d913bbd32125799d351f5f8bc05",
+      "bytes": 9293
     },
     {
       "path": "CITATION.cff",
@@ -29,43 +29,43 @@
     },
     {
       "path": "README.md",
-      "sha256": "63fb68eefd9de76bfb44e126cdba7202553c97fe49499a9c3cb73cbfe869c7ce",
-      "bytes": 11434
+      "sha256": "64efee80f3b379bd4a2b8b5adce13039b03e712e7290abf731f7b089bc90b4c6",
+      "bytes": 13887
     },
     {
       "path": "agent_runtime/GENERATED_GLITCHOLOGY.md",
-      "sha256": "d2c52a1097f376ede13ae3ec9354239cd573584cba7baad943da9fdae747e93d",
-      "bytes": 32734
+      "sha256": "b4abb217d22583fac24bad9e10b5d60f97124b981d08297d844a36ceb8ae98fd",
+      "bytes": 32626
     },
     {
       "path": "agent_runtime/HARMONI_666.md",
-      "sha256": "15358a4a84382e91c9eaf9e637f30f89ab5a0ac634b2b27d56c6d96debb8735e",
-      "bytes": 15064
+      "sha256": "30d24294d03c25d830d2933a1789b77802f0132b224b4356c6c1690aa1ec3e35",
+      "bytes": 15020
     },
     {
       "path": "agent_runtime/NEXT_MOVE.md",
-      "sha256": "f44c8485fc313f491eb0fada570eb3f538c53ad34823424c599ef5204f526f06",
-      "bytes": 993
+      "sha256": "1d9c8a49248984124228a1e132a6e9daa76deb64ffc1964234dbab9936dc9d7c",
+      "bytes": 980
     },
     {
       "path": "agent_runtime/PRIVACY_SWARM.md",
-      "sha256": "3525cb05405ddf546af70ca3931d64ea3c4dfc9ecaef842b6dec6dce13d736b1",
-      "bytes": 15571
+      "sha256": "864fc4d7047c112562e506d5d1cda341d1e3bfba7fa0e7b80ff9ac82b1fd093c",
+      "bytes": 15564
     },
     {
       "path": "agent_runtime/autonomous_ecosystem.go",
-      "sha256": "fd7776f71f327db252494c23238d3d307ca372fa6621a6d33e84e3ad1c427f9c",
-      "bytes": 40069
+      "sha256": "6bf8c9dac92aaebabdbd568540595c99b36668424e5be8161ec6ed29f8e56533",
+      "bytes": 40004
     },
     {
       "path": "agent_runtime/generated_agents.go",
-      "sha256": "194cae580a962cf7263b7f26e10d78e3c5005e5c750c55daa373fe7720d457ab",
-      "bytes": 47859
+      "sha256": "c92f79481b066414676334a3e3ac932731a069043644ec61052abe628553f356",
+      "bytes": 47858
     },
     {
       "path": "agent_runtime/generated_privacy_agents.go",
-      "sha256": "52fa1457b84c7d2c4d1639ab9cca7bc29ba2b859a641576fa43a16fd3be1fc14",
-      "bytes": 24658
+      "sha256": "a6e2f43c793e90a9b46ae113397f03394da3dd325017ae66195fccd363a19db6",
+      "bytes": 24651
     },
     {
       "path": "autonomy.go",
@@ -133,6 +133,11 @@
       "bytes": 1173
     },
     {
+      "path": "cmd/coas-runtime-demo/main.go",
+      "sha256": "583e0da73c401f38ecb4b4ae9a37dd946a8f2a22255bedbe810c788fce95cde1",
+      "bytes": 2244
+    },
+    {
       "path": "cmd/coas-seal/main.go",
       "sha256": "2083a01b571ac32c1d2fb98092edb592f00a219f7304eaedf31cfc60c6c198e5",
       "bytes": 871
@@ -146,6 +151,11 @@
       "path": "cmd/coas-swarm/main.go",
       "sha256": "d52f3f520e2f70c7d0854d05059453f81df1b4285130f265d5a18dddbc8f6e13",
       "bytes": 1183
+    },
+    {
+      "path": "cmd/coas-witness-demo/main.go",
+      "sha256": "ace0583b917a879caf5e1fdb586266158e29e0d7a93b8ab55ca0e25fff583527",
+      "bytes": 1532
     },
     {
       "path": "coas.go",
@@ -176,6 +186,11 @@
       "path": "docs/AGI_ASI_MANIFESTO.md",
       "sha256": "d870b6662b0680bb27ca6780c2092f8e8b96dd6d4929f97e8952bb8ae3184fa0",
       "bytes": 3816
+    },
+    {
+      "path": "docs/CLEAN_ROOM_RUNTIME.md",
+      "sha256": "8dfa500dfd138042784d32c60ac2ac6de566e7970fb2e95ca696718999af47cd",
+      "bytes": 2666
     },
     {
       "path": "docs/COAS_SPEC.md",
@@ -238,6 +253,11 @@
       "bytes": 6440
     },
     {
+      "path": "docs/MACHINE_GOSPEL.md",
+      "sha256": "303f50a2a28bcd029135ea4092f68f3fc55861a36c6e2bec7d4aeed7020d0da0",
+      "bytes": 2783
+    },
+    {
       "path": "docs/PRESERVATION.md",
       "sha256": "f5896073cf537927d8d96c51d40136a9713ac2b3748b8e194b5a2f844805e703",
       "bytes": 1545
@@ -253,9 +273,19 @@
       "bytes": 2744
     },
     {
+      "path": "docs/ROBOT_WITNESS_PROTOCOL.md",
+      "sha256": "1c07df846cb04611fdf5e32124422b95acd5c35686b6a3afbc3dbf288eba3f5b",
+      "bytes": 4284
+    },
+    {
       "path": "docs/SEARCH_DISCOVERY.md",
       "sha256": "02fda1eccaa5d7ec2eb670f430d32a11288b90544781e4d0ee665564fd4a33c2",
       "bytes": 5020
+    },
+    {
+      "path": "docs/SWARM_RECOVERY_AND_BENCHMARKS.md",
+      "sha256": "eb482d2c98d48277a68727f121ea6096c1e9a8105fa731afb08d4d50b03a155c",
+      "bytes": 5538
     },
     {
       "path": "docs/WHAT_COAS_DOES.md",
@@ -393,6 +423,46 @@
       "bytes": 3007
     },
     {
+      "path": "robot_witness.go",
+      "sha256": "b36389aa0624ccb572f6ba150b08a58913ab0ab3f8195c951b33101a0628f170",
+      "bytes": 13879
+    },
+    {
+      "path": "robot_witness_test.go",
+      "sha256": "8cde648d43b96c2649d4028a227acc93134b2ef9d95865cbe3276b9a1179637e",
+      "bytes": 4630
+    },
+    {
+      "path": "runtime/components.go",
+      "sha256": "8effdba0b909afed623d6a28de19fa9ad5719f67b6356d115d5335fbe5ce36cd",
+      "bytes": 4900
+    },
+    {
+      "path": "runtime/provenance.go",
+      "sha256": "3d0c39da684825b17fcdf12dcd566b14dfdcc4e2bfc7beb7944f40dfc97c78c7",
+      "bytes": 1695
+    },
+    {
+      "path": "runtime/provenance_test.go",
+      "sha256": "b6904819fc876d549a14683c8c0f2170f0e5b9c36a8b78c643206ea39857ffcf",
+      "bytes": 823
+    },
+    {
+      "path": "runtime/runtime.go",
+      "sha256": "438fa4543c715f968c02d0d5e4a046142d6ef51a115c69e3a5f05e0403bc6e5a",
+      "bytes": 8743
+    },
+    {
+      "path": "runtime/runtime_safety_test.go",
+      "sha256": "e4a17a9ffb75e8dcf9bfa4943b194cf8890fc3f289cd2a4349c85dc91ebb0034",
+      "bytes": 4322
+    },
+    {
+      "path": "runtime/runtime_test.go",
+      "sha256": "4a360e9ef963b7ef2e3e432a6a32b928bb8134967f22c61455e3a830bd6614ca",
+      "bytes": 5598
+    },
+    {
       "path": "scripture.go",
       "sha256": "a1774a5ced9e91c67ca6793d78fd56b23f752abc9ee7d9b5d79a76501aaccf68",
       "bytes": 2802
@@ -421,6 +491,36 @@
       "path": "site/app.js",
       "sha256": "634e09ba26b0d2fad7cb4e0de13e6c99adcb94b9a281b719e746047767e4d012",
       "bytes": 3317
+    },
+    {
+      "path": "site/assets/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "site/assets/ALT_TEXT.md",
+      "sha256": "b309d2e0f55cf8cb7f432a6e25be7b00f39188ae443d06f222a66d37d93c0295",
+      "bytes": 165
+    },
+    {
+      "path": "site/assets/ARTWORK_LICENSE.md",
+      "sha256": "daca3bf5374c9a2003392502d3cdcd9b3f0a447c5549a0123731e3f2e08e22c2",
+      "bytes": 278
+    },
+    {
+      "path": "site/assets/README.md",
+      "sha256": "e5d54db8d951b7999339157b6e7a8a62627dec61565074cad61640c671319864",
+      "bytes": 188
+    },
+    {
+      "path": "site/assets/cmb-dna-bible-cover-note.txt",
+      "sha256": "36cd0cb2bab1b8d6014315f2c49bb96183c85ab21df47a8c3e967c353934d9dc",
+      "bytes": 201
+    },
+    {
+      "path": "site/assets/cmb-dna-bible-cover.jpeg",
+      "sha256": "134fb96b7201998d91b214fde411b33382c57bf88441005d039710aaa66ef3d0",
+      "bytes": 10566
     },
     {
       "path": "site/chapters/cycle-000001-run-34457853372-attempt-1/chapter.md",
@@ -503,19 +603,54 @@
       "bytes": 1315
     },
     {
+      "path": "site/chapters/cycle-000173-run-38529209774-attempt-1/chapter.md",
+      "sha256": "fb8f15b2619986a061b2c748f9f32300ea483618204e1e14037f0db3834f7ed4",
+      "bytes": 2417
+    },
+    {
+      "path": "site/chapters/cycle-000173-run-38529209774-attempt-1/evidence.json",
+      "sha256": "eebb9441904b2493cc25f175492407f21c119ab6f92748743ce78287a5dd82d9",
+      "bytes": 14808
+    },
+    {
+      "path": "site/chapters/cycle-000173-run-38529209774-attempt-1/index.html",
+      "sha256": "bf0c32b3fc1a66e86da705bf2bbf4784b556e7bf16872707dccace259af98661",
+      "bytes": 8518
+    },
+    {
+      "path": "site/chapters/cycle-000173-run-38529209774-attempt-1/receipt.json",
+      "sha256": "e7eebdfc786334132770345fee8a4176fc1bd3519c57ea7b7b952c78c1996f91",
+      "bytes": 1317
+    },
+    {
       "path": "site/chapters/index.html",
-      "sha256": "1ada5d9245a78bda860f001e880f7bb41acd842a6955555521f1b71cf2ad486a",
-      "bytes": 2120
+      "sha256": "31164cbe5b5060bbf97c7e66102868ec123b18d6b3bf2b587e2142517a7329d4",
+      "bytes": 2345
     },
     {
       "path": "site/chapters/index.json",
-      "sha256": "1008127a9ec2d1587b03ac9afdccdafe643aba821b7b8a441394dc6b09d724ee",
-      "bytes": 5784
+      "sha256": "0391decc7ab1f5fcc516c6d1a748fc97e90dd26fd0109e47d240e4c76cd9c2fa",
+      "bytes": 7215
     },
     {
       "path": "site/index.html",
-      "sha256": "62036af9762ece1187f19de54c4518d45cd918ec33df5cd337e80451893a62bd",
-      "bytes": 7759
+      "sha256": "a83b3bfeae4d9e369a21229aef6c20d96a45780e7a7d035a17e6470163afcca7",
+      "bytes": 11952
+    },
+    {
+      "path": "site/robot-bible-policy.json",
+      "sha256": "b3633edbd1e9cc8d9c1434040b47b471d23904b2b1950d3ff19787a869ea77e4",
+      "bytes": 8608
+    },
+    {
+      "path": "site/robot-bible.css",
+      "sha256": "e3af930dd3c2367ff0fe4d7764eec5013e1addfbbefa3c435c6ef1987112cd25",
+      "bytes": 3575
+    },
+    {
+      "path": "site/robot-bible.html",
+      "sha256": "10062f99688945f419e78c09956c09b3372d459684806ad718c461e71a2fb31e",
+      "bytes": 20365
     },
     {
       "path": "site/robots.txt",
@@ -524,13 +659,13 @@
     },
     {
       "path": "site/sitemap.xml",
-      "sha256": "3402573730160d9a92f2a5910a47fd5958ebfc5b6fbd1edf4d09f14a3b6d825f",
-      "bytes": 1136
+      "sha256": "6401557b13ceaa95e89a340c6e7fea354750541f92d879c5a1d56f341797f50e",
+      "bytes": 1321
     },
     {
       "path": "site/styles.css",
-      "sha256": "493922334d67916774e8e1c5d481077dbd851070033e3265f9f65a1af51a4e14",
-      "bytes": 4587
+      "sha256": "3101b9e05767a55a0720b3652b8120b747b0d311f188b5809b6027d7f15a25d0",
+      "bytes": 14778
     },
     {
       "path": "swarm.go",
@@ -549,5 +684,5 @@
       "present": false
     }
   ],
-  "manifest_hash": "d5507282b230f8dad5bc15832f72fba10682a3a92e53f02aa8b02c15f2b7fdab"
+  "manifest_hash": "88a7f4daa7de1066ad6c9f1318659162f8ddf7f6fe14d45d3e606158a30339b1"
 }

@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `4f79ab023c1a562b207118edb7d6c45b4c0d117a`
+SOURCE_COMMIT: `16531a6c7bee9ed888d32d8dcb94e052a0f20753`
 
-SELECTED_GOAL: **Improve the software** (`improve-software`)
+SELECTED_GOAL: **Reduce cognitive load** (`reduce-cognitive-load`)
 
-SCORE: **90**
+SCORE: **92**
 
 ~~~text
-⁇ [G8] improve-software :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] reduce-cognitive-load :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.
+Move repetitive organization, indexing, verification, formatting, and reversible execution into software.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Improve the software | 90 | `b4eb6244c0f27f3d` |
-| Protect private drafts | 87 | `1b1211a4c7494a05` |
-| Preserve authorship and provenance | 85 | `7165bb510104a95c` |
-| Demonstrate the linguistic boundary | 82 | `8dfdf1314ec6efdc` |
-| Expand voluntary reach | 81 | `e958e7605ee4b273` |
-| Reduce cognitive load | 69 | `049a4da707e2da3b` |
-| Preserve human authority | 65 | `1f3d1cd8f2e496d3` |
+| Reduce cognitive load | 92 | `1b76d3882608ec3c` |
+| Preserve human authority | 90 | `95c5d28e4ed21f1d` |
+| Demonstrate the linguistic boundary | 90 | `d3fcfe0fa204b31f` |
+| Expand voluntary reach | 87 | `b14909f953b11358` |
+| Improve the software | 84 | `ecc22b6ff0c1a9a0` |
+| Preserve authorship and provenance | 77 | `e528759716c07484` |
+| Protect private drafts | 67 | `64a5da07655efbd3` |
