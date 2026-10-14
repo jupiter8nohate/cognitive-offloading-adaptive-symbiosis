@@ -29,7 +29,7 @@ func TestRegisterRejectsInvalidCapabilityAtomically(t *testing.T) {
 		t.Fatal(err)
 	}
 	worker := FuncWorker{
-		WorkerName: "PARTIAL_WORKER",
+		WorkerName:         "PARTIAL_WORKER",
 		WorkerCapabilities: []string{"verify", " "},
 		Run: func(context.Context, Task, State) (StepResult, []Evidence, error) {
 			return StepResult{Succeeded: true}, nil, nil
@@ -49,7 +49,7 @@ func TestRegisterRejectsDuplicateCapability(t *testing.T) {
 		t.Fatal(err)
 	}
 	if err := engine.Register(FuncWorker{
-		WorkerName: "DUPLICATE_WORKER",
+		WorkerName:         "DUPLICATE_WORKER",
 		WorkerCapabilities: []string{"verify", "verify"},
 	}); err == nil {
 		t.Fatal("expected duplicate capability registration to fail")
@@ -76,7 +76,7 @@ func TestEngineRejectsInvalidTaskBeforeExecution(t *testing.T) {
 	}
 	called := false
 	err = engine.Register(FuncWorker{
-		WorkerName: "W",
+		WorkerName:         "W",
 		WorkerCapabilities: []string{"verify"},
 		Run: func(context.Context, Task, State) (StepResult, []Evidence, error) {
 			called = true
