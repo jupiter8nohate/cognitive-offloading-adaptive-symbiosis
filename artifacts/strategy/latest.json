@@ -1,42 +1,65 @@
 {
   "version": "coas-autonomous-plan.v1",
-  "source_commit": "5aac8a15eb10a97485214fa33aa6b5858d1177a2",
+  "source_commit": "a3c1decadf3afb702bd7e0f92f6e0f0ba335b167",
   "selected": {
-    "goal_id": "reduce-cognitive-load",
-    "goal_name": "Reduce cognitive load",
-    "score": 92,
-    "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
+    "goal_id": "prove-linguistic-boundary",
+    "goal_name": "Demonstrate the linguistic boundary",
+    "score": 90,
+    "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
     "evidence": [
-      "COAS mechanics",
-      "agent swarm",
-      "reference implementation"
+      "Err⃝or⃟⃤GLITCHOLOGY",
+      "GLITCH-8 grammar",
+      "agent_runtime/"
     ],
-    "source_hash": "b623930e145eb4f2"
+    "source_hash": "95a9f5943fddd676"
   },
   "candidates": [
     {
+      "goal_id": "prove-linguistic-boundary",
+      "goal_name": "Demonstrate the linguistic boundary",
+      "score": 90,
+      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
+      "evidence": [
+        "Err⃝or⃟⃤GLITCHOLOGY",
+        "GLITCH-8 grammar",
+        "agent_runtime/"
+      ],
+      "source_hash": "95a9f5943fddd676"
+    },
+    {
+      "goal_id": "protect-private-drafts",
+      "goal_name": "Protect private drafts",
+      "score": 87,
+      "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
+      "evidence": [
+        "privacy.go",
+        "docs/PRIVACY.md"
+      ],
+      "source_hash": "d556d66ddad7ef82"
+    },
+    {
       "goal_id": "reduce-cognitive-load",
       "goal_name": "Reduce cognitive load",
-      "score": 92,
+      "score": 86,
       "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
       "evidence": [
         "COAS mechanics",
         "agent swarm",
         "reference implementation"
       ],
-      "source_hash": "b623930e145eb4f2"
+      "source_hash": "ee591cb55faa85a0"
     },
     {
-      "goal_id": "preserve-human-authority",
-      "goal_name": "Preserve human authority",
-      "score": 91,
-      "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
+      "goal_id": "expand-voluntary-reach",
+      "goal_name": "Expand voluntary reach",
+      "score": 83,
+      "rationale": "Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.",
       "evidence": [
-        "autonomy.go",
-        "GLITCHOLOGY core laws",
-        "COAS invariants"
+        "distribution.go",
+        "evangelism.go",
+        "docs/DISTRIBUTION.md"
       ],
-      "source_hash": "f3318b8dd3e2283f"
+      "source_hash": "50ab74ce9b8f3daf"
     },
     {
       "goal_id": "improve-software",
@@ -48,54 +71,31 @@
         "gofmt",
         "repository source"
       ],
-      "source_hash": "6fe39595d8c13e19"
+      "source_hash": "315ad3184971846e"
+    },
+    {
+      "goal_id": "preserve-human-authority",
+      "goal_name": "Preserve human authority",
+      "score": 82,
+      "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
+      "evidence": [
+        "autonomy.go",
+        "GLITCHOLOGY core laws",
+        "COAS invariants"
+      ],
+      "source_hash": "ac246d9b5e0d36db"
     },
     {
       "goal_id": "preserve-authorship",
       "goal_name": "Preserve authorship and provenance",
-      "score": 79,
+      "score": 65,
       "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
       "evidence": [
         "preservation.go",
         "artifacts/preservation/",
         "Git history"
       ],
-      "source_hash": "c8720bbc90492b0a"
-    },
-    {
-      "goal_id": "expand-voluntary-reach",
-      "goal_name": "Expand voluntary reach",
-      "score": 71,
-      "rationale": "Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.",
-      "evidence": [
-        "distribution.go",
-        "evangelism.go",
-        "docs/DISTRIBUTION.md"
-      ],
-      "source_hash": "fea4e13c999fcb12"
-    },
-    {
-      "goal_id": "protect-private-drafts",
-      "goal_name": "Protect private drafts",
-      "score": 67,
-      "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
-      "evidence": [
-        "privacy.go",
-        "docs/PRIVACY.md"
-      ],
-      "source_hash": "e09860c22568799c"
-    },
-    {
-      "goal_id": "prove-linguistic-boundary",
-      "goal_name": "Demonstrate the linguistic boundary",
-      "score": 65,
-      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
-      "evidence": [
-        "Err⃝or⃟⃤GLITCHOLOGY",
-        "GLITCH-8 grammar",
-        "agent_runtime/"
-      ],
-      "source_hash": "9bd03b588df676da"
+      "source_hash": "3e757f163a3a023d"
     }
   ]
 }
