@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `ac0255d2df2c00d4df3b300407816dbfa18eaee8`
+SOURCE_COMMIT: `5aac8a15eb10a97485214fa33aa6b5858d1177a2`
 
-SELECTED_GOAL: **Expand voluntary reach** (`expand-voluntary-reach`)
+SELECTED_GOAL: **Reduce cognitive load** (`reduce-cognitive-load`)
 
-SCORE: **85**
+SCORE: **92**
 
 ~~~text
-⁇ [G8] expand-voluntary-reach :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] reduce-cognitive-load :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.
+Move repetitive organization, indexing, verification, formatting, and reversible execution into software.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Expand voluntary reach | 85 | `52ddc1bc889f28ff` |
-| Improve the software | 82 | `6ef1a5cac4055406` |
-| Reduce cognitive load | 79 | `2d8e7d1a9b2616ee` |
-| Preserve authorship and provenance | 70 | `fd5aaac0d9ce60be` |
-| Preserve human authority | 70 | `243c56521e792ecd` |
-| Demonstrate the linguistic boundary | 67 | `024134ff3839225d` |
-| Protect private drafts | 63 | `033c8dafc65c65d3` |
+| Reduce cognitive load | 92 | `b623930e145eb4f2` |
+| Preserve human authority | 91 | `f3318b8dd3e2283f` |
+| Improve the software | 83 | `6fe39595d8c13e19` |
+| Preserve authorship and provenance | 79 | `c8720bbc90492b0a` |
+| Expand voluntary reach | 71 | `fea4e13c999fcb12` |
+| Protect private drafts | 67 | `e09860c22568799c` |
+| Demonstrate the linguistic boundary | 65 | `9bd03b588df676da` |
