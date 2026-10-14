@@ -185,7 +185,7 @@ jobs:
         if: steps.stage.outputs.changed == 'true'
         shell: bash
         run: |
-          if git grep -nI $'\\xE2\\x80\\x94' -- .; then
+          if git grep -nI $'\xE2\x80\x94' -- .; then
             echo "Forbidden U+2014 punctuation found in autonomous candidate."
             exit 1
           fi
