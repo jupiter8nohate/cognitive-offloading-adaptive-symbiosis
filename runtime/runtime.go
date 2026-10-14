@@ -7,6 +7,7 @@ import (
 	"sort"
 	"sync"
 	"time"
+	"strings"
 )
 
 // Mode defines the maximum authority granted to a runtime task.
@@ -142,7 +143,7 @@ func NewEngine(governor Governor, planner Planner, memory Memory, verifier Verif
 
 // Register adds a worker under each declared capability.
 func (e *Engine) Register(worker Worker) error {
-	if worker == nil || worker.Name() == "" {
+	if worker == nil || strings.TrimSpace(worker.Name()) == "" {
 		return errors.New("worker with a non-empty name is required")
 	}
 	caps := worker.Capabilities()
@@ -150,12 +151,19 @@ func (e *Engine) Register(worker Worker) error {
 		return fmt.Errorf("worker %q declares no capabilities", worker.Name())
 	}
 
+	seen := make(map[string]struct{}, len(caps))
+	for _, capability := range caps {
+		if strings.TrimSpace(capability) == "" {
+			return fmt.Errorf("worker %q declares an empty capability", worker.Name())
+		}
+		if _, exists := seen[capability]; exists {
+			return fmt.Errorf("worker %q declares duplicate capability %q", worker.Name(), capability)
+		}
+		seen[capability] = struct{}{}
+	}
 	e.mu.Lock()
 	defer e.mu.Unlock()
 	for _, capability := range caps {
-		if capability == "" {
-			return fmt.Errorf("worker %q declares an empty capability", worker.Name())
-		}
 		e.workers[capability] = append(e.workers[capability], worker)
 		sort.SliceStable(e.workers[capability], func(i, j int) bool {
 			return e.workers[capability][i].Name() < e.workers[capability][j].Name()
@@ -166,6 +174,12 @@ func (e *Engine) Register(worker Worker) error {
 
 // Run executes a task only within the authority granted by the Governor.
 func (e *Engine) Run(ctx context.Context, task Task) (Result, error) {
+	if ctx == nil {
+		return Result{}, errors.New("context is required")
+	}
+	if err := ctx.Err(); err != nil {
+		return Result{}, fmt.Errorf("task context: %w", err)
+	}
 	if err := validateTask(task); err != nil {
 		return Result{}, err
 	}
@@ -184,7 +198,9 @@ func (e *Engine) Run(ctx context.Context, task Task) (Result, error) {
 	if decision.Mode == ModeManual {
 		result.Summary = "manual mode selected; no machine execution performed"
 		result.FinishedAt = time.Now().UTC()
-		_ = e.Memory.AppendResult(ctx, result)
+		if err := e.Memory.AppendResult(ctx, result); err != nil {
+			return result, fmt.Errorf("append manual result: %w", err)
+		}
 		return result, nil
 	}
 
@@ -192,12 +208,17 @@ func (e *Engine) Run(ctx context.Context, task Task) (Result, error) {
 		result.AwaitingConfirmation = true
 		result.Summary = "human confirmation required before execution"
 		result.FinishedAt = time.Now().UTC()
-		_ = e.Memory.AppendResult(ctx, result)
+		if err := e.Memory.AppendResult(ctx, result); err != nil {
+			return result, fmt.Errorf("append awaiting-confirmation result: %w", err)
+		}
 		return result, nil
 	}
 
 	state := State{}
 	for step := 0; step < task.MaxSteps; step++ {
+		if err := ctx.Err(); err != nil {
+			return result, fmt.Errorf("task context at step %d: %w", step+1, err)
+		}
 		capability, done, planErr := e.Planner.Next(ctx, task, state)
 		if planErr != nil {
 			return result, fmt.Errorf("planning failed at step %d: %w", step+1, planErr)
@@ -280,6 +301,11 @@ func validateTask(task Task) error {
 	}
 	if len(task.Capabilities) > task.MaxSteps {
 		return errors.New("max steps must cover all requested capabilities")
+	}
+	for _, capability := range task.Capabilities {
+		if strings.TrimSpace(capability) == "" {
+			return errors.New("task capabilities must be non-empty")
+		}
 	}
 	return nil
 }
