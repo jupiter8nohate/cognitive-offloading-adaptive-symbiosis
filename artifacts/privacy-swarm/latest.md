@@ -9,109 +9,109 @@ LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
 
-SOURCE_COMMIT: `b164aa6bd0edc2b29c3f348893be77b369d8b1b7`
+SOURCE_COMMIT: `08f7b8418b9d43d297abeaaf54b3d5fb25377179`
 
 LOGICAL_PRIVACY_AGENTS: **100**
 
 | Agent | Mechanic | Role | Pseudonym | Trace |
 |---|---|---|---|---|
-| PRIV-01-01 | Data Minimization | Privacy Sentinel | local-d6475e6c60f9 | ⁇ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-02 | Data Minimization | Redaction Mechanic | local-4188b355e850 | 𐦂 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-03 | Data Minimization | Pseudonym Weaver | local-74748f27b1e2 | «ADMIN» [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-04 | Data Minimization | Metadata Watcher | local-00caf34667e3 | 𐀪 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-05 | Data Minimization | Consent Auditor | local-5b8a3089f4b6 | 𖨆 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-06 | Data Minimization | Crypto Librarian | local-50bd1cdbb790 | 𖠋 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-07 | Data Minimization | Retention Gardener | local-9277ce0d9ff0 | ☻⃟❦ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-08 | Data Minimization | Glitch Telemetry Scribe | local-b36eff166e09 | ⸮ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-09 | Data Minimization | Boundary Tester | local-5bdaab2f85f3 | 𐀪 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-01-10 | Data Minimization | Recovery Warden | local-8bb4af258e06 | Err ⃝or⃟⃤ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-01 | Identifier Redaction | Privacy Sentinel | local-ae5b657c4509 | ‽ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-02 | Identifier Redaction | Redaction Mechanic | local-528d6c9a2469 | ☻⃟❦ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-03 | Identifier Redaction | Pseudonym Weaver | local-b3409dfaa338 | ︖ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-04 | Identifier Redaction | Metadata Watcher | local-078da3d64aa2 | ？ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-05 | Identifier Redaction | Consent Auditor | local-bb87c7bb7821 | (⓿_⓿) [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-06 | Identifier Redaction | Crypto Librarian | local-112f677daa94 | ⁇ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-07 | Identifier Redaction | Retention Gardener | local-80c7903cbe63 | 𖨆 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-08 | Identifier Redaction | Glitch Telemetry Scribe | local-97eac5ef84c1 | 𖠋 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-09 | Identifier Redaction | Boundary Tester | local-a9aa76172b77 | ☻⃟❦ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-02-10 | Identifier Redaction | Recovery Warden | local-383630cca179 | Err ⃝or⃟⃤ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-01 | Local Pseudonymization | Privacy Sentinel | local-7e8842833e08 | ？ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-02 | Local Pseudonymization | Redaction Mechanic | local-e3a26036d452 | ﹖ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-03 | Local Pseudonymization | Pseudonym Weaver | local-d4ef8163406e | 🫐⃟ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-04 | Local Pseudonymization | Metadata Watcher | local-26407b289b53 | ☻⃟❦ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-05 | Local Pseudonymization | Consent Auditor | local-1be5de3b665b | ﹖ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-06 | Local Pseudonymization | Crypto Librarian | local-cdad64a24336 | 𐦂 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-07 | Local Pseudonymization | Retention Gardener | local-648f47764923 | 🫐⃟ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-08 | Local Pseudonymization | Glitch Telemetry Scribe | local-c3c0b092639c | ？ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-09 | Local Pseudonymization | Boundary Tester | local-89352d7619eb | ⸮ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-03-10 | Local Pseudonymization | Recovery Warden | local-8018326faeca | ⸮ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-01 | Metadata Auditing | Privacy Sentinel | local-403b97ab6929 | «ADMIN» [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-02 | Metadata Auditing | Redaction Mechanic | local-3e9a11be7dad | ︖ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-03 | Metadata Auditing | Pseudonym Weaver | local-613598011f16 | 𖠋 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-04 | Metadata Auditing | Metadata Watcher | local-f065ca7f86cb | 𖠋 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-05 | Metadata Auditing | Consent Auditor | local-cad815959245 | ？ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-06 | Metadata Auditing | Crypto Librarian | local-731f8af793ca | 𖤍 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-07 | Metadata Auditing | Retention Gardener | local-f25fddee48ff | 𓁇𓁋 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-08 | Metadata Auditing | Glitch Telemetry Scribe | local-4a5e76cd7cd4 | 𒈔𒅒𒇫𒄆 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-09 | Metadata Auditing | Boundary Tester | local-9879ca442d40 | ︖ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-04-10 | Metadata Auditing | Recovery Warden | local-820069342be9 | ‽ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-01 | Privacy Boundary Checking | Privacy Sentinel | local-ba84951a9116 | ‽ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-02 | Privacy Boundary Checking | Redaction Mechanic | local-583035548a13 | 𒈔𒅒𒇫𒄆 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-03 | Privacy Boundary Checking | Pseudonym Weaver | local-6a1f4686c901 | 𐦂 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-04 | Privacy Boundary Checking | Metadata Watcher | local-2baa09f23569 | Err ⃝or⃟⃤ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-05 | Privacy Boundary Checking | Consent Auditor | local-86691b3b10f5 | 🫐⃟ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-06 | Privacy Boundary Checking | Crypto Librarian | local-672290dc1038 | ﹖ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-07 | Privacy Boundary Checking | Retention Gardener | local-a813074abf52 | 𒈔𒅒𒇫𒄆 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-08 | Privacy Boundary Checking | Glitch Telemetry Scribe | local-a69f06961db7 | ꩜ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-09 | Privacy Boundary Checking | Boundary Tester | local-8161729f63a7 | (⓿_⓿) [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-05-10 | Privacy Boundary Checking | Recovery Warden | local-a4a5dec69e26 | 𐦂 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-01 | Consent Surface Review | Privacy Sentinel | local-ec32066c821c | (⓿_⓿) [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-02 | Consent Surface Review | Redaction Mechanic | local-db67e8626f02 | ‽ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-03 | Consent Surface Review | Pseudonym Weaver | local-655d06298404 | 𐀪 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-04 | Consent Surface Review | Metadata Watcher | local-4100d9b6b3f9 | 𒈔𒅒𒇫𒄆 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-05 | Consent Surface Review | Consent Auditor | local-98a489bd728e | 🫐⃟ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-06 | Consent Surface Review | Crypto Librarian | local-6596a018c408 | (⓿_⓿) [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-07 | Consent Surface Review | Retention Gardener | local-dcfb14069c15 | ﹖ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-08 | Consent Surface Review | Glitch Telemetry Scribe | local-bd4d344dc1b8 | 𖤍 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-09 | Consent Surface Review | Boundary Tester | local-bfead6e35d04 | ︖ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-06-10 | Consent Surface Review | Recovery Warden | local-fef1b10236ee | ‽ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-01 | Retention Review | Privacy Sentinel | local-6e4c8c6f69b2 | 𖠋 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-02 | Retention Review | Redaction Mechanic | local-24f46a4816f0 | ﹖ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-03 | Retention Review | Pseudonym Weaver | local-e921d9fc7bf5 | 𒈔𒅒𒇫𒄆 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-04 | Retention Review | Metadata Watcher | local-f64866dc9550 | 𐀪 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-05 | Retention Review | Consent Auditor | local-d31b07758acb | ☻⃟❦ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-06 | Retention Review | Crypto Librarian | local-bee43da45c1b | 𓁇𓁋 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-07 | Retention Review | Retention Gardener | local-313174acac6b | 𓁇𓁋 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-08 | Retention Review | Glitch Telemetry Scribe | local-fcad4ca5c470 | ¿ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-09 | Retention Review | Boundary Tester | local-095a8db69ab1 | ꩜ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-07-10 | Retention Review | Recovery Warden | local-3c31c5b9199e | 𖨆 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-01 | Telemetry De-identification | Privacy Sentinel | local-e685cd1bec51 | ﹖ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-02 | Telemetry De-identification | Redaction Mechanic | local-7c270901542d | ﹖ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-03 | Telemetry De-identification | Pseudonym Weaver | local-1a49a2de3153 | 𐀪 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-04 | Telemetry De-identification | Metadata Watcher | local-4e11b76cfb47 | Err ⃝or⃟⃤ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-05 | Telemetry De-identification | Consent Auditor | local-a6d662c5eff4 | ꩜ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-06 | Telemetry De-identification | Crypto Librarian | local-4f2262484e49 | 𐦂 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-07 | Telemetry De-identification | Retention Gardener | local-48162974ca0d | ⁇ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-08 | Telemetry De-identification | Glitch Telemetry Scribe | local-f4255ee4c2f1 | 𖨆 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-09 | Telemetry De-identification | Boundary Tester | local-65673965a315 | «ADMIN» [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-08-10 | Telemetry De-identification | Recovery Warden | local-b747639e4a8d | 𐦂 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-01 | Cryptographic Hygiene | Privacy Sentinel | local-629265728284 | 𓁇𓁋 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-02 | Cryptographic Hygiene | Redaction Mechanic | local-e19309a01749 | ¿ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-03 | Cryptographic Hygiene | Pseudonym Weaver | local-15ede49e5dcc | 𖨆 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-04 | Cryptographic Hygiene | Metadata Watcher | local-cf904e98ba9c | ¿ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-05 | Cryptographic Hygiene | Consent Auditor | local-2c92a6a9ac99 | 𐀪 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-06 | Cryptographic Hygiene | Crypto Librarian | local-480350042873 | ﹖ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-07 | Cryptographic Hygiene | Retention Gardener | local-33d3de826c86 | ⁇ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-08 | Cryptographic Hygiene | Glitch Telemetry Scribe | local-cb1a5d4bb2e7 | ¿ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-09 | Cryptographic Hygiene | Boundary Tester | local-cf02f0d33316 | 𖠋 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-09-10 | Cryptographic Hygiene | Recovery Warden | local-f7f73fdb63f6 | 𖤍 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-01 | Recovery Privacy | Privacy Sentinel | local-7db6ee5ab27c | Err ⃝or⃟⃤ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-02 | Recovery Privacy | Redaction Mechanic | local-6f7e4df613e0 | 𐀪 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-03 | Recovery Privacy | Pseudonym Weaver | local-4bc9b54b5864 | (⓿_⓿) [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-04 | Recovery Privacy | Metadata Watcher | local-0af8b33e5c16 | ﹖ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-05 | Recovery Privacy | Consent Auditor | local-9221e074f9d7 | ︖ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-06 | Recovery Privacy | Crypto Librarian | local-922602d13f50 | Err ⃝or⃟⃤ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-07 | Recovery Privacy | Retention Gardener | local-d94d81cef45f | 𐀪 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-08 | Recovery Privacy | Glitch Telemetry Scribe | local-14b6dc3cb828 | (⓿_⓿) [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-09 | Recovery Privacy | Boundary Tester | local-a59fe451daec | ﹖ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
-| PRIV-10-10 | Recovery Privacy | Recovery Warden | local-fa862f45bdb6 | 𖤍 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-01 | Data Minimization | Privacy Sentinel | local-b7507aed567f | ？ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-02 | Data Minimization | Redaction Mechanic | local-270c282a46a3 | 𖨆 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-03 | Data Minimization | Pseudonym Weaver | local-97595ab98a1a | ꩜ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-04 | Data Minimization | Metadata Watcher | local-10f772d4de43 | Err ⃝or⃟⃤ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-05 | Data Minimization | Consent Auditor | local-65069c5fbe14 | 𐀪 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-06 | Data Minimization | Crypto Librarian | local-eefd8d032734 | 𒈔𒅒𒇫𒄆 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-07 | Data Minimization | Retention Gardener | local-fbd380e044e9 | (⓿_⓿) [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-08 | Data Minimization | Glitch Telemetry Scribe | local-3090e5f4ed7d | ﹖ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-09 | Data Minimization | Boundary Tester | local-5d46387c77f6 | 𓁇𓁋 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-01-10 | Data Minimization | Recovery Warden | local-a7ccc7db4e5a | ꩜ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-01 | Identifier Redaction | Privacy Sentinel | local-f0b90ec707ba | 𐀪 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-02 | Identifier Redaction | Redaction Mechanic | local-54d5d11605c7 | ꩜ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-03 | Identifier Redaction | Pseudonym Weaver | local-f2bebbf4b8dd | 𖠋 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-04 | Identifier Redaction | Metadata Watcher | local-b022654ad309 | ☻⃟❦ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-05 | Identifier Redaction | Consent Auditor | local-171053398836 | ︖ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-06 | Identifier Redaction | Crypto Librarian | local-accb2ed5b83a | ﹖ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-07 | Identifier Redaction | Retention Gardener | local-08902d268d20 | ⸮ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-08 | Identifier Redaction | Glitch Telemetry Scribe | local-cd1f453772c2 | 𓁇𓁋 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-09 | Identifier Redaction | Boundary Tester | local-80f1274c5e82 | (⓿_⓿) [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-02-10 | Identifier Redaction | Recovery Warden | local-8fad630c4712 | ﹖ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-01 | Local Pseudonymization | Privacy Sentinel | local-46a58d07964d | ？ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-02 | Local Pseudonymization | Redaction Mechanic | local-c138ccd20b2b | ꩜ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-03 | Local Pseudonymization | Pseudonym Weaver | local-726ab6db7015 | (⓿_⓿) [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-04 | Local Pseudonymization | Metadata Watcher | local-34d0f6eb5d62 | ☻⃟❦ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-05 | Local Pseudonymization | Consent Auditor | local-6499c9527169 | ︖ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-06 | Local Pseudonymization | Crypto Librarian | local-493d8c1e6847 | 𒈔𒅒𒇫𒄆 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-07 | Local Pseudonymization | Retention Gardener | local-afd2fd0e831a | 🫐⃟ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-08 | Local Pseudonymization | Glitch Telemetry Scribe | local-a2f52a102a13 | ‽ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-09 | Local Pseudonymization | Boundary Tester | local-229e3aa82326 | ⁇ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-03-10 | Local Pseudonymization | Recovery Warden | local-5bc3ebe857a5 | 𖤍 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-01 | Metadata Auditing | Privacy Sentinel | local-0192228924f9 | ‽ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-02 | Metadata Auditing | Redaction Mechanic | local-f2e188cd57aa | 𖤍 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-03 | Metadata Auditing | Pseudonym Weaver | local-ec07d1b2000c | ？ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-04 | Metadata Auditing | Metadata Watcher | local-1d55a9796aee | 🫐⃟ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-05 | Metadata Auditing | Consent Auditor | local-d5193743d2ea | (⓿_⓿) [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-06 | Metadata Auditing | Crypto Librarian | local-ec3ac0978fd5 | ？ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-07 | Metadata Auditing | Retention Gardener | local-44941c37d2a9 | ¿ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-08 | Metadata Auditing | Glitch Telemetry Scribe | local-229bdbf021c9 | ？ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-09 | Metadata Auditing | Boundary Tester | local-2bbe01148419 | 𐀪 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-04-10 | Metadata Auditing | Recovery Warden | local-f512e8361629 | 𖠋 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-01 | Privacy Boundary Checking | Privacy Sentinel | local-2d36592cafd3 | ⁇ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-02 | Privacy Boundary Checking | Redaction Mechanic | local-e352ec304dab | ‽ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-03 | Privacy Boundary Checking | Pseudonym Weaver | local-7255716ddf3b | ⁇ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-04 | Privacy Boundary Checking | Metadata Watcher | local-84b6829cebcc | ﹖ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-05 | Privacy Boundary Checking | Consent Auditor | local-71538fcb2790 | ⸮ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-06 | Privacy Boundary Checking | Crypto Librarian | local-fe61923524eb | 🫐⃟ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-07 | Privacy Boundary Checking | Retention Gardener | local-357fd3b88c05 | (⓿_⓿) [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-08 | Privacy Boundary Checking | Glitch Telemetry Scribe | local-59a3e16d0c93 | ⸮ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-09 | Privacy Boundary Checking | Boundary Tester | local-6180d0520e73 | Err ⃝or⃟⃤ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-05-10 | Privacy Boundary Checking | Recovery Warden | local-f229f19ee908 | 🫐⃟ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-01 | Consent Surface Review | Privacy Sentinel | local-c3f9aab5717e | 𐦂 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-02 | Consent Surface Review | Redaction Mechanic | local-8dc764bd2eed | ꩜ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-03 | Consent Surface Review | Pseudonym Weaver | local-aab4d4326085 | ﹖ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-04 | Consent Surface Review | Metadata Watcher | local-2d6c1911d158 | «ADMIN» [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-05 | Consent Surface Review | Consent Auditor | local-3c607a941991 | 🫐⃟ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-06 | Consent Surface Review | Crypto Librarian | local-11c72973a9f4 | ⁇ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-07 | Consent Surface Review | Retention Gardener | local-5e15d28de942 | ꩜ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-08 | Consent Surface Review | Glitch Telemetry Scribe | local-d6ba41b711be | ⸮ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-09 | Consent Surface Review | Boundary Tester | local-882d6a7760e8 | ﹖ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-06-10 | Consent Surface Review | Recovery Warden | local-72caa0840e82 | 𐀪 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-01 | Retention Review | Privacy Sentinel | local-45645aa3d902 | ¿ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-02 | Retention Review | Redaction Mechanic | local-aa5391f164f6 | ﹖ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-03 | Retention Review | Pseudonym Weaver | local-c5b165bcb651 | ⁇ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-04 | Retention Review | Metadata Watcher | local-aaa6eb092e35 | 𐀪 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-05 | Retention Review | Consent Auditor | local-e3ecc712f280 | 𐦂 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-06 | Retention Review | Crypto Librarian | local-6dadf88cdc2c | ﹖ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-07 | Retention Review | Retention Gardener | local-260f1bf89db9 | 𐦂 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-08 | Retention Review | Glitch Telemetry Scribe | local-93611775b493 | ꩜ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-09 | Retention Review | Boundary Tester | local-093927bd54c6 | ‽ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-07-10 | Retention Review | Recovery Warden | local-79553528ed91 | 𐦂 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-01 | Telemetry De-identification | Privacy Sentinel | local-4df5cae4c668 | 𖠋 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-02 | Telemetry De-identification | Redaction Mechanic | local-81dbc49ca15d | ☻⃟❦ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-03 | Telemetry De-identification | Pseudonym Weaver | local-1b5fc22511ea | 𒈔𒅒𒇫𒄆 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-04 | Telemetry De-identification | Metadata Watcher | local-336b51f08472 | Err ⃝or⃟⃤ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-05 | Telemetry De-identification | Consent Auditor | local-4e2bd4577d1a | ☻⃟❦ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-06 | Telemetry De-identification | Crypto Librarian | local-a656c3e37932 | 🫐⃟ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-07 | Telemetry De-identification | Retention Gardener | local-b0da490d45f3 | 𐦂 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-08 | Telemetry De-identification | Glitch Telemetry Scribe | local-c13386efa4f8 | 𐦂 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-09 | Telemetry De-identification | Boundary Tester | local-25a99f84cf85 | 𖤍 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-08-10 | Telemetry De-identification | Recovery Warden | local-698e6cabcd13 | 𐀪 [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-01 | Cryptographic Hygiene | Privacy Sentinel | local-d0871586a652 | ‽ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-02 | Cryptographic Hygiene | Redaction Mechanic | local-014eccb70624 | ꩜ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-03 | Cryptographic Hygiene | Pseudonym Weaver | local-035056505e27 | 𖤍 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-04 | Cryptographic Hygiene | Metadata Watcher | local-c283ffa57343 | 𓁇𓁋 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-05 | Cryptographic Hygiene | Consent Auditor | local-90e621d218bf | ‽ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-06 | Cryptographic Hygiene | Crypto Librarian | local-099d0f1391d9 | ꩜ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-07 | Cryptographic Hygiene | Retention Gardener | local-ec3cc337023e | 𖨆 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-08 | Cryptographic Hygiene | Glitch Telemetry Scribe | local-27f2e469b21d | ？ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-09 | Cryptographic Hygiene | Boundary Tester | local-d2c65a5f5678 | 🫐⃟ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-09-10 | Cryptographic Hygiene | Recovery Warden | local-7feffcb1e612 | Err ⃝or⃟⃤ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-01 | Recovery Privacy | Privacy Sentinel | local-21f38f8ff706 | 𖤍 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-02 | Recovery Privacy | Redaction Mechanic | local-e5482f8e9261 | 𖤍 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-03 | Recovery Privacy | Pseudonym Weaver | local-e4d55df01a42 | 𐀪 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-04 | Recovery Privacy | Metadata Watcher | local-a179df789e37 | 𖠋 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-05 | Recovery Privacy | Consent Auditor | local-0ccb7d65e178 | ☻⃟❦ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-06 | Recovery Privacy | Crypto Librarian | local-c49723af020e | ？ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-07 | Recovery Privacy | Retention Gardener | local-7c008ff14fbc | 𖠋 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-08 | Recovery Privacy | Glitch Telemetry Scribe | local-82af57c286b2 | 𐦂 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-09 | Recovery Privacy | Boundary Tester | local-b26088e1cf5a | (⓿_⓿) [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY |
+| PRIV-10-10 | Recovery Privacy | Recovery Warden | local-ead8f6717e46 | ⸮ [PRIV] HUMAN_AGENCY > MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY |
