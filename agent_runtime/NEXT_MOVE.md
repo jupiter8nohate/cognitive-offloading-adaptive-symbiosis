@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `a24f5af9aabe48444dae2e5830003fabc158c512`
+SOURCE_COMMIT: `8c757aa9ee9d888f1e496dd8cf7541d4e4434baa`
 
-SELECTED_GOAL: **Preserve human authority** (`preserve-human-authority`)
+SELECTED_GOAL: **Preserve authorship and provenance** (`preserve-authorship`)
 
 SCORE: **90**
 
 ~~~text
-⁇ [G8] preserve-human-authority :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] preserve-authorship :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.
+Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Preserve human authority | 90 | `9579d71060299302` |
-| Improve the software | 86 | `15b9b0fcae9508e8` |
-| Preserve authorship and provenance | 84 | `70cafb7ab84d99c5` |
-| Protect private drafts | 84 | `f1631ac1af34c4f2` |
-| Expand voluntary reach | 83 | `5095b1e7c3d8b68d` |
-| Reduce cognitive load | 77 | `e5059b475409f825` |
-| Demonstrate the linguistic boundary | 66 | `da1a5cd1f8aad682` |
+| Preserve authorship and provenance | 90 | `385f1db7cee367be` |
+| Preserve human authority | 88 | `93327917951cca2b` |
+| Expand voluntary reach | 85 | `524b61314d4ca9e9` |
+| Improve the software | 78 | `a8e29846e8b3ddc2` |
+| Protect private drafts | 77 | `ea48fada02cdeb29` |
+| Reduce cognitive load | 74 | `a40a801fca0fbbc7` |
+| Demonstrate the linguistic boundary | 65 | `d9f5ccd3c8984eca` |
