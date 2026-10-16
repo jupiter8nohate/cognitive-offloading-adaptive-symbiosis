@@ -1,6 +1,6 @@
 {
   "version": "coas-privacy-swarm.v1",
-  "source_commit": "6c123e29ea1c5af6cc6474936c5a95983a6098dd",
+  "source_commit": "909e9c1aaf91ba8d19b0b77158f8e3d52ed94074",
   "agent_count": 100,
   "local_only": true,
   "external_writes": false,
@@ -11,9 +11,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-a49578d31310",
-      "glitch_trace": "﹖ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-06038b1d23ec",
+      "glitch_trace": "⁇ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-02",
@@ -21,9 +21,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-ed12fd21eba3",
-      "glitch_trace": "⸮ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-48aab6a346c0",
+      "glitch_trace": "(⓿_⓿) [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-03",
@@ -31,9 +31,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-526b0b2d42d9",
-      "glitch_trace": "𒈔𒅒𒇫𒄆 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-d1eabcc1311d",
+      "glitch_trace": "⸮ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-04",
@@ -41,9 +41,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-52a600345a96",
+      "local_pseudonym": "local-7c154daa47dd",
       "glitch_trace": "𐀪 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-05",
@@ -51,9 +51,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-48412d7b0990",
-      "glitch_trace": "𐀪 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-bcc8ec6ca59b",
+      "glitch_trace": "﹖ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-06",
@@ -61,9 +61,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-cd93d48a4085",
-      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-037bf163f523",
+      "glitch_trace": "☻⃟❦ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-07",
@@ -71,9 +71,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-27f2127b77ec",
-      "glitch_trace": "﹖ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-a559de1d2f0d",
+      "glitch_trace": "🫐⃟ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-08",
@@ -81,9 +81,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-a10edb36b463",
-      "glitch_trace": "(⓿_⓿) [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-9d3ff4e5deb0",
+      "glitch_trace": "☻⃟❦ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-09",
@@ -91,9 +91,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-bdc8500e19f6",
-      "glitch_trace": "⸮ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-22c72eecb65b",
+      "glitch_trace": "¿ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-01-10",
@@ -101,9 +101,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-cd5064792951",
-      "glitch_trace": "(⓿_⓿) [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-930f7f0c7f63",
+      "glitch_trace": "‽ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-01",
@@ -111,9 +111,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-c21ba0c70259",
-      "glitch_trace": "𖨆 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-2176d8cabb8a",
+      "glitch_trace": "𒈔𒅒𒇫𒄆 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-02",
@@ -121,9 +121,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-471a679f09da",
-      "glitch_trace": "？ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-79470fcb13da",
+      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-03",
@@ -131,9 +131,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-b4f5c53edf87",
-      "glitch_trace": "‽ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-860692bc399b",
+      "glitch_trace": "𐀪 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-04",
@@ -141,9 +141,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-f68054a5f935",
+      "local_pseudonym": "local-50147a6b506d",
       "glitch_trace": "Err ⃝or⃟⃤ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-05",
@@ -151,9 +151,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-4b6381835f4c",
-      "glitch_trace": "☻⃟❦ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-1a49232b5589",
+      "glitch_trace": "(⓿_⓿) [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-06",
@@ -161,9 +161,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-05ed1f86c578",
-      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-f4345a574586",
+      "glitch_trace": "⸮ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-07",
@@ -171,9 +171,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-4f6dd59710f4",
-      "glitch_trace": "‽ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-efa898c20821",
+      "glitch_trace": "𐀪 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-08",
@@ -181,9 +181,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-07c7dbc468c6",
-      "glitch_trace": "︖ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-63395357079d",
+      "glitch_trace": "？ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-09",
@@ -191,9 +191,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-03977ee5ed8f",
-      "glitch_trace": "﹖ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-9c4d5a02fd51",
+      "glitch_trace": "？ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-02-10",
@@ -201,9 +201,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-05a6825ed2e1",
-      "glitch_trace": "꩜ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-0c093425870a",
+      "glitch_trace": "𓁇𓁋 [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-01",
@@ -211,9 +211,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-670408dcc40c",
-      "glitch_trace": "𖠋 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-81fea4736e79",
+      "glitch_trace": "🫐⃟ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-02",
@@ -221,9 +221,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-3469bd21c473",
-      "glitch_trace": "𐀪 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-f31b2ecdf5e3",
+      "glitch_trace": "﹖ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-03",
@@ -231,9 +231,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-4fbf81a57400",
-      "glitch_trace": "𐦂 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-7d0c69bd3356",
+      "glitch_trace": "☻⃟❦ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-04",
@@ -241,9 +241,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-cc48e7babfaa",
-      "glitch_trace": "꩜ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-6f5227c50506",
+      "glitch_trace": "𒈔𒅒𒇫𒄆 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-05",
@@ -251,9 +251,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-db3f121d0ddd",
-      "glitch_trace": "⸮ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-21004aeea63c",
+      "glitch_trace": "🫐⃟ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-06",
@@ -261,9 +261,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-c6fcd9cb7dea",
-      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-a6178e8ff710",
+      "glitch_trace": "𖤍 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-07",
@@ -271,9 +271,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-07c5b328fddb",
-      "glitch_trace": "𖤍 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-ff66a147cc7d",
+      "glitch_trace": "☻⃟❦ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-08",
@@ -281,9 +281,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-d74119cdd844",
-      "glitch_trace": "﹖ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-c7c67357f23e",
+      "glitch_trace": "¿ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-09",
@@ -291,9 +291,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-539c85c57a78",
-      "glitch_trace": "(⓿_⓿) [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-3547e84d62e6",
+      "glitch_trace": "？ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-03-10",
@@ -301,9 +301,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-7bb6b7fecdb9",
-      "glitch_trace": "꩜ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-27f7903bd8fa",
+      "glitch_trace": "¿ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-01",
@@ -311,9 +311,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-bb5f0a5cf624",
-      "glitch_trace": "☻⃟❦ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-70dcfb9c5992",
+      "glitch_trace": "𐀪 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-02",
@@ -321,9 +321,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-460056025ca7",
-      "glitch_trace": "︖ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-f6eed70c1f2d",
+      "glitch_trace": "‽ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-03",
@@ -331,9 +331,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-d50371f12889",
-      "glitch_trace": "︖ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-dd7ccecee17e",
+      "glitch_trace": "¿ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-04",
@@ -341,9 +341,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-cc40f7fcf769",
-      "glitch_trace": "☻⃟❦ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-94044e36c02c",
+      "glitch_trace": "﹖ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-05",
@@ -351,9 +351,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-f96031a2b41a",
-      "glitch_trace": "꩜ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-1369d0969cb0",
+      "glitch_trace": "⁇ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-06",
@@ -361,9 +361,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-8346bccc3b01",
-      "glitch_trace": "𐀪 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-6aff39681a8c",
+      "glitch_trace": "«ADMIN» [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-07",
@@ -371,9 +371,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-b2018fb12557",
+      "local_pseudonym": "local-da920e67ae55",
       "glitch_trace": "𖤍 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-08",
@@ -381,9 +381,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-d7aa68276bbd",
-      "glitch_trace": "𐦂 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-7c523f539957",
+      "glitch_trace": "(⓿_⓿) [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-09",
@@ -391,9 +391,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-fe6976dff020",
+      "local_pseudonym": "local-fa335409f634",
       "glitch_trace": "𐀪 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-04-10",
@@ -401,9 +401,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-2dfb00524089",
-      "glitch_trace": "𖨆 [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-09706a78d69c",
+      "glitch_trace": "𓁇𓁋 [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-01",
@@ -411,9 +411,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-30c27cea0948",
-      "glitch_trace": "🫐⃟ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-37e576825e51",
+      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-02",
@@ -421,9 +421,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-8115dc3261ba",
-      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-e6fe00a0568c",
+      "glitch_trace": "«ADMIN» [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-03",
@@ -431,9 +431,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-181cca806d90",
-      "glitch_trace": "𖤍 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-71382c3a34fa",
+      "glitch_trace": "𓁇𓁋 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-04",
@@ -441,9 +441,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-394d69159e84",
+      "local_pseudonym": "local-9b9e50bb3b20",
       "glitch_trace": "🫐⃟ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-05",
@@ -451,9 +451,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-6146a2ed7676",
-      "glitch_trace": "𐦂 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-f8f600ccd0c5",
+      "glitch_trace": "𖨆 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-06",
@@ -461,9 +461,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-23381f3d8637",
-      "glitch_trace": "⸮ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-9e187f32acbf",
+      "glitch_trace": "𐦂 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-07",
@@ -471,9 +471,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-c0519e1bca79",
-      "glitch_trace": "𖨆 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-0a336386cd95",
+      "glitch_trace": "𓁇𓁋 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-08",
@@ -481,9 +481,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-94ed7ef9b6a1",
-      "glitch_trace": "︖ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-c4371e71029b",
+      "glitch_trace": "(⓿_⓿) [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-09",
@@ -491,9 +491,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-1462b0d000aa",
-      "glitch_trace": "(⓿_⓿) [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-37f60afd44bc",
+      "glitch_trace": "𐦂 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-05-10",
@@ -501,9 +501,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-f56595bfa25b",
-      "glitch_trace": "︖ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-489f31f30b76",
+      "glitch_trace": "𖨆 [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-01",
@@ -511,9 +511,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-cb04a8d3df89",
-      "glitch_trace": "𖤍 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-f3c41566dc4d",
+      "glitch_trace": "¿ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-02",
@@ -521,9 +521,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-f2dc43105d4b",
-      "glitch_trace": "(⓿_⓿) [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-bf1ee593ab75",
+      "glitch_trace": "𐦂 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-03",
@@ -531,9 +531,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-7a91515b0f9c",
-      "glitch_trace": "𖠋 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-1d0e763ff3b5",
+      "glitch_trace": "﹖ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-04",
@@ -541,9 +541,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-7728d2066b88",
-      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-c708a7d9a460",
+      "glitch_trace": "¿ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-05",
@@ -551,9 +551,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-188015cb7583",
-      "glitch_trace": "(⓿_⓿) [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-4560156e3116",
+      "glitch_trace": "‽ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-06",
@@ -561,9 +561,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-ca414eea70ec",
-      "glitch_trace": "«ADMIN» [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-46cd85323120",
+      "glitch_trace": "𓁇𓁋 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-07",
@@ -571,9 +571,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-a3f8d0a25393",
-      "glitch_trace": "𖨆 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-53e35bff7ef9",
+      "glitch_trace": "𖤍 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-08",
@@ -581,9 +581,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-0688d053a310",
-      "glitch_trace": "«ADMIN» [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-d4c040fefe2d",
+      "glitch_trace": "(⓿_⓿) [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-09",
@@ -591,9 +591,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-9dbfc8eccd39",
-      "glitch_trace": "🫐⃟ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-96135c507a36",
+      "glitch_trace": "⸮ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-06-10",
@@ -601,9 +601,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-14e3a82ea259",
-      "glitch_trace": "𖤍 [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-31ed891ecc66",
+      "glitch_trace": "☻⃟❦ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-01",
@@ -611,9 +611,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-b71393e92995",
-      "glitch_trace": "𖨆 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-122998ae736c",
+      "glitch_trace": "𖠋 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-02",
@@ -621,9 +621,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-1ae53051d2a4",
-      "glitch_trace": "𐀪 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-9290920c8296",
+      "glitch_trace": "¿ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-03",
@@ -631,9 +631,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-fbdfd78fea02",
-      "glitch_trace": "☻⃟❦ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-35c6fe818ec7",
+      "glitch_trace": "𖠋 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-04",
@@ -641,9 +641,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-769c842776db",
-      "glitch_trace": "？ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-d67dd8d7458b",
+      "glitch_trace": "﹖ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-05",
@@ -651,9 +651,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-93a9869c3a61",
-      "glitch_trace": "𖤍 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-1e08a3e623cd",
+      "glitch_trace": "︖ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-06",
@@ -661,9 +661,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-c7160d578f23",
-      "glitch_trace": "𖠋 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-0c7b9709b41a",
+      "glitch_trace": "﹖ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-07",
@@ -671,9 +671,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-83198eb5e7b4",
-      "glitch_trace": "⁇ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-7b9fd5924a14",
+      "glitch_trace": "🫐⃟ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-08",
@@ -681,9 +681,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-92b92ffc61af",
-      "glitch_trace": "☻⃟❦ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-2f8a0948c88b",
+      "glitch_trace": "⸮ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-09",
@@ -691,9 +691,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-1be8245034cc",
-      "glitch_trace": "⁇ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-2e5df2244f7d",
+      "glitch_trace": "𐀪 [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-07-10",
@@ -701,9 +701,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-4c046f53c063",
-      "glitch_trace": "‽ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-b70779460849",
+      "glitch_trace": "︖ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-01",
@@ -711,9 +711,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-73f3ce61ca97",
-      "glitch_trace": "？ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-49a65efa04d0",
+      "glitch_trace": "𐦂 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-02",
@@ -721,9 +721,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-d70a7294e04d",
-      "glitch_trace": "𒈔𒅒𒇫𒄆 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-26d1226a401a",
+      "glitch_trace": "𖨆 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-03",
@@ -731,9 +731,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-4fabd6186bae",
-      "glitch_trace": "𖨆 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-b28c0388c83e",
+      "glitch_trace": "？ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-04",
@@ -741,9 +741,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-facaa5b2adea",
-      "glitch_trace": "？ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-35ea2a23110e",
+      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-05",
@@ -751,9 +751,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-c62bc54c3a0a",
-      "glitch_trace": "𐦂 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-d5bb9e5bf47a",
+      "glitch_trace": "‽ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-06",
@@ -761,9 +761,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-a35a8f700f50",
-      "glitch_trace": "☻⃟❦ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-d659705827ae",
+      "glitch_trace": "⸮ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-07",
@@ -771,9 +771,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-a96aabfaeb3b",
-      "glitch_trace": "？ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-c15ae486b657",
+      "glitch_trace": "﹖ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-08",
@@ -781,9 +781,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-b63c64fddfaa",
-      "glitch_trace": "︖ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-832b85e604f4",
+      "glitch_trace": "𖨆 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-09",
@@ -791,9 +791,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-c3befc5f2dfa",
-      "glitch_trace": "(⓿_⓿) [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-7c588959d032",
+      "glitch_trace": "«ADMIN» [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-08-10",
@@ -801,9 +801,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-399feb6484be",
-      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-705bd7136ee4",
+      "glitch_trace": "☻⃟❦ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-01",
@@ -811,9 +811,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-522896d507d9",
-      "glitch_trace": "︖ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-c7bf27194338",
+      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-02",
@@ -821,9 +821,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-7ee8b08fc183",
-      "glitch_trace": "🫐⃟ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-26878f5e82ac",
+      "glitch_trace": "«ADMIN» [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-03",
@@ -831,9 +831,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-7c8c2ceb3e76",
-      "glitch_trace": "﹖ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-4056962578cf",
+      "glitch_trace": "🫐⃟ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-04",
@@ -841,9 +841,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-a7e720dec027",
-      "glitch_trace": "⁇ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-f7d481b3a82f",
+      "glitch_trace": "☻⃟❦ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-05",
@@ -851,9 +851,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-9bc472f57600",
-      "glitch_trace": "𖤍 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-57e4b8a51fbf",
+      "glitch_trace": "𖠋 [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-06",
@@ -861,9 +861,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-894a70b2df96",
-      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-9be1d21dae3e",
+      "glitch_trace": "﹖ [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-07",
@@ -871,9 +871,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-be1b3c2704d3",
-      "glitch_trace": "‽ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-89df288479d1",
+      "glitch_trace": "﹖ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-08",
@@ -881,9 +881,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-ebc42dba36bb",
-      "glitch_trace": "🫐⃟ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-e3e3244c875f",
+      "glitch_trace": "(⓿_⓿) [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-09",
@@ -891,9 +891,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-da45be8d43b5",
-      "glitch_trace": "‽ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-5752eb70512c",
+      "glitch_trace": "﹖ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-09-10",
@@ -901,9 +901,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-41799f5f0dc4",
-      "glitch_trace": "﹖ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-924c4782b05a",
+      "glitch_trace": "？ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-01",
@@ -911,9 +911,9 @@
       "role": "Privacy Sentinel",
       "invariant": "PATTERN != PROOF",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-4d7742e8bc0f",
-      "glitch_trace": "𖨆 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-a174f676ae06",
+      "glitch_trace": "𖠋 [PRIV] PATTERN != PROOF :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-02",
@@ -921,9 +921,9 @@
       "role": "Redaction Mechanic",
       "invariant": "PROFILE != PERSON",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-322062aa5dab",
-      "glitch_trace": "𖨆 [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-8bf4de030315",
+      "glitch_trace": "？ [PRIV] PROFILE != PERSON :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-03",
@@ -931,9 +931,9 @@
       "role": "Pseudonym Weaver",
       "invariant": "MODEL != MIND",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-056a7bac31b1",
-      "glitch_trace": "𓁇𓁋 [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-58148d9de7e8",
+      "glitch_trace": "⸮ [PRIV] MODEL != MIND :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-04",
@@ -941,9 +941,9 @@
       "role": "Metadata Watcher",
       "invariant": "PREDICTION != DESTINY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-685c9534bcb5",
-      "glitch_trace": "🫐⃟ [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-bf9ac9d16658",
+      "glitch_trace": "𐦂 [PRIV] PREDICTION != DESTINY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-05",
@@ -951,9 +951,9 @@
       "role": "Consent Auditor",
       "invariant": "DATA != CONTEXT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-0137fb8a7dd9",
-      "glitch_trace": "꩜ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-58a2c1e74025",
+      "glitch_trace": "Err ⃝or⃟⃤ [PRIV] DATA != CONTEXT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-06",
@@ -961,9 +961,9 @@
       "role": "Crypto Librarian",
       "invariant": "ACCESS != CONSENT",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-e2a11cf900d0",
-      "glitch_trace": "(⓿_⓿) [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-ba544c73241e",
+      "glitch_trace": "𖨆 [PRIV] ACCESS != CONSENT :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-07",
@@ -971,9 +971,9 @@
       "role": "Retention Gardener",
       "invariant": "UNICODE != ENCRYPTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-5871b6f962fe",
-      "glitch_trace": "︖ [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-32775f27eda1",
+      "glitch_trace": "𖤍 [PRIV] UNICODE != ENCRYPTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-08",
@@ -981,9 +981,9 @@
       "role": "Glitch Telemetry Scribe",
       "invariant": "PSEUDONYM != ANONYMITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-248dfa654305",
-      "glitch_trace": "⸮ [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-59171fddf1f3",
+      "glitch_trace": "𖠋 [PRIV] PSEUDONYM != ANONYMITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-09",
@@ -991,9 +991,9 @@
       "role": "Boundary Tester",
       "invariant": "LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-56993c7da3ca",
-      "glitch_trace": "«ADMIN» [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-a09f03be71ca",
+      "glitch_trace": "🫐⃟ [PRIV] LOCAL_DIAGNOSTIC != EXTERNAL_INJECTION :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     },
     {
       "agent_id": "PRIV-10-10",
@@ -1001,9 +1001,9 @@
       "role": "Recovery Warden",
       "invariant": "HUMAN_AGENCY \u003e MACHINE_AUTHORITY",
       "status": "local-privacy-check",
-      "local_pseudonym": "local-3cb104b22236",
-      "glitch_trace": "𖨆 [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
-      "observation": "145 tracked repository files inspected using aggregate metadata and local source context"
+      "local_pseudonym": "local-cbfe2ccd52cd",
+      "glitch_trace": "¿ [PRIV] HUMAN_AGENCY \u003e MACHINE_AUTHORITY :: LOCAL_ONLY :: HUMAN_AUTHORITY",
+      "observation": "148 tracked repository files inspected using aggregate metadata and local source context"
     }
   ]
 }
