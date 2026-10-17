@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `6aebe7410b66c8a87dd3c03b1e9fa40adaf56120`
+SOURCE_COMMIT: `b98eb1a5b7dd82fbdbd7fe25c3913daa7ae0936e`
 
-SELECTED_GOAL: **Protect private drafts** (`protect-private-drafts`)
+SELECTED_GOAL: **Improve the software** (`improve-software`)
 
-SCORE: **87**
+SCORE: **90**
 
 ~~~text
-⁇ [G8] protect-private-drafts :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] improve-software :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.
+Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Protect private drafts | 87 | `b6a51b7376f8bce3` |
-| Demonstrate the linguistic boundary | 85 | `90782393bdadabc2` |
-| Improve the software | 84 | `aeaacfe4a32c4935` |
-| Preserve human authority | 81 | `8cbbe94cc8352eae` |
-| Preserve authorship and provenance | 78 | `e6ad1394cdbe00c7` |
-| Reduce cognitive load | 75 | `290eb6f7bed04fb9` |
-| Expand voluntary reach | 70 | `81d67cdbb88b0baf` |
+| Improve the software | 90 | `57b27e339088822f` |
+| Preserve human authority | 90 | `7640a6bf0354d142` |
+| Preserve authorship and provenance | 89 | `37a7d446456db495` |
+| Protect private drafts | 86 | `b5c04b6958722ab2` |
+| Reduce cognitive load | 78 | `a83bd5c46073c44b` |
+| Demonstrate the linguistic boundary | 76 | `689f036b518225e1` |
+| Expand voluntary reach | 71 | `c0903c5d98d1c23a` |
