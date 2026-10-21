@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `21bccdbfbbdcf9bca4ed794f6b26858967a074a6`
+SOURCE_COMMIT: `23ef5a0ce4d30c9bef1af37c2d029692e73f9f87`
 
-SELECTED_GOAL: **Improve the software** (`improve-software`)
+SELECTED_GOAL: **Expand voluntary reach** (`expand-voluntary-reach`)
 
-SCORE: **94**
+SCORE: **95**
 
 ~~~text
-⁇ [G8] improve-software :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] expand-voluntary-reach :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.
+Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Improve the software | 94 | `b8b36dfd0b71427f` |
-| Preserve authorship and provenance | 87 | `3535750609468cf4` |
-| Reduce cognitive load | 86 | `34ef9f1e3b999099` |
-| Demonstrate the linguistic boundary | 85 | `142312153596afa3` |
-| Preserve human authority | 81 | `6d4a1aec22dba007` |
-| Protect private drafts | 73 | `0dc6f2e30948d77e` |
-| Expand voluntary reach | 66 | `3feb0f6507d7e971` |
+| Expand voluntary reach | 95 | `7bdd3b2451dea2a7` |
+| Reduce cognitive load | 88 | `748f20f8171fd2e9` |
+| Improve the software | 84 | `ec69e4344b3449ee` |
+| Protect private drafts | 81 | `ee73049329969dd2` |
+| Preserve authorship and provenance | 78 | `89e837db963cac9a` |
+| Preserve human authority | 70 | `bf14f34f607a1af4` |
+| Demonstrate the linguistic boundary | 70 | `fd01789c76273ac5` |
