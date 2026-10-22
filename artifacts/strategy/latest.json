@@ -1,53 +1,42 @@
 {
   "version": "coas-autonomous-plan.v1",
-  "source_commit": "12c3727de6fc94928ae125d53e374dcc4f4c333a",
+  "source_commit": "735a847582535f78bd93135b607057e59661adce",
   "selected": {
-    "goal_id": "reduce-cognitive-load",
-    "goal_name": "Reduce cognitive load",
-    "score": 94,
-    "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
+    "goal_id": "preserve-human-authority",
+    "goal_name": "Preserve human authority",
+    "score": 86,
+    "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
     "evidence": [
-      "COAS mechanics",
-      "agent swarm",
-      "reference implementation"
+      "autonomy.go",
+      "GLITCHOLOGY core laws",
+      "COAS invariants"
     ],
-    "source_hash": "1dcb3a4ac979cead"
+    "source_hash": "15a5510cac0c76c2"
   },
   "candidates": [
     {
-      "goal_id": "reduce-cognitive-load",
-      "goal_name": "Reduce cognitive load",
-      "score": 94,
-      "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
+      "goal_id": "preserve-human-authority",
+      "goal_name": "Preserve human authority",
+      "score": 86,
+      "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
       "evidence": [
-        "COAS mechanics",
-        "agent swarm",
-        "reference implementation"
+        "autonomy.go",
+        "GLITCHOLOGY core laws",
+        "COAS invariants"
       ],
-      "source_hash": "1dcb3a4ac979cead"
+      "source_hash": "15a5510cac0c76c2"
     },
     {
-      "goal_id": "prove-linguistic-boundary",
-      "goal_name": "Demonstrate the linguistic boundary",
-      "score": 84,
-      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
-      "evidence": [
-        "Err⃝or⃟⃤GLITCHOLOGY",
-        "GLITCH-8 grammar",
-        "agent_runtime/"
-      ],
-      "source_hash": "32267affa5c1b845"
-    },
-    {
-      "goal_id": "protect-private-drafts",
-      "goal_name": "Protect private drafts",
+      "goal_id": "preserve-authorship",
+      "goal_name": "Preserve authorship and provenance",
       "score": 83,
-      "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
+      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
       "evidence": [
-        "privacy.go",
-        "docs/PRIVACY.md"
+        "preservation.go",
+        "artifacts/preservation/",
+        "Git history"
       ],
-      "source_hash": "933ed2080096ee53"
+      "source_hash": "8e4def0e68b2526d"
     },
     {
       "goal_id": "expand-voluntary-reach",
@@ -59,19 +48,7 @@
         "evangelism.go",
         "docs/DISTRIBUTION.md"
       ],
-      "source_hash": "2cd8bb57362daaee"
-    },
-    {
-      "goal_id": "preserve-authorship",
-      "goal_name": "Preserve authorship and provenance",
-      "score": 76,
-      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
-      "evidence": [
-        "preservation.go",
-        "artifacts/preservation/",
-        "Git history"
-      ],
-      "source_hash": "2a489883193d34c9"
+      "source_hash": "4bfd7c9081473d47"
     },
     {
       "goal_id": "improve-software",
@@ -83,19 +60,42 @@
         "gofmt",
         "repository source"
       ],
-      "source_hash": "e0baafec59c2a9cb"
+      "source_hash": "83449b086ecdd4be"
     },
     {
-      "goal_id": "preserve-human-authority",
-      "goal_name": "Preserve human authority",
+      "goal_id": "prove-linguistic-boundary",
+      "goal_name": "Demonstrate the linguistic boundary",
       "score": 69,
-      "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
+      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
       "evidence": [
-        "autonomy.go",
-        "GLITCHOLOGY core laws",
-        "COAS invariants"
+        "Err⃝or⃟⃤GLITCHOLOGY",
+        "GLITCH-8 grammar",
+        "agent_runtime/"
       ],
-      "source_hash": "61e27c8a835ea0cd"
+      "source_hash": "fc081e6ee570c691"
+    },
+    {
+      "goal_id": "reduce-cognitive-load",
+      "goal_name": "Reduce cognitive load",
+      "score": 69,
+      "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
+      "evidence": [
+        "COAS mechanics",
+        "agent swarm",
+        "reference implementation"
+      ],
+      "source_hash": "805525884c8dcc60"
+    },
+    {
+      "goal_id": "protect-private-drafts",
+      "goal_name": "Protect private drafts",
+      "score": 67,
+      "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
+      "evidence": [
+        "privacy.go",
+        "docs/PRIVACY.md"
+      ],
+      "source_hash": "83e13e46b0959853"
     }
   ]
 }
