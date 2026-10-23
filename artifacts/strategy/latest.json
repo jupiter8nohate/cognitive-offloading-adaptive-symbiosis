@@ -1,30 +1,30 @@
 {
   "version": "coas-autonomous-plan.v1",
-  "source_commit": "e6acd4e6866508ac68c2a81ec02a92fcd10a2716",
+  "source_commit": "12b074abe5c4d46240bbc05c962f4d5d9e7e66f7",
   "selected": {
-    "goal_id": "prove-linguistic-boundary",
-    "goal_name": "Demonstrate the linguistic boundary",
-    "score": 90,
-    "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
+    "goal_id": "preserve-authorship",
+    "goal_name": "Preserve authorship and provenance",
+    "score": 94,
+    "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
     "evidence": [
-      "Err⃝or⃟⃤GLITCHOLOGY",
-      "GLITCH-8 grammar",
-      "agent_runtime/"
+      "preservation.go",
+      "artifacts/preservation/",
+      "Git history"
     ],
-    "source_hash": "57114865a840618a"
+    "source_hash": "b826db87b6786481"
   },
   "candidates": [
     {
-      "goal_id": "prove-linguistic-boundary",
-      "goal_name": "Demonstrate the linguistic boundary",
-      "score": 90,
-      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
+      "goal_id": "preserve-authorship",
+      "goal_name": "Preserve authorship and provenance",
+      "score": 94,
+      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
       "evidence": [
-        "Err⃝or⃟⃤GLITCHOLOGY",
-        "GLITCH-8 grammar",
-        "agent_runtime/"
+        "preservation.go",
+        "artifacts/preservation/",
+        "Git history"
       ],
-      "source_hash": "57114865a840618a"
+      "source_hash": "b826db87b6786481"
     },
     {
       "goal_id": "expand-voluntary-reach",
@@ -36,19 +36,7 @@
         "evangelism.go",
         "docs/DISTRIBUTION.md"
       ],
-      "source_hash": "7526bb1bfac0f258"
-    },
-    {
-      "goal_id": "improve-software",
-      "goal_name": "Improve the software",
-      "score": 84,
-      "rationale": "Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.",
-      "evidence": [
-        "go test ./...",
-        "gofmt",
-        "repository source"
-      ],
-      "source_hash": "ae559e9507dec9c3"
+      "source_hash": "18b7d077ef035e97"
     },
     {
       "goal_id": "preserve-human-authority",
@@ -60,42 +48,54 @@
         "GLITCHOLOGY core laws",
         "COAS invariants"
       ],
-      "source_hash": "12e5bda08bbb2a12"
-    },
-    {
-      "goal_id": "preserve-authorship",
-      "goal_name": "Preserve authorship and provenance",
-      "score": 76,
-      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
-      "evidence": [
-        "preservation.go",
-        "artifacts/preservation/",
-        "Git history"
-      ],
-      "source_hash": "a688968218dd3e15"
+      "source_hash": "128a5fb663157713"
     },
     {
       "goal_id": "protect-private-drafts",
       "goal_name": "Protect private drafts",
-      "score": 76,
+      "score": 77,
       "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
       "evidence": [
         "privacy.go",
         "docs/PRIVACY.md"
       ],
-      "source_hash": "ca358f0eee762f31"
+      "source_hash": "8d7f4f0f60cf040d"
+    },
+    {
+      "goal_id": "prove-linguistic-boundary",
+      "goal_name": "Demonstrate the linguistic boundary",
+      "score": 72,
+      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
+      "evidence": [
+        "Err⃝or⃟⃤GLITCHOLOGY",
+        "GLITCH-8 grammar",
+        "agent_runtime/"
+      ],
+      "source_hash": "c19e1525b5ae5fe9"
     },
     {
       "goal_id": "reduce-cognitive-load",
       "goal_name": "Reduce cognitive load",
-      "score": 67,
+      "score": 72,
       "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
       "evidence": [
         "COAS mechanics",
         "agent swarm",
         "reference implementation"
       ],
-      "source_hash": "5ff02e69000b012f"
+      "source_hash": "648f806e783be8a9"
+    },
+    {
+      "goal_id": "improve-software",
+      "goal_name": "Improve the software",
+      "score": 70,
+      "rationale": "Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.",
+      "evidence": [
+        "go test ./...",
+        "gofmt",
+        "repository source"
+      ],
+      "source_hash": "432a813190caf04f"
     }
   ]
 }
