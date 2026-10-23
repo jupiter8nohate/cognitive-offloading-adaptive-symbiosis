@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `aa4209261a133b6dfd9811c59e101c432e562c8a`
+SOURCE_COMMIT: `7cf3b8a9ff804779949bd1148e9b11702978a433`
 
-SELECTED_GOAL: **Preserve human authority** (`preserve-human-authority`)
+SELECTED_GOAL: **Improve the software** (`improve-software`)
 
-SCORE: **93**
+SCORE: **95**
 
 ~~~text
-⁇ [G8] preserve-human-authority :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] improve-software :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.
+Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Preserve human authority | 93 | `b740ee9152839f88` |
-| Preserve authorship and provenance | 82 | `116b63f261f9936d` |
-| Expand voluntary reach | 81 | `ca660cbecba80a22` |
-| Improve the software | 79 | `4c999ae247ca83cd` |
-| Protect private drafts | 76 | `abf3e45e0c5d830d` |
-| Reduce cognitive load | 76 | `2aaac324a5d25509` |
-| Demonstrate the linguistic boundary | 72 | `e07c9948c8227985` |
+| Improve the software | 95 | `5cd46d00331ff1a9` |
+| Expand voluntary reach | 94 | `b8006831a22e4549` |
+| Reduce cognitive load | 90 | `f2b6ebc4076d312b` |
+| Preserve human authority | 87 | `d04549c71023ea56` |
+| Protect private drafts | 85 | `b40872d582eea6dd` |
+| Demonstrate the linguistic boundary | 79 | `e77144cbc71cbc80` |
+| Preserve authorship and provenance | 73 | `08a5424d0c367112` |
