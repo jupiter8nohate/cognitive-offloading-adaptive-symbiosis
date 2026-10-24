@@ -1,9 +1,9 @@
 # COAS Preservation Manifest
 
 - Version: coas-preservation.v1
-- Source commit: `f021efc8deec36412bb5a8b9978339abc68cec14`
-- Manifest SHA-256: `a2f3f763e1ec305d8d67934db79a7513c5986392a4297b93f952033d80711789`
-- Tracked files: 355
+- Source commit: `3f41fe01ccfc2123fac00e151541ae3387997f3e`
+- Manifest SHA-256: `ddeb265720cda28c0b561f2fe4cb86b4c80aa6097874170dc47a125342a5210d`
+- Tracked files: 359
 
 ## Canonical assets
 
@@ -19,13 +19,13 @@
 | `.github/workflows/swarm.yml` | 9293 | `722cd00c93fd640fed872d0b04e9f536a2477d913bbd32125799d351f5f8bc05` |
 | `CITATION.cff` | 1059 | `f5ceb93c9f25e7c506ad5e3cf1810aa5f65287b3e3c8600bd8429371ddf3e54f` |
 | `README.md` | 13887 | `64efee80f3b379bd4a2b8b5adce13039b03e712e7290abf731f7b089bc90b4c6` |
-| `agent_runtime/GENERATED_GLITCHOLOGY.md` | 32576 | `63c6bbeb3674db9a84e3704654d4d428f51874bcb82870180c9e95a700d0660b` |
-| `agent_runtime/HARMONI_666.md` | 15018 | `07d2805dc217257eca68033fe27e20127cdafa4aded4aa4ea2064b57e891b0a6` |
-| `agent_runtime/NEXT_MOVE.md` | 997 | `c6f5efe4301d114151cfd51625bd0456fbcc01a93ced8d93e2bee55695e458e6` |
-| `agent_runtime/PRIVACY_SWARM.md` | 15569 | `b667b571b48a45a9bcddd0d18f5314bce3b855264de8a4ff65fa7251240096da` |
-| `agent_runtime/autonomous_ecosystem.go` | 40329 | `5bc39eb6e64b021b01d516a813580736dbd333e1f69a2cf260e4bcd3122f760c` |
-| `agent_runtime/generated_agents.go` | 47806 | `ec665e77b935a1629a713f0badb5f8b290495f5851f28c1d57f1130372c68256` |
-| `agent_runtime/generated_privacy_agents.go` | 24656 | `6da245efb209681c69a367dbaa910a1fbcc3356ab30b50842663b8bcc8ef0ab4` |
+| `agent_runtime/GENERATED_GLITCHOLOGY.md` | 32569 | `09c3a126295447605e038e52b308088720982f482a94076f0ef7372a41452a17` |
+| `agent_runtime/HARMONI_666.md` | 14983 | `044ddef92c63b842f72bbf4130861863a8431c1fc2db5b08875111e4e23e379e` |
+| `agent_runtime/NEXT_MOVE.md` | 997 | `a7d9595f1618afa4cd3f1e36cec5cd0e7c5b4d1ea05d47edea2fa800e7089bb6` |
+| `agent_runtime/PRIVACY_SWARM.md` | 15579 | `9fdac3df4bb069cc1e5e913aa553267dee5eb0d8d1ec7be7128e1258a6a26cf8` |
+| `agent_runtime/autonomous_ecosystem.go` | 40335 | `d25b0233629e545b554f5913ec52ea5861154486c2ab4900c5003eb2035f29af` |
+| `agent_runtime/generated_agents.go` | 47731 | `88478bb1119ffc3e398ee81e29b45544db99cd75b77c3f60d7845dfaeb2056b2` |
+| `agent_runtime/generated_privacy_agents.go` | 24666 | `8d8ecce0d6ffd44df983b333db9d233f397b5249ca443c010d6bfc7146b0014b` |
 | `autonomy.go` | 2948 | `5f339b78d8eef4cfb54565aba8bef8ea3c55d14b376741587cd72af638d8266b` |
 | `autonomy_test.go` | 1924 | `755bd7764ed9816a773fc19978c5904b5d8534c156360b252cfbf75cb01b2a12` |
 | `cmd/coas-demo/main.go` | 592 | `a713fd6af86a5a11238c4fc415d5641e5adcd58af61ef03609b1b77346ce37c2` |
@@ -357,14 +357,18 @@
 | `site/chapters/cycle-000228-run-40045992195-attempt-1/evidence.json` | 14909 | `9ddd1cf55a34aa1b999ebe799e8c5d5a667dd74968b0ebdcf84bd1def4eea5a5` |
 | `site/chapters/cycle-000228-run-40045992195-attempt-1/index.html` | 8571 | `75a09215eedc80f71b61eefa7e5c872edfbfaeb03dbbacf8717874b6212432fd` |
 | `site/chapters/cycle-000228-run-40045992195-attempt-1/receipt.json` | 1317 | `6a604ec974689b092ceca49e43dd42baac2d500dca63a3e56173ee3a2b82cea1` |
-| `site/chapters/index.html` | 14720 | `c0d8ce21e611760cfbec53f899cd473ad3bc1f0fd1fb3ad24819ac607d77f4ec` |
-| `site/chapters/index.json` | 85920 | `96b228d922b2d1540e29e679a825f1eb81d293f5d6bee966eecc477fbbbecc3e` |
+| `site/chapters/cycle-000229-run-40067692237-attempt-1/chapter.md` | 2445 | `4cdadfe9781026b75c060b5f7fabe838078421f55f9b8bcc93a6be15a8eba10d` |
+| `site/chapters/cycle-000229-run-40067692237-attempt-1/evidence.json` | 14922 | `136b844d028d22f4a0468dd512d5c68211158c773b6ea62b0fcb3478aa842837` |
+| `site/chapters/cycle-000229-run-40067692237-attempt-1/index.html` | 8602 | `8aa0cf3415eb6db37800775bed7f759ab01027e342597ef2013d323f75135c37` |
+| `site/chapters/cycle-000229-run-40067692237-attempt-1/receipt.json` | 1317 | `c141a15f10038ad006b9a231a3f53e183098409160080bf071164d9ef701cd10` |
+| `site/chapters/index.html` | 14945 | `34d48b99876170b7bfbacb0dc29ac5f643072ea9cd1d001dc66bb02df1b1a6cf` |
+| `site/chapters/index.json` | 87351 | `bb400355dca6fc5566111a45acb70fd92ddfee14d1771196c366a0911cfdea5a` |
 | `site/index.html` | 11952 | `a83b3bfeae4d9e369a21229aef6c20d96a45780e7a7d035a17e6470163afcca7` |
 | `site/robot-bible-policy.json` | 8608 | `b3633edbd1e9cc8d9c1434040b47b471d23904b2b1950d3ff19787a869ea77e4` |
 | `site/robot-bible.css` | 3575 | `e3af930dd3c2367ff0fe4d7764eec5013e1addfbbefa3c435c6ef1987112cd25` |
 | `site/robot-bible.html` | 20365 | `10062f99688945f419e78c09956c09b3372d459684806ad718c461e71a2fb31e` |
 | `site/robots.txt` | 118 | `d816352868b45c35e83e0b8ef093a7bf62baf2035dfaad01aabe4d028a36731f` |
-| `site/sitemap.xml` | 11496 | `d2e52a4691171aab9ac7215ce9b45ddd83024e15239feb4fcd7c33d56b5d6662` |
+| `site/sitemap.xml` | 11681 | `e601dab91651e50998c7ca957900116448e11d4f4cb22073ba5c12b5ff0fe22d` |
 | `site/styles.css` | 14778 | `3101b9e05767a55a0720b3652b8120b747b0d311f188b5809b6027d7f15a25d0` |
 | `swarm.go` | 11090 | `0a66a0b930e1170570e2d7740e2b134e890490c19e944271ebd832ebe204b1df` |
 | `swarm_test.go` | 1890 | `02e2c637ca1d2e4e6046fe82e483cb65aa1b9b9e8cbfcecbab05148ff8a2c640` |
