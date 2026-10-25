@@ -2,9 +2,9 @@
 
 Version: dna-bible-god-search.v1
 
-Source commit: 708f3ec697d9160ab4664aef71912d3b736a4948
+Source commit: 29bc605347295677c35de37f9f141c0964eb599e
 
-Cycle: 237
+Cycle: 238
 
 Target: 26
 
