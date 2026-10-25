@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `098478e310e6a185088c52b267b83d413dd9797e`
+SOURCE_COMMIT: `7a8cd1c5193e479b3f1170432dc0d448e4712e57`
 
-SELECTED_GOAL: **Preserve authorship and provenance** (`preserve-authorship`)
+SELECTED_GOAL: **Expand voluntary reach** (`expand-voluntary-reach`)
 
-SCORE: **91**
+SCORE: **92**
 
 ~~~text
-⁇ [G8] preserve-authorship :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] expand-voluntary-reach :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.
+Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Preserve authorship and provenance | 91 | `1a40d4be33df9da3` |
-| Preserve human authority | 90 | `d3c38f5202195be2` |
-| Improve the software | 71 | `a1b93a85219bb32f` |
-| Protect private drafts | 70 | `29f6eaecf59d7ea4` |
-| Demonstrate the linguistic boundary | 69 | `bed0adc907f602bc` |
-| Reduce cognitive load | 69 | `80a13514c14ed5e7` |
-| Expand voluntary reach | 67 | `02dc69e42a2b9e96` |
+| Expand voluntary reach | 92 | `596fa0fb1dd1c675` |
+| Demonstrate the linguistic boundary | 81 | `2fee0f2e52baf3cf` |
+| Preserve human authority | 77 | `2bad1dc2aa02ac08` |
+| Protect private drafts | 76 | `2fbd165826ca116e` |
+| Improve the software | 73 | `46aaefd49c191042` |
+| Reduce cognitive load | 72 | `836e77b04696119a` |
+| Preserve authorship and provenance | 70 | `dee9f3c87d34c559` |
