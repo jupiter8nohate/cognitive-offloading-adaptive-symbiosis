@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `af540533a7ae82634fc9c834e116715b9138e4d5`
+SOURCE_COMMIT: `7e87d9f4efd36102409a8301442d47899f3b6233`
 
-SELECTED_GOAL: **Demonstrate the linguistic boundary** (`prove-linguistic-boundary`)
+SELECTED_GOAL: **Reduce cognitive load** (`reduce-cognitive-load`)
 
-SCORE: **94**
+SCORE: **95**
 
 ~~~text
-⁇ [G8] prove-linguistic-boundary :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] reduce-cognitive-load :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Create working software that remains machine-readable while preserving the distinction between computation and human meaning.
+Move repetitive organization, indexing, verification, formatting, and reversible execution into software.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Demonstrate the linguistic boundary | 94 | `f66f55f1abe4aeda` |
-| Reduce cognitive load | 75 | `2985797773644f6b` |
-| Preserve authorship and provenance | 74 | `85c7507d4d227c6b` |
-| Expand voluntary reach | 73 | `461d6c22908b336e` |
-| Protect private drafts | 71 | `2a55fca30d59a521` |
-| Preserve human authority | 68 | `41370644845b8e15` |
-| Improve the software | 65 | `ba2df353e3dbfaf9` |
+| Reduce cognitive load | 95 | `5caefe6954395891` |
+| Preserve authorship and provenance | 89 | `37ae13d771b4af30` |
+| Preserve human authority | 89 | `b38f325ad9aca666` |
+| Protect private drafts | 85 | `9542680cbeb0c7a6` |
+| Improve the software | 78 | `e6dd684a8db08108` |
+| Expand voluntary reach | 76 | `e4c118e1f7efeb22` |
+| Demonstrate the linguistic boundary | 67 | `40df8a9a0e878f48` |
