@@ -1,101 +1,101 @@
 {
   "version": "coas-autonomous-plan.v1",
-  "source_commit": "8c39a6017401c14ecc6a4e03b4f357fca76e8e25",
+  "source_commit": "c9c6ac6d00b7a8dbf6a0b25f0c4df2ebe1843b14",
   "selected": {
-    "goal_id": "preserve-authorship",
-    "goal_name": "Preserve authorship and provenance",
-    "score": 88,
-    "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
+    "goal_id": "reduce-cognitive-load",
+    "goal_name": "Reduce cognitive load",
+    "score": 95,
+    "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
     "evidence": [
-      "preservation.go",
-      "artifacts/preservation/",
-      "Git history"
+      "COAS mechanics",
+      "agent swarm",
+      "reference implementation"
     ],
-    "source_hash": "55dd36ed44902792"
+    "source_hash": "5cf5fd1d6bad7437"
   },
   "candidates": [
     {
-      "goal_id": "preserve-authorship",
-      "goal_name": "Preserve authorship and provenance",
-      "score": 88,
-      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
-      "evidence": [
-        "preservation.go",
-        "artifacts/preservation/",
-        "Git history"
-      ],
-      "source_hash": "55dd36ed44902792"
-    },
-    {
-      "goal_id": "improve-software",
-      "goal_name": "Improve the software",
-      "score": 86,
-      "rationale": "Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.",
-      "evidence": [
-        "go test ./...",
-        "gofmt",
-        "repository source"
-      ],
-      "source_hash": "532b728b8dc98334"
-    },
-    {
       "goal_id": "reduce-cognitive-load",
       "goal_name": "Reduce cognitive load",
-      "score": 84,
+      "score": 95,
       "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
       "evidence": [
         "COAS mechanics",
         "agent swarm",
         "reference implementation"
       ],
-      "source_hash": "1301a9b49202eca7"
+      "source_hash": "5cf5fd1d6bad7437"
     },
     {
       "goal_id": "protect-private-drafts",
       "goal_name": "Protect private drafts",
-      "score": 77,
+      "score": 74,
       "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
       "evidence": [
         "privacy.go",
         "docs/PRIVACY.md"
       ],
-      "source_hash": "30151f7223768a71"
+      "source_hash": "a9694659963038d3"
+    },
+    {
+      "goal_id": "improve-software",
+      "goal_name": "Improve the software",
+      "score": 69,
+      "rationale": "Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.",
+      "evidence": [
+        "go test ./...",
+        "gofmt",
+        "repository source"
+      ],
+      "source_hash": "2380c2d7b5f534ea"
     },
     {
       "goal_id": "preserve-human-authority",
       "goal_name": "Preserve human authority",
-      "score": 75,
+      "score": 69,
       "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
       "evidence": [
         "autonomy.go",
         "GLITCHOLOGY core laws",
         "COAS invariants"
       ],
-      "source_hash": "294eb22d0be7bbe3"
+      "source_hash": "045b4c42f5b9ae8f"
+    },
+    {
+      "goal_id": "preserve-authorship",
+      "goal_name": "Preserve authorship and provenance",
+      "score": 68,
+      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
+      "evidence": [
+        "preservation.go",
+        "artifacts/preservation/",
+        "Git history"
+      ],
+      "source_hash": "609207b734ae7712"
     },
     {
       "goal_id": "expand-voluntary-reach",
       "goal_name": "Expand voluntary reach",
-      "score": 71,
+      "score": 67,
       "rationale": "Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.",
       "evidence": [
         "distribution.go",
         "evangelism.go",
         "docs/DISTRIBUTION.md"
       ],
-      "source_hash": "82c895d032b835a5"
+      "source_hash": "fa0ff70c85aefae3"
     },
     {
       "goal_id": "prove-linguistic-boundary",
       "goal_name": "Demonstrate the linguistic boundary",
-      "score": 67,
+      "score": 65,
       "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
       "evidence": [
         "Err⃝or⃟⃤GLITCHOLOGY",
         "GLITCH-8 grammar",
         "agent_runtime/"
       ],
-      "source_hash": "bcd1f713979ac203"
+      "source_hash": "5d773cc1f9726be5"
     }
   ]
 }
