@@ -16,7 +16,7 @@ The 100 logical agents share deduplicated provider responses. This preserves aut
 
 | Provider | Agent observations | Surfaced or indexed |
 |---|---:|---:|
-| github-search | 100 | 10 |
+| github-search | 100 | 0 |
 | google-search-console-url-inspection | 100 | 0 |
 | google-web-search-service | 100 | 0 |
 
