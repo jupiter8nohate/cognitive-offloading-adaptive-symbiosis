@@ -1,101 +1,101 @@
 {
   "version": "coas-autonomous-plan.v1",
-  "source_commit": "4758e8d5b28ede5742fd4e4ec3fb381e9b5f63d6",
+  "source_commit": "36405c32087710c21607fb477d244ee161e9f201",
   "selected": {
     "goal_id": "prove-linguistic-boundary",
     "goal_name": "Demonstrate the linguistic boundary",
-    "score": 95,
+    "score": 94,
     "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
     "evidence": [
       "Err⃝or⃟⃤GLITCHOLOGY",
       "GLITCH-8 grammar",
       "agent_runtime/"
     ],
-    "source_hash": "f77937d1c0f42a90"
+    "source_hash": "b86f25708c6cba44"
   },
   "candidates": [
     {
       "goal_id": "prove-linguistic-boundary",
       "goal_name": "Demonstrate the linguistic boundary",
-      "score": 95,
+      "score": 94,
       "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
       "evidence": [
         "Err⃝or⃟⃤GLITCHOLOGY",
         "GLITCH-8 grammar",
         "agent_runtime/"
       ],
-      "source_hash": "f77937d1c0f42a90"
-    },
-    {
-      "goal_id": "expand-voluntary-reach",
-      "goal_name": "Expand voluntary reach",
-      "score": 93,
-      "rationale": "Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.",
-      "evidence": [
-        "distribution.go",
-        "evangelism.go",
-        "docs/DISTRIBUTION.md"
-      ],
-      "source_hash": "1c0e109275708d05"
+      "source_hash": "b86f25708c6cba44"
     },
     {
       "goal_id": "improve-software",
       "goal_name": "Improve the software",
-      "score": 93,
+      "score": 83,
       "rationale": "Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.",
       "evidence": [
         "go test ./...",
         "gofmt",
         "repository source"
       ],
-      "source_hash": "b7784df036ee04d7"
+      "source_hash": "6fa91b71ec22beb4"
     },
     {
       "goal_id": "preserve-human-authority",
       "goal_name": "Preserve human authority",
-      "score": 84,
+      "score": 78,
       "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
       "evidence": [
         "autonomy.go",
         "GLITCHOLOGY core laws",
         "COAS invariants"
       ],
-      "source_hash": "7040d1cc475092b2"
+      "source_hash": "2c8cb442d34c7d88"
     },
     {
       "goal_id": "reduce-cognitive-load",
       "goal_name": "Reduce cognitive load",
-      "score": 76,
+      "score": 75,
       "rationale": "Move repetitive organization, indexing, verification, formatting, and reversible execution into software.",
       "evidence": [
         "COAS mechanics",
         "agent swarm",
         "reference implementation"
       ],
-      "source_hash": "49b091aa9586ca23"
+      "source_hash": "86dc32d861d6f7c6"
+    },
+    {
+      "goal_id": "expand-voluntary-reach",
+      "goal_name": "Expand voluntary reach",
+      "score": 73,
+      "rationale": "Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.",
+      "evidence": [
+        "distribution.go",
+        "evangelism.go",
+        "docs/DISTRIBUTION.md"
+      ],
+      "source_hash": "c21fa2b6999d1729"
     },
     {
       "goal_id": "preserve-authorship",
       "goal_name": "Preserve authorship and provenance",
-      "score": 65,
+      "score": 71,
       "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
       "evidence": [
         "preservation.go",
         "artifacts/preservation/",
         "Git history"
       ],
-      "source_hash": "d9153ba6cde15e21"
+      "source_hash": "447968e50dd3de9c"
     },
     {
       "goal_id": "protect-private-drafts",
       "goal_name": "Protect private drafts",
-      "score": 60,
+      "score": 63,
       "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
       "evidence": [
         "privacy.go",
         "docs/PRIVACY.md"
       ],
-      "source_hash": "5d49c3547a30ea3b"
+      "source_hash": "dc53af448a7010f9"
     }
   ]
 }
