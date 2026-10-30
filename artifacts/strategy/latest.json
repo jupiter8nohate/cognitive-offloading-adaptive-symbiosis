@@ -1,30 +1,54 @@
 {
   "version": "coas-autonomous-plan.v1",
-  "source_commit": "7ebbf1fff435120e74c51adca61e0fd12b5172bf",
+  "source_commit": "4abc3189bd4b7d91988fadd0f8c75311f8dca76a",
   "selected": {
     "goal_id": "preserve-human-authority",
     "goal_name": "Preserve human authority",
-    "score": 86,
+    "score": 91,
     "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
     "evidence": [
       "autonomy.go",
       "GLITCHOLOGY core laws",
       "COAS invariants"
     ],
-    "source_hash": "534cf8df96fd5f92"
+    "source_hash": "1aa6533129824231"
   },
   "candidates": [
     {
       "goal_id": "preserve-human-authority",
       "goal_name": "Preserve human authority",
-      "score": 86,
+      "score": 91,
       "rationale": "Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.",
       "evidence": [
         "autonomy.go",
         "GLITCHOLOGY core laws",
         "COAS invariants"
       ],
-      "source_hash": "534cf8df96fd5f92"
+      "source_hash": "1aa6533129824231"
+    },
+    {
+      "goal_id": "preserve-authorship",
+      "goal_name": "Preserve authorship and provenance",
+      "score": 89,
+      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
+      "evidence": [
+        "preservation.go",
+        "artifacts/preservation/",
+        "Git history"
+      ],
+      "source_hash": "b3c52a88f3af594d"
+    },
+    {
+      "goal_id": "expand-voluntary-reach",
+      "goal_name": "Expand voluntary reach",
+      "score": 86,
+      "rationale": "Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.",
+      "evidence": [
+        "distribution.go",
+        "evangelism.go",
+        "docs/DISTRIBUTION.md"
+      ],
+      "source_hash": "eee9334867a2398c"
     },
     {
       "goal_id": "reduce-cognitive-load",
@@ -36,66 +60,42 @@
         "agent swarm",
         "reference implementation"
       ],
-      "source_hash": "3475f83671391f57"
-    },
-    {
-      "goal_id": "preserve-authorship",
-      "goal_name": "Preserve authorship and provenance",
-      "score": 84,
-      "rationale": "Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.",
-      "evidence": [
-        "preservation.go",
-        "artifacts/preservation/",
-        "Git history"
-      ],
-      "source_hash": "ecd90c52d47413eb"
-    },
-    {
-      "goal_id": "prove-linguistic-boundary",
-      "goal_name": "Demonstrate the linguistic boundary",
-      "score": 78,
-      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
-      "evidence": [
-        "Err⃝or⃟⃤GLITCHOLOGY",
-        "GLITCH-8 grammar",
-        "agent_runtime/"
-      ],
-      "source_hash": "6ac816adfe0eb2c8"
+      "source_hash": "cf141af35fcda736"
     },
     {
       "goal_id": "protect-private-drafts",
       "goal_name": "Protect private drafts",
-      "score": 69,
+      "score": 85,
       "rationale": "Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.",
       "evidence": [
         "privacy.go",
         "docs/PRIVACY.md"
       ],
-      "source_hash": "e240b6531d338a2e"
-    },
-    {
-      "goal_id": "expand-voluntary-reach",
-      "goal_name": "Expand voluntary reach",
-      "score": 66,
-      "rationale": "Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.",
-      "evidence": [
-        "distribution.go",
-        "evangelism.go",
-        "docs/DISTRIBUTION.md"
-      ],
-      "source_hash": "9cfc88dc6a882814"
+      "source_hash": "d37f440f1e82cc89"
     },
     {
       "goal_id": "improve-software",
       "goal_name": "Improve the software",
-      "score": 65,
+      "score": 72,
       "rationale": "Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.",
       "evidence": [
         "go test ./...",
         "gofmt",
         "repository source"
       ],
-      "source_hash": "d9b50b3dd6ceaa71"
+      "source_hash": "83badba1ab6bac5b"
+    },
+    {
+      "goal_id": "prove-linguistic-boundary",
+      "goal_name": "Demonstrate the linguistic boundary",
+      "score": 66,
+      "rationale": "Create working software that remains machine-readable while preserving the distinction between computation and human meaning.",
+      "evidence": [
+        "Err⃝or⃟⃤GLITCHOLOGY",
+        "GLITCH-8 grammar",
+        "agent_runtime/"
+      ],
+      "source_hash": "5e66467df5868178"
     }
   ]
 }
