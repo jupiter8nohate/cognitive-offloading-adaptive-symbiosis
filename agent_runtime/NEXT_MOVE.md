@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `37efc2a0229342b55874e8de2e462a764362bfbd`
+SOURCE_COMMIT: `19f49b03f13912b986e2a2ccce46a837431e2e8b`
 
-SELECTED_GOAL: **Demonstrate the linguistic boundary** (`prove-linguistic-boundary`)
+SELECTED_GOAL: **Expand voluntary reach** (`expand-voluntary-reach`)
 
-SCORE: **95**
+SCORE: **90**
 
 ~~~text
-⁇ [G8] prove-linguistic-boundary :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] expand-voluntary-reach :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Create working software that remains machine-readable while preserving the distinction between computation and human meaning.
+Create clear, distinctive, shareable public artifacts and publish only through owned or explicitly authorized channels.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Demonstrate the linguistic boundary | 95 | `3dca0fdfa517c823` |
-| Reduce cognitive load | 95 | `d8166e9b13babbcf` |
-| Preserve authorship and provenance | 94 | `7ad4cb9126eb931c` |
-| Preserve human authority | 89 | `f14614fb3a5878b2` |
-| Expand voluntary reach | 78 | `0de7ffab3a0600df` |
-| Improve the software | 70 | `43e97c1d88c33ce9` |
-| Protect private drafts | 62 | `9da4e498a09aa552` |
+| Expand voluntary reach | 90 | `d35d3789d52bbb25` |
+| Demonstrate the linguistic boundary | 83 | `adf503817e703df3` |
+| Improve the software | 79 | `0ea1d33aabf11b89` |
+| Reduce cognitive load | 76 | `87838c8f4c62e067` |
+| Preserve human authority | 74 | `c300a0f47621f1fd` |
+| Preserve authorship and provenance | 70 | `437008e7a9db4a10` |
+| Protect private drafts | 69 | `8591d0e95bc2b416` |
