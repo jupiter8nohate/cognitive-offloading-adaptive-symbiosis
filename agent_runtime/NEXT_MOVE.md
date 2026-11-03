@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `d711b2ecb153c84d188b50ce1cbaa4e2aec35321`
+SOURCE_COMMIT: `7b15477cc82f895575fedee31260464e32152e25`
 
-SELECTED_GOAL: **Reduce cognitive load** (`reduce-cognitive-load`)
+SELECTED_GOAL: **Preserve human authority** (`preserve-human-authority`)
 
-SCORE: **94**
+SCORE: **93**
 
 ~~~text
-⁇ [G8] reduce-cognitive-load :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] preserve-human-authority :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Move repetitive organization, indexing, verification, formatting, and reversible execution into software.
+Keep human-defined meaning, consent, identity, values, and consequential judgment above machine inference.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Reduce cognitive load | 94 | `f672b0667fc8eee4` |
-| Preserve human authority | 89 | `37957f0a07946b58` |
-| Preserve authorship and provenance | 87 | `ef711e66c263d6ed` |
-| Expand voluntary reach | 75 | `a54bb677d8bbcc9d` |
-| Improve the software | 75 | `86c0ad834b5e3fd6` |
-| Demonstrate the linguistic boundary | 72 | `45d26e927e88b965` |
-| Protect private drafts | 68 | `84f12043cb5c7f1d` |
+| Preserve human authority | 93 | `3bba0ed7bf0f1bf5` |
+| Preserve authorship and provenance | 91 | `77c18b36dfd380fe` |
+| Protect private drafts | 89 | `99d177c04a4c3ab0` |
+| Improve the software | 85 | `edd0973d2bd9795f` |
+| Reduce cognitive load | 80 | `6c3bb1eeb854c20b` |
+| Expand voluntary reach | 68 | `4102867f9bdae0b2` |
+| Demonstrate the linguistic boundary | 66 | `f9317f195b5b1c40` |
