@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `3b4d30befc5e18da1b3bd2f62b178f4e67859b95`
+SOURCE_COMMIT: `4fba61181df61f26ed16fb7cba15cca9399c6f16`
 
-SELECTED_GOAL: **Preserve authorship and provenance** (`preserve-authorship`)
+SELECTED_GOAL: **Protect private drafts** (`protect-private-drafts`)
 
-SCORE: **92**
+SCORE: **89**
 
 ~~~text
-⁇ [G8] preserve-authorship :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] protect-private-drafts :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.
+Use authenticated cryptography and data minimization rather than treating symbols or Unicode as secrecy.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Preserve authorship and provenance | 92 | `786c097105779c73` |
-| Protect private drafts | 86 | `58c448d40a1735ee` |
-| Reduce cognitive load | 85 | `ce8ef352ee2f8894` |
-| Improve the software | 84 | `cd49375a4d9d3ea6` |
-| Expand voluntary reach | 80 | `c941d86c909a9861` |
-| Preserve human authority | 69 | `fc17e1c6fe1f7d0c` |
-| Demonstrate the linguistic boundary | 69 | `04774d0f53c4e65b` |
+| Protect private drafts | 89 | `1da9c85877ffa073` |
+| Improve the software | 88 | `17fbaeac9b476828` |
+| Reduce cognitive load | 82 | `ea487e61125b1a3a` |
+| Demonstrate the linguistic boundary | 80 | `aa5f91c91368bea7` |
+| Preserve authorship and provenance | 78 | `a868a0025216692e` |
+| Preserve human authority | 78 | `0dcbda498d32bb63` |
+| Expand voluntary reach | 72 | `83f8c0371f4ada35` |
