@@ -1,6 +1,6 @@
 {
   "version": "coas-preservation.v1",
-  "source_commit": "b41677963aea9bcec69ffe3a0634b6b03ea5c7e9",
+  "source_commit": "c1960b6ad371fe0aa31211f6d7e52aa5aecfd693",
   "entries": [
     {
       "path": ".github/workflows/distribution.yml",
@@ -34,38 +34,38 @@
     },
     {
       "path": "agent_runtime/GENERATED_GLITCHOLOGY.md",
-      "sha256": "639b2d98c73dc8234ee3baa1dc1a11a6bbf5a2e1a719cf287fe49d5dd3b14ec4",
-      "bytes": 32591
+      "sha256": "4e4597b7129b13500e3df51d7e3ad0fda9b1d80c300121ed39f7271fcfddb7e7",
+      "bytes": 32552
     },
     {
       "path": "agent_runtime/HARMONI_666.md",
-      "sha256": "9f0112bdea3d9279732d7787df53c315c3b07a8d2467ce4105a45914f0523539",
-      "bytes": 14881
+      "sha256": "04bfaac763836c9bbb8021e547d1c01dce31e40d72e115dcb349b4ddd2f1825d",
+      "bytes": 14860
     },
     {
       "path": "agent_runtime/NEXT_MOVE.md",
-      "sha256": "f71b43971e4a25dfa4be0d50468c202fa34e4a3a32d8f0869dcc90371626b2df",
-      "bytes": 1022
+      "sha256": "89cda359e28db694acd38e66a4e7b04c99f7d6c44c5ba5ade17d2ca00a43f642",
+      "bytes": 997
     },
     {
       "path": "agent_runtime/PRIVACY_SWARM.md",
-      "sha256": "210ebde10f77746745f90b278b346e0f0c86699001112903d23ff47154055418",
-      "bytes": 15506
+      "sha256": "cb1b078f123450fbc8a8d3528deb7433e0fbd956e4990268913409624dec447d",
+      "bytes": 15569
     },
     {
       "path": "agent_runtime/autonomous_ecosystem.go",
-      "sha256": "053c12fb092ecddc13e5a82840b1a575872a05a038e9fa06644093353d474fb5",
-      "bytes": 40435
+      "sha256": "7454f78e669ef8387b603cc7a1e6513ae2d69039dcd0ee1ac29c8cd9312ac73e",
+      "bytes": 40619
     },
     {
       "path": "agent_runtime/generated_agents.go",
-      "sha256": "dc552449a2e4daa8b460f91bface3165861e244e438697e3bd90a692dcac5522",
-      "bytes": 47808
+      "sha256": "e8d6099627fde126325caf0442d07c64547da68749c91e253be8997e77ef5e71",
+      "bytes": 47701
     },
     {
       "path": "agent_runtime/generated_privacy_agents.go",
-      "sha256": "2115cced7ef3e0d86d13ce0566f68b9a52a2762a95e9f4daf9291cb71248eb0b",
-      "bytes": 24593
+      "sha256": "0989aff7111d5f50ea1691adfc059c3bb63b32f4a4a2c4c2a34e56b8974ca4c1",
+      "bytes": 24656
     },
     {
       "path": "autonomy.go",
@@ -2943,14 +2943,34 @@
       "bytes": 1317
     },
     {
+      "path": "site/chapters/cycle-000290-run-42349757553-attempt-1/chapter.md",
+      "sha256": "5f79701b7303baa4b77c029d980460b7854ecef627fc6bb46f528674d1420ac0",
+      "bytes": 2488
+    },
+    {
+      "path": "site/chapters/cycle-000290-run-42349757553-attempt-1/evidence.json",
+      "sha256": "d7960cc4e0ce3cb79d24a401a4d1beed85ecadc063d2b748429d1235a8756816",
+      "bytes": 15061
+    },
+    {
+      "path": "site/chapters/cycle-000290-run-42349757553-attempt-1/index.html",
+      "sha256": "04c612aff376d685b94c729e4b165dc69be7d42bc8e0ae374f77f47bb2125f5b",
+      "bytes": 8711
+    },
+    {
+      "path": "site/chapters/cycle-000290-run-42349757553-attempt-1/receipt.json",
+      "sha256": "d2624faf56d22aade7566cdabaab73212824c909afce79ca367c306749c4760f",
+      "bytes": 1317
+    },
+    {
       "path": "site/chapters/index.html",
-      "sha256": "b1d6634976f560559a11bdcaddfcc0e68aad12ce7cfa6d5bc6e0452437a25f77",
-      "bytes": 28445
+      "sha256": "c8c41cf690ef1f15346c96d63b4cd5697c97ed72eb5c95876918ba2ce6452480",
+      "bytes": 28670
     },
     {
       "path": "site/chapters/index.json",
-      "sha256": "f76ce6c8bdff5388a99ec9559803146f6300681e0f6f01d874262f3e3f5f1ba7",
-      "bytes": 173211
+      "sha256": "92d9538f1c3aec366bfdfe697ca399b3d85c83a91d34fb8eaa7b9b469ddf94b4",
+      "bytes": 174642
     },
     {
       "path": "site/index.html",
@@ -2979,8 +2999,8 @@
     },
     {
       "path": "site/sitemap.xml",
-      "sha256": "6ba7bfd5df119169ffb5d0ff90d99cc5bb3accd2d1b79a44b8a41ad5806db560",
-      "bytes": 22781
+      "sha256": "c799bf5fbd555ea457241418aea2d11944227efaab58e5ee38741859e6c4488c",
+      "bytes": 22966
     },
     {
       "path": "site/styles.css",
@@ -3004,5 +3024,5 @@
       "present": false
     }
   ],
-  "manifest_hash": "956c5d711206e1fdc5df4228c3b86982ef19fd102930ce96c123de0d9f354833"
+  "manifest_hash": "99b68c506a614d92808d6de3f6fbd8b07f24899519df888e0b7783f4f8dc01f5"
 }
