@@ -1,25 +1,25 @@
 # 𒄆𓁹✞𒀱✞𓁹𒄆  E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟  //  N⃟ E⃟ X⃟ T⃟_M⃟ O⃟ V⃟ E⃟  𒄆𓁹✞𒀱✞𓁹𒄆
 
-SOURCE_COMMIT: `40f674a8244b4e966f5e47cac09bce43fca649fe`
+SOURCE_COMMIT: `e827a3611e1d7182476c36f924d0a65e616d8cef`
 
-SELECTED_GOAL: **Improve the software** (`improve-software`)
+SELECTED_GOAL: **Preserve authorship and provenance** (`preserve-authorship`)
 
-SCORE: **93**
+SCORE: **86**
 
 ~~~text
-⁇ [G8] improve-software :: SELECTED :: AUTONOMOUS_EXECUTION
+⁇ [G8] preserve-authorship :: SELECTED :: AUTONOMOUS_EXECUTION
 ~~~
 
-Find maintainability, correctness, test, documentation, portability, and usability improvements and implement qualifying changes.
+Strengthen verifiable history, source attribution, content hashing, and recoverable creative records.
 
 ## Candidate board
 
 | Goal | Score | Source hash |
 |---|---:|---|
-| Improve the software | 93 | `f521eaf044678753` |
-| Protect private drafts | 83 | `93a918795c792131` |
-| Demonstrate the linguistic boundary | 80 | `0f01760e19ea7d96` |
-| Reduce cognitive load | 78 | `e682e03fddfeeccc` |
-| Expand voluntary reach | 74 | `66c62e2ecf29fe46` |
-| Preserve human authority | 73 | `a3985436309a3887` |
-| Preserve authorship and provenance | 72 | `a2d6d1913fc728ef` |
+| Preserve authorship and provenance | 86 | `b0eef954049ee459` |
+| Protect private drafts | 79 | `ae1940643ca7b84d` |
+| Improve the software | 78 | `89cfea2db9ecff39` |
+| Expand voluntary reach | 75 | `298eafce253d71db` |
+| Preserve human authority | 71 | `44463b69d5211bf6` |
+| Reduce cognitive load | 70 | `dee28295f97f0439` |
+| Demonstrate the linguistic boundary | 68 | `7fb17323a1f3cffe` |
